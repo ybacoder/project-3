@@ -1,0 +1,44 @@
+/**************************************************************************
+ *** Layout File                                                        ***
+ ***                                                                    ***
+ *** This file is designed to provide the necessary information so      ***
+ *** that NCES survey response data may be used in other statistical    ***
+ *** software packages. This file provides variable names, locations,   ***
+ *** and short descriptions for all selected variables. Additionally,   ***
+ *** for categorical variables, this file also contains the response    ***
+ *** codes and value label descriptions.                                ***
+ ***                                                                    ***
+ *** Full sample weights, replicate weights, and identification         ***
+ *** numbers are added automatically to the list of variables selected  ***
+ *** by the EDAT and are included here.                                 ***
+ *************************************************************************/
+
+/* ASCII Dataset File Name */
+NELS_88_00_PSEF3F4
+
+/* Total Record Length */
+17
+
+/* Variable Names, Locations, and Descriptions */
+STU_ID    1-7           Student ID (unique sample member ID)
+INCODE    8-13          Incode of institution attended
+F4SECT    14-15         Sector of institution, 1997-98
+PSE94FLG  16-17         PSE1994 file indicator
+
+/* Variable Value Labels */
+F4SECT
+   1 = "Private for-profit"
+   2 = "Private nonprofit, less-than-4-year"
+   3 = "Public, less-than-2-year"
+   4 = "Public, 2-year"
+   5 = "Private nonprofit, 4-year or above"
+   6 = "Public, 4-year or above"
+   -1 = "{Don^t know}"
+INCODE
+   999996 = "{Foreign institution}"
+   999997 = "{Institution name unknown}"
+   999998 = "{Institution city unknown}"
+   999999 = "{Institution state unknown}"
+PSE94FLG
+   0 = "Does not exist on pse1994 file"
+   1 = "Exists on pse1994 file"

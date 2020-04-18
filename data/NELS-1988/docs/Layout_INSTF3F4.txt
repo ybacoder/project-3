@@ -1,0 +1,62 @@
+/**************************************************************************
+ *** Layout File                                                        ***
+ ***                                                                    ***
+ *** This file is designed to provide the necessary information so      ***
+ *** that NCES survey response data may be used in other statistical    ***
+ *** software packages. This file provides variable names, locations,   ***
+ *** and short descriptions for all selected variables. Additionally,   ***
+ *** for categorical variables, this file also contains the response    ***
+ *** codes and value label descriptions.                                ***
+ ***                                                                    ***
+ *** Full sample weights, replicate weights, and identification         ***
+ *** numbers are added automatically to the list of variables selected  ***
+ *** by the EDAT and are included here.                                 ***
+ *************************************************************************/
+
+/* ASCII Dataset File Name */
+NELS_88_00_INSTF3F4
+
+/* Total Record Length */
+12
+
+/* Variable Names, Locations, and Descriptions */
+INCODE    1-6           Incode of postsecondary institution
+F4SECT    7-8           Sector of institution, 1997-98
+TUITFEES  9-10          Tuition/fees decile, 1993-94
+TOTATTND  11-12         Total attendance decile, 1993-94
+
+/* Variable Value Labels */
+F4SECT
+   1 = "Private for-profit"
+   2 = "Private nonprofit, less-than-4-year"
+   3 = "Public, less-than-2-year"
+   4 = "Public, 2-year"
+   5 = "Private nonprofit, 4-year or above"
+   6 = "Public, 4-year or above"
+INCODE
+TOTATTND
+   0 = "Missing"
+   1 = "1st decile"
+   2 = "2nd decile"
+   3 = "3rd decile"
+   4 = "4th decile"
+   5 = "5th decile"
+   6 = "6th decile"
+   7 = "7th decile"
+   8 = "8th decile"
+   9 = "9th decile"
+   10 = "10th decile"
+   -9 = "{Missing/school identified in 2000}"
+TUITFEES
+   0 = "Missing"
+   1 = "1st decile"
+   2 = "2nd decile"
+   3 = "3rd decile"
+   4 = "4th decile"
+   5 = "5th decile"
+   6 = "6th decile"
+   7 = "7th decile"
+   8 = "8th decile"
+   9 = "9th decile"
+   10 = "10th decile"
+   -9 = "{Missing/school identified in 2000}"

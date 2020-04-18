@@ -1,0 +1,6228 @@
+/**************************************************************************
+ *** Layout File                                                        ***
+ ***                                                                    ***
+ *** This file is designed to provide the necessary information so      ***
+ *** that NCES survey response data may be used in other statistical    ***
+ *** software packages. This file provides variable names, locations,   ***
+ *** and short descriptions for all selected variables. Additionally,   ***
+ *** for categorical variables, this file also contains the response    ***
+ *** codes and value label descriptions.                                ***
+ ***                                                                    ***
+ *** Full sample weights, replicate weights, and identification         ***
+ *** numbers are added automatically to the list of variables selected  ***
+ *** by the EDAT and are included here.                                 ***
+ *************************************************************************/
+
+/* ASCII Dataset File Name */
+els_02_12_byf1sch
+
+/* Total Record Length */
+3561
+
+/* Variable Names, Locations, and Descriptions */
+SCH_ID         73-76         School ID
+STRAT_ID       77-79         Stratum
+PSU            80-81         Primary sampling unit
+BYSCH1         1562-1571     BRR school weight for replicate 1
+BYSCH2         1572-1581     BRR school weight for replicate 2
+BYSCHWT        82-91         School weight
+BYADMSTA       92-93         Base year administrator questionnaire status
+BYSCH3         1582-1591     BRR school weight for replicate 3
+BYSCH4         1592-1601     BRR school weight for replicate 4
+BYSCH5         1602-1611     BRR school weight for replicate 5
+BYSCMDFG       94-95         Base year library media center questionnaire flag
+BYSCH6         1612-1621     BRR school weight for replicate 6
+BYSCH7         1622-1631     BRR school weight for replicate 7
+BYG10EP        96-97         Grade 10 enrollment-2001/02 school roster-categorical
+BYSCENP        98-99         Oct 2001 total school enrollment-administrator quex-categorical
+BYSCH8         1632-1641     BRR school weight for replicate 8
+BYSCH9         1642-1651     BRR school weight for replicate 9
+BYSCTRL        100-101       School control
+BYURBAN        102-103       School urbanicity
+BYSCH10        1652-1661     BRR school weight for replicate 10
+BYSCH11        1662-1671     BRR school weight for replicate 11
+BYREGION       104-105       Geographic region of school
+BYSPANP        106-107       Grade span-administrator questionnaire
+BYSCH12        1672-1681     BRR school weight for replicate 12
+BYSCH13        1682-1691     BRR school weight for replicate 13
+BY10FLP        108-109       Grade 10 percent free lunch-categorical
+BYFTTP         110-111       Number of full-time teachers categorical
+BYSCH14        1692-1701     BRR school weight for replicate 14
+BYSCH15        1702-1711     BRR school weight for replicate 15
+BYSCH16        1712-1721     BRR school weight for replicate 16
+BYSCH17        1722-1731     BRR school weight for replicate 17
+BYSCH18        1732-1741     BRR school weight for replicate 18
+BYSCH19        1742-1751     BRR school weight for replicate 19
+F1ADMSTA       112-113       F1 administrator questionnaire status
+F1SCENP        114-115       Oct 2003 total school enrollment-administrator quex-categorical
+BYSCH20        1752-1761     BRR school weight for replicate 20
+BYSCH21        1762-1771     BRR school weight for replicate 21
+F1SCFLP        116-117       F1 School percent free lunch-categorical
+F1FTTP         118-119       F1 Number of full-time teachers categorical
+BYSCH22        1772-1781     BRR school weight for replicate 22
+BYSCH23        1782-1791     BRR school weight for replicate 23
+BYSCH24        1792-1801     BRR school weight for replicate 24
+BYSCH25        1802-1811     BRR school weight for replicate 25
+BYSCH26        1812-1821     BRR school weight for replicate 26
+BYSCH27        1822-1831     BRR school weight for replicate 27
+BYSCH28        1832-1841     BRR school weight for replicate 28
+BYSCH29        1842-1851     BRR school weight for replicate 29
+BYSCH30        1852-1861     BRR school weight for replicate 30
+BYSCH31        1862-1871     BRR school weight for replicate 31
+BYSCH32        1872-1881     BRR school weight for replicate 32
+BYSCH33        1882-1891     BRR school weight for replicate 33
+BYSCH34        1892-1901     BRR school weight for replicate 34
+BYSCH35        1902-1911     BRR school weight for replicate 35
+BYSCH36        1912-1921     BRR school weight for replicate 36
+BYSCH37        1922-1931     BRR school weight for replicate 37
+BYSCH38        1932-1941     BRR school weight for replicate 38
+BYSCH39        1942-1951     BRR school weight for replicate 39
+BYSCH40        1952-1961     BRR school weight for replicate 40
+BYSCH41        1962-1971     BRR school weight for replicate 41
+BYSCH42        1972-1981     BRR school weight for replicate 42
+BYSCH43        1982-1991     BRR school weight for replicate 43
+BYSCH44        1992-2001     BRR school weight for replicate 44
+BYSCH45        2002-2011     BRR school weight for replicate 45
+BYSCH46        2012-2021     BRR school weight for replicate 46
+BYSCH47        2022-2031     BRR school weight for replicate 47
+BYSCH48        2032-2041     BRR school weight for replicate 48
+BYSCH49        2042-2051     BRR school weight for replicate 49
+BYSCH50        2052-2061     BRR school weight for replicate 50
+BYSCH51        2062-2071     BRR school weight for replicate 51
+BYSCH52        2072-2081     BRR school weight for replicate 52
+BYSCH53        2082-2091     BRR school weight for replicate 53
+BYSCH54        2092-2101     BRR school weight for replicate 54
+BYSCH55        2102-2111     BRR school weight for replicate 55
+BYSCH56        2112-2121     BRR school weight for replicate 56
+BYSCH57        2122-2131     BRR school weight for replicate 57
+BYSCH58        2132-2141     BRR school weight for replicate 58
+BYSCH59        2142-2151     BRR school weight for replicate 59
+BYSCH60        2152-2161     BRR school weight for replicate 60
+BYSCH61        2162-2171     BRR school weight for replicate 61
+BYSCH62        2172-2181     BRR school weight for replicate 62
+BYSCH63        2182-2191     BRR school weight for replicate 63
+BYSCH64        2192-2201     BRR school weight for replicate 64
+BYSCH65        2202-2211     BRR school weight for replicate 65
+BYSCH66        2212-2221     BRR school weight for replicate 66
+BYSCH67        2222-2231     BRR school weight for replicate 67
+BYSCH68        2232-2241     BRR school weight for replicate 68
+BYSCH69        2242-2251     BRR school weight for replicate 69
+BYSCH70        2252-2261     BRR school weight for replicate 70
+BYSCH71        2262-2271     BRR school weight for replicate 71
+BYSCH72        2272-2281     BRR school weight for replicate 72
+BYSCH73        2282-2291     BRR school weight for replicate 73
+BYSCH74        2292-2301     BRR school weight for replicate 74
+BYSCH75        2302-2311     BRR school weight for replicate 75
+BYSCH76        2312-2321     BRR school weight for replicate 76
+BYSCH77        2322-2331     BRR school weight for replicate 77
+BYSCH78        2332-2341     BRR school weight for replicate 78
+BYSCH79        2342-2351     BRR school weight for replicate 79
+BYSCH80        2352-2361     BRR school weight for replicate 80
+BYSCH81        2362-2371     BRR school weight for replicate 81
+BYSCH82        2372-2381     BRR school weight for replicate 82
+BYSCH83        2382-2391     BRR school weight for replicate 83
+BYSCH84        2392-2401     BRR school weight for replicate 84
+BYSCH85        2402-2411     BRR school weight for replicate 85
+BYSCH86        2412-2421     BRR school weight for replicate 86
+BYSCH87        2422-2431     BRR school weight for replicate 87
+BYSCH88        2432-2441     BRR school weight for replicate 88
+BYSCH89        2442-2451     BRR school weight for replicate 89
+BYSCH90        2452-2461     BRR school weight for replicate 90
+BYSCH91        2462-2471     BRR school weight for replicate 91
+BYSCH92        2472-2481     BRR school weight for replicate 92
+BYSCH93        2482-2491     BRR school weight for replicate 93
+BYSCH94        2492-2501     BRR school weight for replicate 94
+BYSCH95        2502-2511     BRR school weight for replicate 95
+BYSCH96        2512-2521     BRR school weight for replicate 96
+BYSCH97        2522-2531     BRR school weight for replicate 97
+BYSCH98        2532-2541     BRR school weight for replicate 98
+BYSCH99        2542-2551     BRR school weight for replicate 99
+BYSCH100       2552-2561     BRR school weight for replicate 100
+BYSCH101       2562-2571     BRR school weight for replicate 101
+BYSCH102       2572-2581     BRR school weight for replicate 102
+BYSCH103       2582-2591     BRR school weight for replicate 103
+BYSCH104       2592-2601     BRR school weight for replicate 104
+BYSCH105       2602-2611     BRR school weight for replicate 105
+BYSCH106       2612-2621     BRR school weight for replicate 106
+BYSCH107       2622-2631     BRR school weight for replicate 107
+BYSCH108       2632-2641     BRR school weight for replicate 108
+BYSCH109       2642-2651     BRR school weight for replicate 109
+BYSCH110       2652-2661     BRR school weight for replicate 110
+BYSCH111       2662-2671     BRR school weight for replicate 111
+BYSCH112       2672-2681     BRR school weight for replicate 112
+BYSCH113       2682-2691     BRR school weight for replicate 113
+BYSCH114       2692-2701     BRR school weight for replicate 114
+BYSCH115       2702-2711     BRR school weight for replicate 115
+BYSCH116       2712-2721     BRR school weight for replicate 116
+BYSCH117       2722-2731     BRR school weight for replicate 117
+BYSCH118       2732-2741     BRR school weight for replicate 118
+BYSCH119       2742-2751     BRR school weight for replicate 119
+BYSCH120       2752-2761     BRR school weight for replicate 120
+BYSCH121       2762-2771     BRR school weight for replicate 121
+BYSCH122       2772-2781     BRR school weight for replicate 122
+BYSCH123       2782-2791     BRR school weight for replicate 123
+BYSCH124       2792-2801     BRR school weight for replicate 124
+BYSCH125       2802-2811     BRR school weight for replicate 125
+BYSCH126       2812-2821     BRR school weight for replicate 126
+BYSCH127       2822-2831     BRR school weight for replicate 127
+BYSCH128       2832-2841     BRR school weight for replicate 128
+BYSCH129       2842-2851     BRR school weight for replicate 129
+BYSCH130       2852-2861     BRR school weight for replicate 130
+BYSCH131       2862-2871     BRR school weight for replicate 131
+BYSCH132       2872-2881     BRR school weight for replicate 132
+BYSCH133       2882-2891     BRR school weight for replicate 133
+BYSCH134       2892-2901     BRR school weight for replicate 134
+BYSCH135       2902-2911     BRR school weight for replicate 135
+BYSCH136       2912-2921     BRR school weight for replicate 136
+BYSCH137       2922-2931     BRR school weight for replicate 137
+BYSCH138       2932-2941     BRR school weight for replicate 138
+BYSCH139       2942-2951     BRR school weight for replicate 139
+BYSCH140       2952-2961     BRR school weight for replicate 140
+BYSCH141       2962-2971     BRR school weight for replicate 141
+BYSCH142       2972-2981     BRR school weight for replicate 142
+BYSCH143       2982-2991     BRR school weight for replicate 143
+BYSCH144       2992-3001     BRR school weight for replicate 144
+BYSCH145       3002-3011     BRR school weight for replicate 145
+BYSCH146       3012-3021     BRR school weight for replicate 146
+BYSCH147       3022-3031     BRR school weight for replicate 147
+BYSCH148       3032-3041     BRR school weight for replicate 148
+BYSCH149       3042-3051     BRR school weight for replicate 149
+BYSCH150       3052-3061     BRR school weight for replicate 150
+BYSCH151       3062-3071     BRR school weight for replicate 151
+BYSCH152       3072-3081     BRR school weight for replicate 152
+BYSCH153       3082-3091     BRR school weight for replicate 153
+BYSCH154       3092-3101     BRR school weight for replicate 154
+BYSCH155       3102-3111     BRR school weight for replicate 155
+BYSCH156       3112-3121     BRR school weight for replicate 156
+BYSCH157       3122-3131     BRR school weight for replicate 157
+BYSCH158       3132-3141     BRR school weight for replicate 158
+BYA04          120-121       Way of teaching students with different abilities
+BYA05          122-123       Crime in students' neighborhood
+BYSCH159       3142-3151     BRR school weight for replicate 159
+BYSCH160       3152-3161     BRR school weight for replicate 160
+BYA06          124-125       Type of academic calendar
+BYA07          126-128       # of days in school year for 10th graders
+BYSCH161       3162-3171     BRR school weight for replicate 161
+BYSCH162       3172-3181     BRR school weight for replicate 162
+BYA08          129-130       # class periods in day for 10th graders
+BYA09          131-133       # of minutes of average 10th grade class period
+BYSCH163       3182-3191     BRR school weight for replicate 163
+BYSCH164       3192-3201     BRR school weight for replicate 164
+BYA10          134-135       Typical semester class load for 10th graders
+BYA11          136-137       School is coeducational
+BYSCH165       3202-3211     BRR school weight for replicate 165
+BYSCH166       3212-3221     BRR school weight for replicate 166
+BYA12A         138-140       % in school-sponsored community service
+BYA12B         141-143       % in work study program
+BYSCH167       3222-3231     BRR school weight for replicate 167
+BYSCH168       3232-3241     BRR school weight for replicate 168
+BYA12C         144-146       % in academic counseling program
+BYA12D         147-149       % in vocational counseling program
+BYSCH169       3242-3251     BRR school weight for replicate 169
+BYSCH170       3252-3261     BRR school weight for replicate 170
+BYA12E         150-152       % in dropout prevention program
+BYA12F         153-155       % in gang prevention program
+BYSCH171       3262-3271     BRR school weight for replicate 171
+BYSCH172       3272-3281     BRR school weight for replicate 172
+BYA12G         156-158       % in alcohol/drug prevention program
+BYA12H         159-161       % in AIDS education program
+BYSCH173       3282-3291     BRR school weight for replicate 173
+BYSCH174       3292-3301     BRR school weight for replicate 174
+BYA12I         162-164       % in crisis prevention program
+BYA13          165-166       When parents notified of absences
+BYSCH175       3302-3311     BRR school weight for replicate 175
+BYSCH176       3312-3321     BRR school weight for replicate 176
+BYA14A         167-169       % 10th graders in general high school program
+BYA14B         170-172       % 10th graders in college prep program
+BYSCH177       3322-3331     BRR school weight for replicate 177
+BYSCH178       3332-3341     BRR school weight for replicate 178
+BYA14C         173-175       % 10th graders in other specialized programs
+BYA14D         176-178       % 10th graders in voc/tech/business program
+BYSCH179       3342-3351     BRR school weight for replicate 179
+BYSCH180       3352-3361     BRR school weight for replicate 180
+BYA14E         179-181       % 10th graders in special ed program
+BYA14F         182-184       % 10th graders in alternative program
+BYSCH181       3362-3371     BRR school weight for replicate 181
+BYSCH182       3372-3381     BRR school weight for replicate 182
+BYA14G         185-187       % 10th graders receive bilingual education
+BYA14H         188-190       % 10th graders receive ESL
+BYSCH183       3382-3391     BRR school weight for replicate 183
+BYSCH184       3392-3401     BRR school weight for replicate 184
+BYA14I         191-193       % 10th graders receive remedial reading
+BYA14J         194-196       % 10th graders receive remedial math
+BYSCH185       3402-3411     BRR school weight for replicate 185
+BYSCH186       3412-3421     BRR school weight for replicate 186
+BYA14K         197-199       % 10th graders in after school/summer outreach
+BYA15A         200-201       Students develop career plan
+BYSCH187       3422-3431     BRR school weight for replicate 187
+BYSCH188       3432-3441     BRR school weight for replicate 188
+BYA15B         202-203       Students select career major/pathway
+BYA15C         204-205       Students in program to prepare for college
+BYSCH189       3442-3451     BRR school weight for replicate 189
+BYSCH190       3452-3461     BRR school weight for replicate 190
+BYA16          206-207       Vocational-technical programs offered
+BYA17A         208-209       Agriculture/renewable resource courses offered
+BYSCH191       3462-3471     BRR school weight for replicate 191
+BYSCH192       3472-3481     BRR school weight for replicate 192
+BYA17B         210-211       Business courses offered
+BYA17C         212-213       Marketing/distribution courses offered
+BYSCH193       3482-3491     BRR school weight for replicate 193
+BYSCH194       3492-3501     BRR school weight for replicate 194
+BYA17D         214-215       Health care courses offered
+BYA17E         216-217       Public/protective service courses offered
+BYSCH195       3502-3511     BRR school weight for replicate 195
+BYSCH196       3512-3521     BRR school weight for replicate 196
+BYA17F         218-219       Construction courses offered
+BYA17G         220-221       Mechanics and repair courses offered
+BYSCH197       3522-3531     BRR school weight for replicate 197
+BYSCH198       3532-3541     BRR school weight for replicate 198
+BYA17H         222-223       Precisions production courses offered
+BYA17I         224-225       Trade/industry/transportation courses offered
+BYSCH199       3542-3551     BRR school weight for replicate 199
+BYSCH200       3552-3561     BRR school weight for replicate 200
+BYA17J         226-227       Computer technology courses offered
+BYA17K         228-229       Communication technology courses offered
+BYA17L         230-231       Other technology courses offered
+BYA17M         232-233       Food service and hospitality courses offered
+BYA17N         234-235       Child care/education courses offered
+BYA17O         236-237       Personal and other services courses offered
+BYA17P         238-239       Other occupational courses offered
+BYA17Q         240-241       Family/consumer sciences courses offered
+BYA17R         242-243       Industrial arts/technology courses offered
+BYA18A         244-245       Cooperative education offered to 10th graders
+BYA18B         246-247       Internships offered to 10th graders
+BYA18C         248-249       Job shadowing offered to 10th graders
+BYA18D         250-251       Mentoring offered to 10th graders
+BYA18E         252-253       Community service offered to 10th graders
+BYA18F         254-255       School-based enterprise offered to 10th graders
+BYA19AA        256-257       Baseball offered to males
+BYA19AB        258-259       Baseball offered to females
+BYA19BA        260-261       Softball offered to males
+BYA19BB        262-263       Softball offered to females
+BYA19CA        264-265       Basketball offered to males
+BYA19CB        266-267       Basketball offered to females
+BYA19DA        268-269       Football offered to males
+BYA19DB        270-271       Football offered to females
+BYA19EA        272-273       Soccer offered to males
+BYA19EB        274-275       Soccer offered to females
+BYA19FA        276-277       Swim team offered to males
+BYA19FB        278-279       Swim team offered to females
+BYA19GA        280-281       Ice hockey offered to males
+BYA19GB        282-283       Ice hockey offered to females
+BYA19HA        284-285       Field hockey offered to males
+BYA19HB        286-287       Field hockey offered to females
+BYA19IA        288-289       Volleyball offered to males
+BYA19IB        290-291       Volleyball offered to females
+BYA19JA        292-293       Lacrosse offered to males
+BYA19JB        294-295       Lacrosse offered to females
+BYA19KA        296-297       Tennis offered to males
+BYA19KB        298-299       Tennis offered to females
+BYA19LA        300-301       Cross-country offered to males
+BYA19LB        302-303       Cross-country offered to females
+BYA19MA        304-305       Track offered to males
+BYA19MB        306-307       Track offered to females
+BYA19NA        308-309       Golf offered to males
+BYA19NB        310-311       Golf offered to females
+BYA19OA        312-313       Gymnastics offered to males
+BYA19OB        314-315       Gymnastics offered to females
+BYA19PA        316-317       Wrestling offered to males
+BYA19PB        318-319       Wrestling offered to females
+BYA19QA        320-321       Cheerleading offered to males
+BYA19QB        322-323       Cheerleading offered to females
+BYA19RA        324-325       Drill team offered to males
+BYA19RB        326-327       Drill team offered to females
+BYA19SA        328-329       Other sport offered to males
+BYA19SB        330-331       Other sport offered to females
+BYA19TA        332-333       No sports offered to males
+BYA19TB        334-335       No sports offered to females
+BYA20          336-338       % 10th graders are LEP or non-English proficient
+BYA22B         339-340       # of part-time teachers
+BYA23A         341-342       # of full-time math teachers
+BYA23B         343-344       # of full-time science teachers
+BYA23C         345-346       # of full-time art teachers
+BYA23D         347-348       # of full-time music teachers
+BYA23E         349-350       # of full-time English teachers
+BYA23F         351-352       # of full-time foreign language teachers
+BYA23G         353-354       # of full-time social sciences teachers
+BYA23H         355-356       # of full-time history teachers
+BYA23I         357-358       # of full-time vocational education teachers
+BYA23J         359-360       # of full-time physical education teachers
+BYA23K         361-362       # full-time guidance counselors
+BYA23L         363-364       # full-time special education teachers
+BYA24A         365-367       % full-time teachers are certified
+BYA24B         368-370       % part-time teachers are certified
+BYA25A         371-373       % full-time teachers teach out of field
+BYA25B         374-376       % part-time teachers teach out of field
+BYA26A         377-381       Lowest salary paid to full-time teachers
+BYA26B         382-386       Highest salary paid to full-time teachers
+BYA27A         387-388       Principal/administrator evaluates teachers
+BYA27B         389-390       Teachers evaluate teachers
+BYA27C         391-392       Students evaluate teachers
+BYA28A         393-394       Good teachers given special awards
+BYA28B         395-396       Good teachers assigned to better students
+BYA28C         397-398       Good teachers given a lighter teaching load
+BYA28D         399-400       Good teachers relieved of administrative/disciplinary duties
+BYA28E         401-402       Good teachers given priority on requests for materials
+BYA28F         403-404       Good teachers receive higher pay
+BYA28G         405-406       Good teachers are not recognized in these ways
+BYA29          407-408       Content standards for academic subjects
+BYA30          409-410       Main source of content standards
+BYA31          411-412       Content standards linked with performance standards
+BYA32          413-414       Students must pass a test for high school diploma
+BYA33AA        415-416       Minimum competency test given in grade 7
+BYA33AB        417-418       Math is on grade 7 competency test
+BYA33AC        419-420       Science is on grade 7 competency test
+BYA33AD        421-422       English is on grade 7 competency test
+BYA33AE        423-424       History/social studies is on grade 7 competency test
+BYA33BA        425-426       Minimum competency test given in grade 8
+BYA33BB        427-428       Math is on grade 8 competency test
+BYA33BC        429-430       Science is on grade 8 competency test
+BYA33BD        431-432       English is on grade 8 competency test
+BYA33BE        433-434       History/social studies is on grade 8 competency test
+BYA33CA        435-436       Minimum competency test given in grade 9
+BYA33CB        437-438       Math is on grade 9 competency test
+BYA33CC        439-440       Science is on grade 9 competency test
+BYA33CD        441-442       English is on grade 9 competency test
+BYA33CE        443-444       History/social studies is on grade 9 competency test
+BYA33DA        445-446       Minimum competency test given in grade 10
+BYA33DB        447-448       Math is on grade 10 competency test
+BYA33DC        449-450       Science is on grade 10 competency test
+BYA33DD        451-452       English is on grade 10 competency test
+BYA33DE        453-454       History/social studies is on grade 10 competency test
+BYA33EA        455-456       Minimum competency test given in grade 11
+BYA33EB        457-458       Math is on grade 11 competency test
+BYA33EC        459-460       Science is on grade 11 competency test
+BYA33ED        461-462       English is on grade 11 competency test
+BYA33EE        463-464       History/social studies is on grade 11 competency test
+BYA33FA        465-466       Minimum competency test given in grade 12
+BYA33FB        467-468       Math is on grade 12 competency test
+BYA33FC        469-470       Science is on grade 12 competency test
+BYA33FD        471-472       English is on grade 12 competency test
+BYA33FE        473-474       History/social studies is on grade 12 competency test
+BYA34A         475-476       Competency test is state requirement
+BYA34B         477-478       Competency test is district requirement
+BYA34C         479-480       Competency test is school requirement
+BYA35          481-482       Competency test tied to content standards
+BYA36          483-485       % fail competency test on first attempt
+BYA37A         486-487       Retake competency test if failed
+BYA37B         488-489       Take remedial class if fail competency test
+BYA37C         490-491       Complete competency test preparation class if fail
+BYA37D         492-493       Tutoring/individualized academic program if fail competency test
+BYA37E         494-495       Summer school if fail competency test
+BYA37F         496-497       Referred to alternative/continuing ed school if fail competency test
+BYA38A         498-499       Control access to buildings during school hours
+BYA38B         500-501       Control access to grounds during school hours
+BYA38C         502-503       Require students pass through metal detector
+BYA38D         504-505       Random metal detector checks on students
+BYA38E         506-507       Close campus for students during lunch
+BYA38F         508-509       Random dog sniffs to check for drugs
+BYA38G         510-511       Random sweeps for contraband
+BYA38H         512-513       Require drug testing for any students
+BYA38I         514-515       Require students to wear uniforms
+BYA38J         516-517       Enforce strict dress code
+BYA38K         518-519       Require clear book bags/ban book bags
+BYA38L         520-521       Require students to wear badges/picture ID
+BYA38M         522-523       Require faculty/staff to wear badges/picture ID
+BYA38N         524-525       Use security cameras to monitor school
+BYA38O         526-527       Telephones in most classrooms
+BYA38P         528-529       Emergency call button in classrooms
+BYA39A         530-531       Process to get parent input on discipline policies
+BYA39B         532-533       Training parents to deal with problem behavior
+BYA39C         534-535       Program involves parents in school discipline
+BYA40A         536-537       Use paid security at any time during school hours
+BYA40B         538-539       Use paid security as students arrive or leave
+BYA40C         540-541       Use paid security at school activities
+BYA40D         542-543       Use paid security outside of school hours/activities
+BYA40E         544-545       Use paid security at other time
+BYA41A         546-547       Teachers have access to cable TV
+BYA41B         548-549       Teachers have access to closed-circuit TV
+BYA41C         550-551       Teachers have access to videodisc player/VCR/DVD
+BYA41D         552-553       Teachers have access to video camera
+BYA41E         554-555       Teachers have access to video production studio
+BYA41F         556-557       Teachers have access to satellite TV hook-up
+BYA41G         558-559       Teachers have access to videoconferencing equipment
+BYA41H         560-561       Teachers have access to digital camera
+BYA41I         562-563       Teachers have access to scanner
+BYA41J         564-565       Teachers have access to LCD panel
+BYA41K         566-567       Teachers have access to laptop computer
+BYA41L         568-569       Teachers have access to Internet
+BYA41M         570-571       Teachers have access to computer printer
+BYA42A         572-573       Teachers use computers as instructional tools
+BYA42B         574-575       Teachers use computers to plan lessons
+BYA42C         576-577       Teachers use computers for professional development courses
+BYA42D         578-579       Teachers use computers to communicate with colleagues
+BYA42E         580-581       Teachers use computers to access best practices
+BYA42F         582-583       Teachers use computers to communicate with parents
+BYA42G         584-585       Teachers use computers to post homework
+BYA42H         586-587       Teachers/staff use computers to communicate with each other
+BYA42I         588-589       Teachers use computers to teach job skills
+BYA42J         590-591       Administrative staff use computers for administrative purposes
+BYA42K         592-593       Administrative staff use computers to communicate with colleagues
+BYA42L         594-595       Administrative staff use computers to communicate with parents
+BYA42M         596-597       School offers students distance learning courses
+BYA42N         598-599       Teachers have access to Internet professional development programs
+BYA43A         600-601       Teacher training on use of new software
+BYA43B         602-603       Teacher training on use of Internet
+BYA43C         604-605       Teacher training on using computers to teach skills
+BYA43D         606-607       Teacher training on integrating computer into class
+BYA43E         608-609       Teacher training on basic computer literacy
+BYA44A         610-611       Computers in administrative offices
+BYA44B         612-613       Computers in teacher work rooms
+BYA44C         614-615       Computers in classrooms
+BYA44D         616-617       Computers in the library media center
+BYA44E         618-619       Computers in separate computer lab
+BYA46A         620-621       Principal's influence on hiring/firing teachers
+BYA46B         622-623       Principal's influence on grouping students
+BYA46C         624-625       Principal's influence on course offerings
+BYA46D         626-627       Principal's influence on instructional materials
+BYA46E         628-629       Principal's influence on curricular guidelines
+BYA46F         630-631       Principal's influence on grading and evaluation
+BYA46G         632-633       Principal's influence on discipline policies
+BYA46H         634-635       Principal's influence on school funds
+BYA47A         636-637       School's relationship with school board
+BYA47B         638-639       School's relationship with central office
+BYA47C         640-641       School's relationship with teachers' association
+BYA48A         642-643       Principal evaluated on standardized test scores
+BYA48B         644-645       Principal evaluated on school environment
+BYA48C         646-647       Principal evaluated on efficient administration
+BYA48D         648-649       Principal evaluated on parent involvement
+BYA48E         650-651       Principal evaluated on relationship with community
+BYA48F         652-653       Principal evaluated on new programs/reform
+BYA49A         654-655       How often tardiness a problem at school
+BYA49B         656-657       How often absenteeism a problem at school
+BYA49C         658-659       How often class cutting a problem at school
+BYA49D         660-661       How often physical conflicts a problem at school
+BYA49E         662-663       How often robbery/theft a problem at school
+BYA49F         664-665       How often vandalism a problem at school
+BYA49G         666-667       How often use of alcohol a problem at school
+BYA49H         668-669       How often use of illegal drugs a problem at school
+BYA49I         670-671       How often students on drugs/alcohol at school a problem
+BYA49J         672-673       How often sale of drugs near school a problem
+BYA49K         674-675       How often possession of weapons a problem at school
+BYA49L         676-677       How often physical abuse of teachers a problem at school
+BYA49M         678-679       How often racial tension among students a problem at school
+BYA49N         680-681       How often student bullying a problem at school
+BYA49O         682-683       How often verbal abuse of teachers a problem at school
+BYA49P         684-685       How often disorder in classrooms a problem at school
+BYA49Q         686-687       How often student disrespect for teachers a problem at school
+BYA49R         688-689       How often gang activity a problem at school
+BYA49S         690-691       How often cult/extremist group activities a problem at school
+BYA50A         692-693       Learning hindered by poor condition of buildings
+BYA50B         694-695       Learning hindered by poor heating/air/light
+BYA50C         696-697       Learning hindered by poor science labs
+BYA50D         698-699       Learning hindered by poor fine arts facilities
+BYA50E         700-701       Learning hindered by lack of space
+BYA50F         702-703       Learning hindered by poor library
+BYA50G         704-705       Learning hindered by lack of texts/supplies
+BYA50H         706-707       Learning hindered by too few computers
+BYA50I         708-709       Learning hindered by lack of multi-media
+BYA50J         710-711       Learning hindered by lack of discipline/safety
+BYA50K         712-713       Learning hindered by poor voc/tech equipment/facilities
+BYA51A         714-715       Student morale is high
+BYA51B         716-717       Teachers press students to achieve
+BYA51C         718-719       Teacher morale is high
+BYA51D         720-721       Learning is high priority for students
+BYA51E         722-723       Students expected to do homework
+BYA53          724-729       Date completed interview
+F1A02          730-732       # of days in school year for 12th graders
+F1A03          733-734       Type of academic calendar
+F1A04AA        735-736       Academic courses are block scheduled
+F1A04AB        737-739       # of minutes in block for academic courses
+F1A04BA        740-741       Vocational/technical courses are block scheduled
+F1A04BB        742-744       # of minutes in block for vocational/technical courses
+F1A04CA        745-746       Other courses are block scheduled
+F1A04CB        747-749       # of minutes in block for other courses
+F1A05A         750-751       Students in area or district attend the school
+F1A05B         752-753       Students in area or district attend the school/transfers allowed
+F1A05C         754-755       Students assigned to school to achieve racial/ethnic composition
+F1A05D         756-757       Students admitted to school based on test/audition/other criterion
+F1A05E         758-759       Students admitted to school based on lottery/random selection
+F1A05F         760-761       Students admitted on first-come first-serve basis
+F1A06A         762-763       Influence of teachers on selecting 12th grader's courses
+F1A06B         764-765       Influence of department head on selecting 12th grader's courses
+F1A06C         766-767       Influence of counselors on selecting 12th grader's courses
+F1A06D         768-769       Influence of coaches on selecting 12th grader's courses
+F1A06E         770-771       Influence of parents on selecting 12th grader's courses
+F1A06F         772-773       Influence of student's preferences on selecting 12th grader's courses
+F1A06G         774-775       Influence of student's grades on selecting 12th grader's courses
+F1A06H         776-777       Influence of student's test scores on selecting 12th grader's courses
+F1A06I         778-779       Influence of student attendance on selecting 12th grader's courses
+F1A06J         780-781       Influence of special education on selecting 12th grader's courses
+F1A06K         782-783       Influence of potential for dropout on selecting 12th grader's courses
+F1A07A         784-785       Years of English coursework required to graduate
+F1A07B         786-787       Years of mathematics coursework required to graduate
+F1A07C         788-789       Years of science coursework required to graduate
+F1A07D         790-791       Years of history/social studies coursework required to graduate
+F1A07E         792-793       Years of computer coursework required to graduate
+F1A07F         794-795       Years of foreign language coursework required to graduate
+F1A07G         796-797       Years of fine arts coursework required to graduate
+F1A07H         798-799       Years of physical education/health coursework required to graduate
+F1A08A         800-801       School confers regular/honors diplomas
+F1A08B         802-803       School confers International Baccalaureate diplomas
+F1A08C         804-805       School confers diplomas with special education adjustments
+F1A08D         806-807       School confers diplomas with vocational/technical skills certificate
+F1A08E         808-809       School confers certificates of attendance
+F1A08F         810-811       School confers GED/other equivalency
+F1A09          812-813       Minimum GPA required to participate in school activities
+F1A10          814-815       Availability of a vocational/technical program
+F1A11A         816-817       Student request used to decide enrollment in vocational program
+F1A11B         818-819       Parent request used to decide enrollment in vocational program
+F1A11C         820-821       Counselor referral used to decide enrollment in vocational program
+F1A11D         822-823       Teacher referral used to decide enrollment in vocational program
+F1A11E         824-825       Academic performance used to decide enrollment in vocational program
+F1A11F         826-827       Attendance record used to decide enrollment in vocational program
+F1A11G         828-829       Special education need used to decide enrollment in vocational program
+F1A11H         830-831       Potential for dropout used to decide enrollment in vocational program
+F1A11I         832-833       Lottery/random choice used to decide enrollment in vocational program
+F1A12A         834-835       # of occupational courses defines vocational/technical completers
+F1A12B         836-837       Specific academic coursework defines vocational/technical completers
+F1A12C         838-839       District/state assessment defines vocational/technical completers
+F1A12D         840-841       Industry-recognized credential defines vocational/technical completers
+F1A13A         842-843       Vocational interest/ability assessments are available
+F1A13B         844-845       Job placement services are available
+F1A13C         846-847       Career days/job fairs are available
+F1A13D         848-849       Career/employment readiness workshops are available
+F1A13E         850-851       School-arranged interviews with employers are available
+F1A13F         852-853       Selection of career major/pathways are available
+F1A14          854-855       Class of 2004 must pass a test for high school diploma
+F1A15A         856-857       Math is on grade 12 competency test
+F1A15B         858-859       Science is on grade 12 competency test
+F1A15C         860-861       Reading is on grade 12 competency test
+F1A15D         862-863       Composition/writing is on grade 12 competency test
+F1A15E         864-865       History/civics/social studies is on grade 12 competency test
+F1A15F         866-867       Computer skills are on grade 12 competency test
+F1A16          868-870       % fail competency test on first attempt
+F1A17A         871-872       Retake competency test if failed
+F1A17B         873-874       Take remedial class if fail competency test
+F1A17C         875-876       Complete competency test preparation class if fail
+F1A17D         877-878       Tutoring/individualized academic program if fail competency test
+F1A17E         879-880       Summer school if fail competency test
+F1A17F         881-882       Referred to alternative/continuing ed school if fail competency test
+F1A18A         883-885       % 12th graders in general high school program
+F1A18B         886-888       % 12th graders in college prep/specialized academic program
+F1A18C         889-891       % 12th graders in voc/tech/business program
+F1A19A         892-893       % of 2003 graduates went to 4-year colleges
+F1A19B         894-895       % of 2003 graduates went to 2-year colleges/vocational school
+F1A19C         896-897       % of 2003 graduates entered labor market or military
+F1A19D         898-899       % of 2003 graduates did something else
+F1A20A         900-901       % of 12th graders attend college application programs
+F1A20B         902-903       % of 12th graders attend programs on financial aid
+F1A20C         904-905       % of 12th graders attend school SAT/ACT courses
+F1A20D         906-907       % of 12th graders attend college fairs
+F1A20E         908-909       % of 12th graders attend meetings with college representative
+F1A20F         910-911       % of 12th graders participate in Talent Search
+F1A20G         912-913       % of 12th graders participate in Upward Bound
+F1A20H         914-915       % of 12th graders in other program for minority/disadvantaged
+F1A21A         916-917       Vocational counseling/services/programs offered
+F1A21B         918-919       Home visits by teachers offered
+F1A21C         920-921       Peer tutoring offered
+F1A21D         922-923       School-sponsored community service offered
+F1A21E         924-925       Individual/family psychological counseling offered
+F1A21F         926-927       Programs for pregnant girls/teenage mothers offered
+F1A22B         928-930       % of student body is LEP or non-English proficient
+F1A22C         931-933       % of student body receives special education services
+F1A22D         934-936       % of student body in alternative program
+F1A22E         937-939       % of student body in dropout prevention program
+F1A22F         940-942       % of student body in Advanced Placement courses
+F1A22G         943-945       % of student body in International Baccalaureate program
+F1A23          946-947       School has dropout prevention program
+F1A24A         948-949       Dropout prevention is recommended on basis of absentee record
+F1A24B         950-951       Dropout prevention is recommended on basis of academic performance
+F1A24C         952-953       Dropout prevention is recommended on basis of teacher referral
+F1A24D         954-955       Dropout prevention is recommended on basis of counselor referral
+F1A24E         956-957       Dropout prevention is recommended on basis of parental request
+F1A24F         958-959       Dropout prevention is recommended on basis of student request
+F1A24G         960-961       Dropout prevention is recommended on basis of disciplinary problems
+F1A25A         962-963       Dropout prevention offers special instructional programs
+F1A25B         964-965       Dropout prevention offers focus on vocational/technical education
+F1A25C         966-967       Dropout prevention offers individual/group counseling
+F1A25D         968-969       Dropout prevention offers health care
+F1A25E         970-971       Dropout prevention offers incentives for better attendance/performance
+F1A25F         972-973       Dropout prevention offers close monitoring of attendance/performance
+F1A25G         974-975       Dropout prevention offers childcare/nurseries for student's children
+F1A25H         976-977       Dropout prevention offers cultural interaction
+F1A25I         978-979       Dropout prevention offers anger management
+F1A27          980-982       # of part-time teachers
+F1A28          983-985       # of full-time teachers left at end of 2002-2003 school year
+F1A29AP        986-987       # of full-time teachers have less than Bachelor's degree (public)
+F1A29BP        988-989       # of full-time teachers with highest degree of Bachelor's (Public)
+F1A29CP        990-991       # of full-time teachers whose highest degree is Master's
+F1A29DP        992-993       # of full-time teachers with highest degree of EdD or PhD
+F1A29EP        994-995       # of full-time teachers whose highest degree is unknown
+F1A30          996-998       # of full-time library media resource center staff members
+F1A31          999-1000      # of part-time library media resource center staff members
+F1A32A         1001-1003     % of full-time teachers are Hispanic
+F1A32B         1004-1006     % of full-time teachers for whom Hispanic ethnicity is unknown
+F1A33A         1007-1009     % of full-time teachers are White
+F1A33B         1010-1012     % of full-time teachers are Black/African American
+F1A33C         1013-1015     % of full-time teachers are Asian
+F1A33D         1016-1018     % of full-time teachers are Native Hawaiian/Pacific Islander
+F1A33E         1019-1021     % of full-time teachers are American Indian/Alaskan Native
+F1A33F         1022-1024     % of full-time teachers for whom race is unknown
+F1A34A         1025-1027     % of full-time teachers have state/advanced professional certificate
+F1A34B         1028-1030     % of full-time teachers have probationary certificate
+F1A34C         1031-1033     % of full-time teachers have provisional certificate
+F1A34D         1034-1036     % of full-time teachers have temporary/emergency certificate
+F1A35          1037-1039     % of full-time library staff is state-certified
+F1A37A         1040-1042     % of poor teachers
+F1A37B         1043-1045     % of fair teachers
+F1A37C         1046-1048     % of good teachers
+F1A37D         1049-1051     % of excellent teachers
+F1A38A         1052-1053     Student morale is high
+F1A38B         1054-1055     Teachers press students to achieve
+F1A38C         1056-1057     Teacher morale is high
+F1A38D         1058-1059     Learning is high priority for students
+F1A38E         1060-1061     Students expected to do homework
+F1A38F         1062-1063     Discipline is emphasized
+F1A38G         1064-1065     Classroom activities are highly structured
+F1A38H         1066-1067     Many teachers are negative about students
+F1A38I         1068-1069     Many teachers find it difficult to motivate students
+F1A38J         1070-1071     School emphasizes sports
+F1A38K         1072-1073     Students are encouraged to compete for grades
+F1A38L         1074-1075     Counselors/teachers encourage students to enroll in academic classes
+F1A38M         1076-1077     There is often conflict between teachers and administrators
+F1A38N         1078-1079     Teachers usually respond to students' individual needs
+F1A39A         1080-1082     % of students typically tardy
+F1A39B         1083-1085     % of students typically absent without excuse
+F1A39C         1086-1088     % of students typically cut or skip classes
+F1A40A         1089-1090     How often physical conflicts a problem at school
+F1A40B         1091-1092     How often robbery/theft a problem at school
+F1A40C         1093-1094     How often vandalism a problem at school
+F1A40D         1095-1096     How often use of alcohol a problem at school
+F1A40E         1097-1098     How often use of illegal drugs a problem at school
+F1A40F         1099-1100     How often students on drugs/alcohol at school a problem
+F1A40G         1101-1102     How often sale of drugs near school a problem
+F1A40H         1103-1104     How often possession of weapons a problem at school
+F1A40I         1105-1106     How often physical abuse of teachers a problem at school
+F1A40J         1107-1108     How often racial tension among students a problem at school
+F1A40K         1109-1110     How often student bullying a problem at school
+F1A40L         1111-1112     How often verbal abuse of teachers a problem at school
+F1A40M         1113-1114     How often disorder in classrooms a problem at school
+F1A40N         1115-1116     How often student disrespect for teachers a problem at school
+F1A40O         1117-1118     How often gang activity a problem at school
+F1A40P         1119-1120     How often cult/extremist group activities a problem at school
+F1A42          1121-1126     Month and year completed interview
+BYL01          1127-1128     How library is organized
+BYL02          1129-1131     Library's total seating capacity
+BYL03A         1132-1133     Library has individual activity areas
+BYL03B         1134-1135     Library has small group activity areas
+BYL03C         1136-1137     Library has large group activity areas
+BYL03D         1138-1139     Library has staff work area
+BYL03E         1140-1141     Library has conference rooms
+BYL03F         1142-1143     Library has computer access area/lab
+BYL04          1144-1145     Library can accommodate full class
+BYL05          1146-1147     Library serves full class/other activity at once
+BYL06AA        1148-1149     Staff includes state-certified librarians
+BYL06AB        1150-1151     # full-time state-certified librarians
+BYL06AC        1152-1153     # part-time state-certified librarians
+BYL06BA        1154-1155     Library media center staff includes state-certified teachers
+BYL06BB        1156-1157     # full-time state-certified teachers in library media center
+BYL06BC        1158-1159     # part-time state-certified teachers in library media center
+BYL06CA        1160-1161     Library media center staff includes uncertified professionals
+BYL06CB        1-2           # full-time uncertified professionals in library media center
+BYL06CC        3-4           # part-time uncertified professionals in library media center
+BYL06DA        5-6           Staff includes paid library aides
+BYL06DB        7-8           # full-time paid library aides
+BYL06DC        9-10          # part-time paid library aides
+BYL07          11-12         Volunteers provide library services
+BYL08A         13-14         # of adult library volunteers
+BYL08B         15-16         # of student library volunteers
+BYL09          17-18         District has library media coordinator
+BYL10          19-20         District library media coordinator is full-time
+BYL11AA        21-22         Library has telephone
+BYL11AB        23-24         Years library has had telephone
+BYL11AC        25-26         Students may use telephone
+BYL11AD        27-28         Faculty/staff may use telephone
+BYL11AE        29-30         Library staff may use telephone
+BYL11BA        31-32         Library has fax machine
+BYL11BB        33-34         Years library has had fax machine
+BYL11BC        35-36         Students may use fax machine
+BYL11BD        37-38         Faculty/staff may use fax machine
+BYL11BE        39-40         Library staff may use fax machine
+BYL11CA        41-42         Library has photocopier
+BYL11CB        43-44         Years library has had photocopier
+BYL11CC        45-46         Students may use photocopier
+BYL11CD        47-48         Faculty/staff may use photocopier
+BYL11CE        49-50         Library staff may use photocopier
+BYL11DA        51-52         Library has VCR
+BYL11DB        53-54         Years library has had VCR
+BYL11DC        55-56         Students may use VCR
+BYL11DD        57-58         Faculty/staff may use VCR
+BYL11DE        59-60         Library staff may use VCR
+BYL11EA        61-62         Library has laser disc player
+BYL11EB        63-64         Years library has had laser disc player
+BYL11EC        65-66         Students may use laser disc player
+BYL11ED        67-68         Faculty/staff may use laser disc player
+BYL11EE        69-70         Library staff may use laser disc player
+BYL11FA        71-72         Library has DVD player
+BYL11FB        1162-1163     Years library has had DVD player
+BYL11FC        1164-1165     Students may use DVD player
+BYL11FD        1166-1167     Faculty/staff may use DVD player
+BYL11FE        1168-1169     Library staff may use DVD player
+BYL11GA        1170-1171     Library has electronic book reader
+BYL11GB        1172-1173     Years library has had electronic book reader
+BYL11GC        1174-1175     Students may use electronic book reader
+BYL11GD        1176-1177     Faculty/staff may use electronic book reader
+BYL11GE        1178-1179     Library staff may use electronic book reader
+BYL11HA        1180-1181     Library has CD-ROM reader
+BYL11HB        1182-1183     Years library has had CD-ROM reader
+BYL11HC        1184-1185     Students may use CD-ROM reader
+BYL11HD        1186-1187     Faculty/staff may use CD-ROM reader
+BYL11HE        1188-1189     Library staff may use CD-ROM reader
+BYL11IA        1190-1191     Library has personal computer
+BYL11IB        1192-1193     Years library has had personal computer
+BYL11IC        1194-1195     Students may use personal computer
+BYL11ID        1196-1197     Faculty/staff may use personal computer
+BYL11IE        1198-1199     Library staff may use personal computer
+BYL11JA        1200-1201     Library has automated book circulation system
+BYL11JB        1202-1203     Years library has had automated book circulation system
+BYL11JC        1204-1205     Students may use automated book circulation system
+BYL11JD        1206-1207     Faculty/staff may use automated book circulation system
+BYL11JE        1208-1209     Library staff may use automated book circulation system
+BYL11KA        1210-1211     Library has Internet access
+BYL11KB        1212-1213     Years library has had Internet access
+BYL11KC        1214-1215     Students may use Internet access
+BYL11KD        1216-1217     Faculty/staff may use Internet access
+BYL11KE        1218-1219     Library staff may use Internet access
+BYL11LA        1220-1221     Library has cable TV
+BYL11LB        1222-1223     Years library has had cable TV
+BYL11LC        1224-1225     Students may use cable TV
+BYL11LD        1226-1227     Faculty/staff may use cable TV
+BYL11LE        1228-1229     Library staff may use cable TV
+BYL11MA        1230-1231     Library has closed-circuit TV
+BYL11MB        1232-1233     Years library has had closed-circuit TV
+BYL11MC        1234-1235     Students may use closed-circuit TV
+BYL11MD        1236-1237     Faculty/staff may use closed-circuit TV
+BYL11ME        1238-1239     Library staff may use closed-circuit TV
+BYL11NA        1240-1241     Library has video camera
+BYL11NB        1242-1243     Years library has had video camera
+BYL11NC        1244-1245     Students may use video camera
+BYL11ND        1246-1247     Faculty/staff may use video camera
+BYL11NE        1248-1249     Library staff may use video camera
+BYL11OA        1250-1251     Library has satellite TV hook-up
+BYL11OB        1252-1253     Years library has had satellite TV hookup
+BYL11OC        1254-1255     Students may use satellite TV hookup
+BYL11OD        1256-1257     Faculty/staff may use satellite TV hookup
+BYL11OE        1258-1259     Library staff may use satellite TV hookup
+BYL11PA        1260-1261     Library has audio equipment
+BYL11PB        1262-1263     Years library has had audio equipment
+BYL11PC        1264-1265     Students may use audio equipment
+BYL11PD        1266-1267     Faculty/staff may use audio equipment
+BYL11PE        1268-1269     Library staff may use audio equipment
+BYL11QA        1270-1271     Library has videoconference equipment
+BYL11QB        1272-1273     Years library had videoconference equipment
+BYL11QC        1274-1275     Students may use videoconference equipment
+BYL11QD        1276-1277     Faculty/staff may use videoconference equipment
+BYL11QE        1278-1279     Library staff may use videoconference equipment
+BYL11RA        1280-1281     Library has scanner
+BYL11RB        1282-1283     Years library had scanner
+BYL11RC        1284-1285     Students may use scanner
+BYL11RD        1286-1287     Faculty/staff may use scanner
+BYL11RE        1288-1289     Library staff may use scanner
+BYL11SA        1290-1291     Library has LCD panel/projection device
+BYL11SB        1292-1293     Years library had LCD panel/projection device
+BYL11SC        1294-1295     Students may use LCD panel/projection device
+BYL11SD        1296-1297     Faculty/staff may use LCD panel/projection device
+BYL11SE        1298-1299     Library staff may use LCD panel/projection device
+BYL11TA        1300-1301     Library has technology for disabled
+BYL11TB        1302-1303     Years library has had technology for disabled
+BYL11TC        1304-1305     Students may use technology for disabled
+BYL11TD        1306-1307     Faculty/staff may use technology for disabled
+BYL11TE        1308-1309     Library staff may use technology for disabled
+BYL12A         1310-1311     Online catalog available
+BYL12B         1312-1313     Other libraries' online catalogs available
+BYL12C         1314-1315     Internet access available
+BYL12D         1316-1317     E-mail/chat room access available
+BYL12E         1318-1319     Reference/bibliography databases available
+BYL12F         1320-1321     General articles/news databases available
+BYL12G         1322-1323     College/career databases available
+BYL12H         1324-1325     Academic subject databases available
+BYL12I         1326-1327     Electronic books/journals/references/magazines available
+BYL12J         1328-1329     Educational software available
+BYL13          1330-1331     Library has multimedia production facility
+BYL14A         1332-1333     Has interlibrary loan program with area high schools
+BYL14B         1334-1335     Has interlibrary loan program with high schools in state
+BYL14C         1336-1337     Has interlibrary loan program with public libraries
+BYL14D         1338-1339     Has interlibrary loan program with the state library
+BYL14E         1340-1341     Has interlibrary loan program with colleges/universities
+BYL14F         1342-1343     Has other interlibrary loan program
+BYL15          1344-1345     School participates in distance learning
+BYL16A         1346-1347     2001 holdings-books
+BYL16B         1348-1349     2001 holdings-video
+BYL16C         1350-1351     2001 holdings-periodical subscriptions
+BYL16D         1352-1353     2001 holdings-electronic database subscription
+BYL17          1354-1355     Library has professional collection for teachers
+BYL18          1356-1357     # of professional collection volumes bought 2000-2001 school year
+BYL19          1358-1359     Total spent on computer hardware 2000-2001 school year
+BYL20          1360-1361     When students may use library on own
+BYL21A         1362-1363     Students may use library on own before/after school
+BYL21B         1364-1365     Students may use library on own during lunch break
+BYL21C         1366-1367     Students may use library on own during set times
+BYL21D         1368-1369     Students may use library on own between class/recess
+BYL21E         1370-1371     Students may use library on own at other time
+BYL22A         1372-1373     How often library used for classes at same time
+BYL22B         1374-1375     How often library used for one class only
+BYL22C         1376-1377     How often library used for small groups
+BYL23          1378-1379     How often library used for non-library activities
+BYL24          1380-1381     How many students use library per week
+BYL25          1382-1385     Total circulation per week
+BYL26          1386-1387     Maximum # of books students may take out
+BYL27A         1388-1389     Students may take out reference material
+BYL27B         1390-1391     Students may take out periodicals
+BYL27C         1392-1393     Students may take out AV materials
+BYL27D         1394-1395     Students may take out AV equipment
+BYL27E         1396-1397     Students may take out computer software
+BYL27F         1398-1399     Students may take out computer hardware
+BYL27G         1400-1401     Students may take out none of these
+BYL28          1402-1403     Parents allowed to check out material
+BYL29          1404-1405     Worked in this library during 2000-2001 school year
+BYL30A         1406-1407     How often worked with English teachers
+BYL30B         1408-1409     How often worked with math teachers
+BYL31A         1410-1411     School-board has policy on use of Internet
+BYL31B         1412-1413     School-board has copyright policy
+BYL31C         1414-1415     School-board has materials selection policy
+BYL31D         1416-1417     School-board has none of these policies
+BYL32          1418-1419     School has library policy/procedure manual
+BYL34          1420-1421     Library questionnaire respondent's title
+BYL35          1422-1427     Date library questionnaire completed
+BYF01A         1428-1429     Trash on front hallway floors
+BYF01B         1430-1431     Overflowing trashcans in hallway
+BYF01C         1432-1433     Broken lights in hallway
+BYF01D         1434-1435     Graffiti on hallway walls/doors/ceiling
+BYF01E         1436-1437     Graffiti on lockers in hallway
+BYF01F         1438-1439     Visible fire/emergency alarms in hallway
+BYF01G         1440-1441     Chipped paint in hallway
+BYF01H         1442-1443     Hallway ceilings in disrepair
+BYF01I         1444-1445     Visible safety exit signs in hallway
+BYF01J         1446-1447     Hallway floor and walls appear clean
+BYF02          1448-1449     Noise level of main entrance during class
+BYF03A         1450-1451     Visitor check-in sign observed
+BYF03B         1452-1453     Sign stating 'no drugs' observed
+BYF03C         1454-1455     Sign stating 'no trespassing' observed
+BYF03D         1456-1457     Sign stating 'no weapons' observed
+BYF04A         1458-1459     Graffiti on bathroom walls and ceilings
+BYF04B         1460-1461     Graffiti on bathroom stall doors/walls
+BYF04C         1462-1463     Trash on bathroom floor
+BYF04D         1464-1465     Overflowing trashcans in bathroom
+BYF04E         1466-1467     Doors on all bathroom stalls
+BYF04F         1468-1469     Students loitering in bathroom during class
+BYF04G         1470-1471     Students smoking in bathroom during class
+BYF05A         1472-1473     Locks on inside of classroom door
+BYF05B         1474-1475     Classroom ceiling in disrepair
+BYF05C         1476-1477     Broken lights in classroom
+BYF05D         1478-1479     Graffiti on classroom walls/ceiling/doors
+BYF05E         1480-1481     Graffiti on classroom desks
+BYF05F         1482-1483     Trash on classroom floor
+BYF05G         1484-1485     Overflowing trashcan in classroom
+BYF05H         1486-1487     Classroom floor and walls appear clean
+BYF05I         1488-1489     Posters or material on classroom windows
+BYF05J         1490-1491     Bars on classroom windows
+BYF05K         1492-1493     Classroom windows broken
+BYF06A         1494-1495     Students wear ID badges
+BYF06B         1496-1497     Teachers wear ID badges
+BYF06C         1498-1499     Other personnel wear ID badges
+BYF06D         1500-1501     Visitors wear ID badges
+BYF07          1502-1503     School has parking lots
+BYF08A         1504-1505     # entrances/exits to parking lots
+BYF08B         1506-1507     # entrances/exits monitored by video
+BYF08C         1508-1509     # entrances/exits monitored by guard
+BYF08D         1510-1511     # entrances/exits locked during day
+BYF09A         1512-1513     How much litter/trash in area around school
+BYF09B         1514-1515     How much graffiti in area around school
+BYF09C         1516-1517     How many boarded up buildings in area around school
+BYF09D         1518-1519     How many people congregated in area around school
+BYF09E         1520-1521     How many students loitering in area around school
+BYF10A         1522-1523     Observed security guard
+BYF10B         1524-1525     Observed metal detectors
+BYF10C         1526-1527     Observed security cameras
+BYF10D         1528-1529     Observed fencing around entire school
+BYF10E         1530-1531     Observed sign-in policies
+BYF10F         1532-1533     Observed adult direct guests to sign-in
+BYF10G         1534-1535     Observed fire alarms
+BYF10H         1536-1537     Observed fire extinguishers
+BYF10I         1538-1539     Observed fire sprinklers
+BYF10J         1540-1541     Observed exterior lights
+BYF10K         1542-1543     Observed student lockers
+BYF10L         1544-1545     Observed student uniforms
+BYF10M         1546-1547     Observed signs-alarm if door opened
+
+/* Variable Value Labels */
+BY10FLP
+   1 = "0-5 percent"
+   2 = "6-10 percent"
+   3 = "11-20 percent"
+   4 = "21-30 percent"
+   5 = "31-50 percent"
+   6 = "51-75 percent"
+   7 = "76-100 percent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA04
+   1 = "Differentiated courses/open with prereqs"
+   2 = "Differentiated courses and grouping"
+   3 = "Undifferentiated/open with prerequisites"
+   4 = "Other"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA05
+   1 = "High level of crime"
+   2 = "Moderate level of crime"
+   3 = "Low level of crime"
+   4 = "Mixed levels of crime"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA06
+   1 = "Semester system"
+   2 = "Trimester system"
+   3 = "Quarter system"
+   4 = "Other"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA07
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA08
+   3 = "3 periods"
+   4 = "4 periods"
+   5 = "5 periods"
+   6 = "6 periods"
+   7 = "7 periods"
+   8 = "8 periods"
+   9 = "9 periods"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA09
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA10
+   2 = "2 classes"
+   3 = "3 classes"
+   4 = "4 classes"
+   5 = "5 classes"
+   6 = "6 classes"
+   7 = "7 classes"
+   8 = "8 classes"
+   9 = "9 classes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA11
+   1 = "Yes"
+   2 = "No, all-female school"
+   3 = "No, all-male school"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA12A
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA12B
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -5 = "Out of range"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA12C
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA12D
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA12E
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA12F
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA12G
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA12H
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA12I
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA13
+   1 = "Not notified"
+   2 = "Sometime that morning"
+   3 = "Sometime that day"
+   4 = "After a day or two"
+   5 = "Within first week"
+   6 = "At end of term/semester"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA14A
+   -4 = "Nonrespondent"
+   -5 = "Out of range"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA14B
+   -4 = "Nonrespondent"
+   -5 = "Out of range"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA14C
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA14D
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA14E
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA14F
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA14G
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA14H
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA14I
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA14J
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA14K
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA15A
+   1 = "No, students do not do this"
+   2 = "Yes, some students do this"
+   3 = "Yes, all students do this"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA15B
+   1 = "No, students do not do this"
+   2 = "Yes, some students do this"
+   3 = "Yes, all students do this"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA15C
+   1 = "No, students do not do this"
+   2 = "Yes, some students do this"
+   3 = "Yes, all students do this"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA16
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA17A
+   1 = "Offered on site"
+   2 = "Offered at area vocational school"
+   3 = "Not offered"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA17B
+   1 = "Offered on site"
+   2 = "Offered at area vocational school"
+   3 = "Not offered"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA17C
+   1 = "Offered on site"
+   2 = "Offered at area vocational school"
+   3 = "Not offered"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA17D
+   1 = "Offered on site"
+   2 = "Offered at area vocational school"
+   3 = "Not offered"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA17E
+   1 = "Offered on site"
+   2 = "Offered at area vocational school"
+   3 = "Not offered"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA17F
+   1 = "Offered on site"
+   2 = "Offered at area vocational school"
+   3 = "Not offered"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA17G
+   1 = "Offered on site"
+   2 = "Offered at area vocational school"
+   3 = "Not offered"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA17H
+   1 = "Offered on site"
+   2 = "Offered at area vocational school"
+   3 = "Not offered"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA17I
+   1 = "Offered on site"
+   2 = "Offered at area vocational school"
+   3 = "Not offered"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA17J
+   1 = "Offered on site"
+   2 = "Offered at area vocational school"
+   3 = "Not offered"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA17K
+   1 = "Offered on site"
+   2 = "Offered at area vocational school"
+   3 = "Not offered"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA17L
+   1 = "Offered on site"
+   2 = "Offered at area vocational school"
+   3 = "Not offered"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA17M
+   1 = "Offered on site"
+   2 = "Offered at area vocational school"
+   3 = "Not offered"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA17N
+   1 = "Offered on site"
+   2 = "Offered at area vocational school"
+   3 = "Not offered"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA17O
+   1 = "Offered on site"
+   2 = "Offered at area vocational school"
+   3 = "Not offered"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA17P
+   1 = "Offered on site"
+   2 = "Offered at area vocational school"
+   3 = "Not offered"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA17Q
+   1 = "Offered on site"
+   2 = "Offered at area vocational school"
+   3 = "Not offered"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA17R
+   1 = "Offered on site"
+   2 = "Offered at area vocational school"
+   3 = "Not offered"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA18A
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA18B
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA18C
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA18D
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA18E
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA18F
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19AA
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19AB
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19BA
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19BB
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19CA
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19CB
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19DA
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19DB
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19EA
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19EB
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19FA
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19FB
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19GA
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19GB
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19HA
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19HB
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19IA
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19IB
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19JA
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19JB
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19KA
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19KB
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19LA
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19LB
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19MA
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19MB
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19NA
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19NB
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19OA
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19OB
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19PA
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19PB
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19QA
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19QB
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19RA
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19RB
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19SA
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19SB
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19TA
+   0 = "Sports offered to males"
+   1 = "Sports not offered to males"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA19TB
+   0 = "Sports offered to females"
+   1 = "Sports not offered to females"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA20
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA22B
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA23A
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA23B
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA23C
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA23D
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA23E
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA23F
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA23G
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA23H
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA23I
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA23J
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA23K
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA23L
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA24A
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA24B
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA25A
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA25B
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA26A
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA26B
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA27A
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA27B
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA27C
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA28A
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA28B
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA28C
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA28D
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA28E
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA28F
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA28G
+   0 = "Recognized"
+   1 = "Not recognized"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA29
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA30
+   1 = "State"
+   2 = "District or Diocese"
+   3 = "Department head"
+   4 = "Principal"
+   5 = "Teachers"
+   6 = "Other"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA31
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA32
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33AA
+   1 = "School does not have 7th grade"
+   2 = "No"
+   3 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33AB
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33AC
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33AD
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33AE
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33BA
+   1 = "School does not have 8th grade"
+   2 = "No"
+   3 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33BB
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33BC
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33BD
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33BE
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33CA
+   1 = "School does not have 9th grade"
+   2 = "No"
+   3 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33CB
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33CC
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33CD
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33CE
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33DA
+   2 = "No"
+   3 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33DB
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33DC
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33DD
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33DE
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33EA
+   1 = "School does not have 11th grade"
+   2 = "No"
+   3 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33EB
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33EC
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33ED
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33EE
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33FA
+   1 = "School does not have 12th grade"
+   2 = "No"
+   3 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33FB
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33FC
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33FD
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA33FE
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA34A
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA34B
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA34C
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA35
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA36
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA37A
+   1 = "Option not available"
+   2 = "Option available, but not required"
+   3 = "Required"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA37B
+   1 = "Option not available"
+   2 = "Option available, but not required"
+   3 = "Required"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA37C
+   1 = "Option not available"
+   2 = "Option available, but not required"
+   3 = "Required"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA37D
+   1 = "Option not available"
+   2 = "Option available, but not required"
+   3 = "Required"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA37E
+   1 = "Option not available"
+   2 = "Option available, but not required"
+   3 = "Required"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA37F
+   1 = "Option not available"
+   2 = "Option available, but not required"
+   3 = "Required"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA38A
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA38B
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA38C
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA38D
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA38E
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA38F
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA38G
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA38H
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA38I
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA38J
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA38K
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA38L
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA38M
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA38N
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA38O
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA38P
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA39A
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA39B
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA39C
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA40A
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA40B
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA40C
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA40D
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA40E
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA41A
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA41B
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA41C
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA41D
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA41E
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA41F
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA41G
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA41H
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA41I
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA41J
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA41K
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA41L
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA41M
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA42A
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA42B
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA42C
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA42D
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA42E
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA42F
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA42G
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA42H
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA42I
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA42J
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA42K
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA42L
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA42M
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA42N
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA43A
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA43B
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA43C
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA43D
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA43E
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA44A
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+BYA44B
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+BYA44C
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+BYA44D
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+BYA44E
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+BYA46A
+   1 = "No influence"
+   2 = "Some influence"
+   3 = "Major influence"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA46B
+   1 = "No influence"
+   2 = "Some influence"
+   3 = "Major influence"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA46C
+   1 = "No influence"
+   2 = "Some influence"
+   3 = "Major influence"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA46D
+   1 = "No influence"
+   2 = "Some influence"
+   3 = "Major influence"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA46E
+   1 = "No influence"
+   2 = "Some influence"
+   3 = "Major influence"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA46F
+   1 = "No influence"
+   2 = "Some influence"
+   3 = "Major influence"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA46G
+   1 = "No influence"
+   2 = "Some influence"
+   3 = "Major influence"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA46H
+   1 = "No influence"
+   2 = "Some influence"
+   3 = "Major influence"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA47A
+   1 = "Very cooperative"
+   2 = "Cooperative"
+   3 = "Somewhat cooperative"
+   4 = "Not cooperative"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA47B
+   1 = "Very cooperative"
+   2 = "Cooperative"
+   3 = "Somewhat cooperative"
+   4 = "Not cooperative"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA47C
+   1 = "Very cooperative"
+   2 = "Cooperative"
+   3 = "Somewhat cooperative"
+   4 = "Not cooperative"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA48A
+   1 = "No influence on evaluation"
+   2 = "Minor influence on evaluation"
+   3 = "Great deal of influence on evaluation"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA48B
+   2 = "Minor influence on evaluation"
+   3 = "Great deal of influence on evaluation"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA48C
+   1 = "No influence on evaluation"
+   2 = "Minor influence on evaluation"
+   3 = "Great deal of influence on evaluation"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA48D
+   1 = "No influence on evaluation"
+   2 = "Minor influence on evaluation"
+   3 = "Great deal of influence on evaluation"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA48E
+   1 = "No influence on evaluation"
+   2 = "Minor influence on evaluation"
+   3 = "Great deal of influence on evaluation"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA48F
+   1 = "No influence on evaluation"
+   2 = "Minor influence on evaluation"
+   3 = "Great deal of influence on evaluation"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA49A
+   1 = "Happens daily"
+   2 = "Happens at least once a week"
+   3 = "Happens at least once a month"
+   4 = "Happens on occasion"
+   5 = "Never happens"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA49B
+   1 = "Happens daily"
+   2 = "Happens at least once a week"
+   3 = "Happens at least once a month"
+   4 = "Happens on occasion"
+   5 = "Never happens"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA49C
+   1 = "Happens daily"
+   2 = "Happens at least once a week"
+   3 = "Happens at least once a month"
+   4 = "Happens on occasion"
+   5 = "Never happens"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA49D
+   1 = "Happens daily"
+   2 = "Happens at least once a week"
+   3 = "Happens at least once a month"
+   4 = "Happens on occasion"
+   5 = "Never happens"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA49E
+   1 = "Happens daily"
+   2 = "Happens at least once a week"
+   3 = "Happens at least once a month"
+   4 = "Happens on occasion"
+   5 = "Never happens"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA49F
+   1 = "Happens daily"
+   2 = "Happens at least once a week"
+   3 = "Happens at least once a month"
+   4 = "Happens on occasion"
+   5 = "Never happens"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA49G
+   1 = "Happens daily"
+   2 = "Happens at least once a week"
+   3 = "Happens at least once a month"
+   4 = "Happens on occasion"
+   5 = "Never happens"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA49H
+   1 = "Happens daily"
+   2 = "Happens at least once a week"
+   3 = "Happens at least once a month"
+   4 = "Happens on occasion"
+   5 = "Never happens"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA49I
+   1 = "Happens daily"
+   2 = "Happens at least once a week"
+   3 = "Happens at least once a month"
+   4 = "Happens on occasion"
+   5 = "Never happens"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA49J
+   1 = "Happens daily"
+   2 = "Happens at least once a week"
+   3 = "Happens at least once a month"
+   4 = "Happens on occasion"
+   5 = "Never happens"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA49K
+   1 = "Happens daily"
+   2 = "Happens at least once a week"
+   3 = "Happens at least once a month"
+   4 = "Happens on occasion"
+   5 = "Never happens"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA49L
+   2 = "Happens at least once a week"
+   3 = "Happens at least once a month"
+   4 = "Happens on occasion"
+   5 = "Never happens"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA49M
+   1 = "Happens daily"
+   2 = "Happens at least once a week"
+   3 = "Happens at least once a month"
+   4 = "Happens on occasion"
+   5 = "Never happens"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA49N
+   1 = "Happens daily"
+   2 = "Happens at least once a week"
+   3 = "Happens at least once a month"
+   4 = "Happens on occasion"
+   5 = "Never happens"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA49O
+   1 = "Happens daily"
+   2 = "Happens at least once a week"
+   3 = "Happens at least once a month"
+   4 = "Happens on occasion"
+   5 = "Never happens"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA49P
+   1 = "Happens daily"
+   2 = "Happens at least once a week"
+   3 = "Happens at least once a month"
+   4 = "Happens on occasion"
+   5 = "Never happens"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA49Q
+   1 = "Happens daily"
+   2 = "Happens at least once a week"
+   3 = "Happens at least once a month"
+   4 = "Happens on occasion"
+   5 = "Never happens"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA49R
+   1 = "Happens daily"
+   2 = "Happens at least once a week"
+   3 = "Happens at least once a month"
+   4 = "Happens on occasion"
+   5 = "Never happens"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA49S
+   2 = "Happens at least once a week"
+   3 = "Happens at least once a month"
+   4 = "Happens on occasion"
+   5 = "Never happens"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA50A
+   1 = "Not at all"
+   2 = "Very little"
+   3 = "To some extent"
+   4 = "A lot"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA50B
+   1 = "Not at all"
+   2 = "Very little"
+   3 = "To some extent"
+   4 = "A lot"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA50C
+   1 = "Not at all"
+   2 = "Very little"
+   3 = "To some extent"
+   4 = "A lot"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA50D
+   1 = "Not at all"
+   2 = "Very little"
+   3 = "To some extent"
+   4 = "A lot"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA50E
+   1 = "Not at all"
+   2 = "Very little"
+   3 = "To some extent"
+   4 = "A lot"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA50F
+   1 = "Not at all"
+   2 = "Very little"
+   3 = "To some extent"
+   4 = "A lot"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA50G
+   1 = "Not at all"
+   2 = "Very little"
+   3 = "To some extent"
+   4 = "A lot"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA50H
+   1 = "Not at all"
+   2 = "Very little"
+   3 = "To some extent"
+   4 = "A lot"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA50I
+   1 = "Not at all"
+   2 = "Very little"
+   3 = "To some extent"
+   4 = "A lot"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA50J
+   1 = "Not at all"
+   2 = "Very little"
+   3 = "To some extent"
+   4 = "A lot"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA50K
+   1 = "Not at all"
+   2 = "Very little"
+   3 = "To some extent"
+   4 = "A lot"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA51A
+   2 = "Between not at all and somewhat accurate"
+   3 = "Somewhat accurate"
+   4 = "Between somewhat and very accurate"
+   5 = "Very accurate"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA51B
+   1 = "Not accurate at all"
+   2 = "Between not at all and somewhat accurate"
+   3 = "Somewhat accurate"
+   4 = "Between somewhat and very accurate"
+   5 = "Very accurate"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA51C
+   1 = "Not accurate at all"
+   2 = "Between not at all and somewhat accurate"
+   3 = "Somewhat accurate"
+   4 = "Between somewhat and very accurate"
+   5 = "Very accurate"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA51D
+   1 = "Not accurate at all"
+   2 = "Between not at all and somewhat accurate"
+   3 = "Somewhat accurate"
+   4 = "Between somewhat and very accurate"
+   5 = "Very accurate"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA51E
+   1 = "Not accurate at all"
+   2 = "Between not at all and somewhat accurate"
+   3 = "Somewhat accurate"
+   4 = "Between somewhat and very accurate"
+   5 = "Very accurate"
+   -4 = "Nonrespondent"
+   -7 = "Partial interview-breakoff"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYA53
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+BYADMSTA
+   0 = "Not completed"
+   1 = "Completed full instrument"
+   2 = "Completed abbreviated instrument"
+   -8 = "Survey component legitimate skip/NA"
+BYF01A
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF01B
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF01C
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF01D
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF01E
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF01F
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF01G
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF01H
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF01I
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF01J
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF02
+   1 = "Whisper"
+   2 = "Normal conversation"
+   3 = "Yelling"
+   4 = "Busy street"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF03A
+   1 = "Yes, observed inside"
+   2 = "Yes, observed outside"
+   3 = "Yes, observed both inside and outside"
+   4 = "No, did not observe"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF03B
+   1 = "Yes, observed inside"
+   2 = "Yes, observed outside"
+   3 = "Yes, observed both inside and outside"
+   4 = "No, did not observe"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF03C
+   1 = "Yes, observed inside"
+   2 = "Yes, observed outside"
+   3 = "Yes, observed both inside and outside"
+   4 = "No, did not observe"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF03D
+   1 = "Yes, observed inside"
+   2 = "Yes, observed outside"
+   3 = "Yes, observed both inside and outside"
+   4 = "No, did not observe"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF04A
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF04B
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF04C
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF04D
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF04E
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF04F
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF04G
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF05A
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF05B
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF05C
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF05D
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF05E
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF05F
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF05G
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF05H
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF05I
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF05J
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF05K
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF06A
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF06B
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF06C
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF06D
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF07
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF08A
+   0 = "0 entrances/exits"
+   1 = "1 entrance/exit"
+   2 = "2 entrances/exits"
+   3 = "3 entrances/exits"
+   4 = "4 entrances/exits"
+   5 = "5 entrances/exits"
+   6 = "6 entrances/exits"
+   7 = "7 entrances/exits"
+   8 = "8 entrances/exits"
+   9 = "9 entrances/exits"
+   10 = "10 or more entrances/exits"
+   -3 = "Item legitimate skip/NA"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF08B
+   0 = "0 entrances/exits"
+   1 = "1 entrance/exit"
+   2 = "2 entrances/exits"
+   3 = "3 entrances/exits"
+   4 = "4 entrances/exits"
+   5 = "5 entrances/exits"
+   6 = "6 entrances/exits"
+   7 = "7 entrances/exits"
+   8 = "8 entrances/exits"
+   10 = "10 or more entrances/exits"
+   -3 = "Item legitimate skip/NA"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF08C
+   0 = "0 entrances/exits"
+   1 = "1 entrance/exit"
+   2 = "2 entrances/exits"
+   3 = "3 entrances/exits"
+   4 = "4 entrances/exits"
+   5 = "5 entrances/exits"
+   6 = "6 entrances/exits"
+   8 = "8 entrances/exits"
+   10 = "10 or more entrances/exits"
+   -3 = "Item legitimate skip/NA"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF08D
+   0 = "0 entrances/exits"
+   1 = "1 entrance/exit"
+   2 = "2 entrances/exits"
+   3 = "3 entrances/exits"
+   4 = "4 entrances/exits"
+   5 = "5 entrances/exits"
+   6 = "6 entrances/exits"
+   7 = "7 entrances/exits"
+   10 = "10 or more entrances/exits"
+   -3 = "Item legitimate skip/NA"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF09A
+   1 = "None"
+   2 = "A little"
+   3 = "Some"
+   4 = "A lot"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF09B
+   1 = "None"
+   2 = "A little"
+   3 = "Some"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF09C
+   1 = "None"
+   2 = "A little"
+   3 = "Some"
+   4 = "A lot"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF09D
+   1 = "None"
+   2 = "A little"
+   3 = "Some"
+   4 = "A lot"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF09E
+   1 = "None"
+   2 = "A little"
+   3 = "Some"
+   4 = "A lot"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF10A
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF10B
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF10C
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF10D
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF10E
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF10F
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF10G
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF10H
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF10I
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF10J
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF10K
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF10L
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYF10M
+   0 = "No"
+   1 = "Yes"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYFTTP
+   1 = "0-10 teachers"
+   2 = "11-20 teachers"
+   3 = "21-30 teachers"
+   4 = "31-45 teachers"
+   5 = "46-60 teachers"
+   6 = "More than 60 teachers"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYG10EP
+   1 = "1-99 students"
+   2 = "100-199 students"
+   3 = "200-299 students"
+   4 = "300-399 students"
+   5 = "400-549 students"
+   6 = "550-699 students"
+   7 = "700 or more students"
+   -8 = "Survey component legitimate skip/NA"
+BYL01
+   1 = "Centralized in one area"
+   2 = "Decentralized"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL02
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL03A
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL03B
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL03C
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL03D
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL03E
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL03F
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL04
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL05
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL06AA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL06AB
+   0 = "0 librarians"
+   1 = "1 librarian"
+   2 = "2 librarians"
+   3 = "3 librarians"
+   4 = "4 librarians"
+   5 = "5 or more librarians"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL06AC
+   0 = "0 librarians"
+   1 = "1 librarian"
+   2 = "2 librarians"
+   3 = "3 librarians"
+   4 = "4 librarians"
+   5 = "5 or more librarians"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL06BA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL06BB
+   0 = "0 teachers"
+   1 = "1 teacher"
+   2 = "2 teachers"
+   3 = "3 teachers"
+   4 = "4 teachers"
+   5 = "5 teachers"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL06BC
+   0 = "0 teachers"
+   1 = "1 teacher"
+   2 = "2 teachers"
+   3 = "3 teachers"
+   5 = "5 teachers"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL06CA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL06CB
+   0 = "0 professionals"
+   1 = "1 professional"
+   2 = "2 professionals"
+   3 = "3 professionals"
+   4 = "4 professionals"
+   5 = "5 or more professionals"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL06CC
+   0 = "0 professionals"
+   1 = "1 professional"
+   2 = "2 professionals"
+   3 = "3 professionals"
+   5 = "5 or more professionals"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL06DA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL06DB
+   0 = "0 aides"
+   1 = "1 aide"
+   2 = "2 aides"
+   3 = "3 aides"
+   4 = "4 aides"
+   5 = "5 or more aides"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL06DC
+   0 = "0 aides"
+   1 = "1 aide"
+   2 = "2 aides"
+   3 = "3 aides"
+   4 = "4 aides"
+   5 = "5 or more aides"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL07
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL08A
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL08B
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL09
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL10
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11AA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11AB
+   1 = "1 year or less"
+   2 = "2 years"
+   3 = "3 years or more"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11AC
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11AD
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11AE
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11BA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11BB
+   1 = "1 year or less"
+   2 = "2 years"
+   3 = "3 years or more"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11BC
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11BD
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11BE
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11CA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11CB
+   1 = "1 year or less"
+   2 = "2 years"
+   3 = "3 years or more"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11CC
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11CD
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11CE
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11DA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11DB
+   1 = "1 year or less"
+   2 = "2 years"
+   3 = "3 years or more"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11DC
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11DD
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11DE
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11EA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11EB
+   1 = "1 year or less"
+   2 = "2 years"
+   3 = "3 years or more"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11EC
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11ED
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11EE
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11FA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11FB
+   1 = "1 year or less"
+   2 = "2 years"
+   3 = "3 years or more"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11FC
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11FD
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11FE
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11GA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11GB
+   1 = "1 year or less"
+   2 = "2 years"
+   3 = "3 years or more"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11GC
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11GD
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11GE
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11HA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11HB
+   1 = "1 year or less"
+   2 = "2 years"
+   3 = "3 years or more"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11HC
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11HD
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11HE
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11IA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11IB
+   1 = "1 year or less"
+   2 = "2 years"
+   3 = "3 years or more"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11IC
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11ID
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11IE
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11JA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11JB
+   1 = "1 year or less"
+   2 = "2 years"
+   3 = "3 years or more"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11JC
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11JD
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11JE
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11KA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11KB
+   1 = "1 year or less"
+   2 = "2 years"
+   3 = "3 years or more"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11KC
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11KD
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11KE
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11LA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11LB
+   1 = "1 year or less"
+   2 = "2 years"
+   3 = "3 years or more"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11LC
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11LD
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11LE
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11MA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11MB
+   1 = "1 year or less"
+   2 = "2 years"
+   3 = "3 years or more"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11MC
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11MD
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11ME
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11NA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11NB
+   1 = "1 year or less"
+   2 = "2 years"
+   3 = "3 years or more"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11NC
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11ND
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11NE
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11OA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11OB
+   1 = "1 year or less"
+   2 = "2 years"
+   3 = "3 years or more"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11OC
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11OD
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11OE
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11PA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11PB
+   2 = "2 years"
+   3 = "3 years or more"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11PC
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11PD
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11PE
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11QA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11QB
+   1 = "1 year or less"
+   2 = "2 years"
+   3 = "3 years or more"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11QC
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11QD
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11QE
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11RA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11RB
+   1 = "1 year or less"
+   2 = "2 years"
+   3 = "3 years or more"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11RC
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11RD
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11RE
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11SA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11SB
+   1 = "1 year or less"
+   2 = "2 years"
+   3 = "3 years or more"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11SC
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11SD
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11SE
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11TA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11TB
+   1 = "1 year or less"
+   2 = "2 years"
+   3 = "3 years or more"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11TC
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11TD
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL11TE
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL12A
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL12B
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL12C
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL12D
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL12E
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL12F
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL12G
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL12H
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL12I
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL12J
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL13
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL14A
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL14B
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL14C
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL14D
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL14E
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL14F
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL15
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL16A
+   1 = "Fewer than 8,000"
+   2 = "8,000-15,999"
+   3 = "16,000-23,999"
+   4 = "24,000 or more"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL16B
+   1 = "Fewer than 250"
+   2 = "250-999"
+   3 = "1,000-1749"
+   4 = "1750 or more"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL16C
+   1 = "Fewer than 25"
+   2 = "25-49"
+   3 = "50-74"
+   4 = "75 or more"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL16D
+   1 = "None"
+   2 = "1-3"
+   3 = "4-6"
+   4 = "7 or more"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL17
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL18
+   1 = "0-9"
+   2 = "10-19"
+   3 = "20-29"
+   4 = "30 or more"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL19
+   1 = "None"
+   2 = "$1-$2,499"
+   3 = "$2,500-$4,999"
+   4 = "$5,000-$9,999"
+   5 = "$10,000 or more"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL20
+   1 = "During scheduled periods/set times"
+   2 = "Anytime"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL21A
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL21B
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL21C
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL21D
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL21E
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL22A
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL22B
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL22C
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL23
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL24
+   1 = "Fewer than 100"
+   2 = "100-249"
+   3 = "250-499"
+   4 = "500-999"
+   5 = "1000 or more"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL25
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL26
+   1 = "0 books"
+   2 = "1-2 books"
+   3 = "3-5 books"
+   4 = "6 or more books"
+   5 = "Varies by grade level"
+   6 = "No maximum"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL27A
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL27B
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL27C
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL27D
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL27E
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL27F
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL27G
+   0 = "May take out some/all of these"
+   1 = "May take out none of these"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL28
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL29
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL30A
+   1 = "Never"
+   2 = "Once during the year"
+   3 = "Once or twice a semester/term"
+   4 = "Monthly"
+   5 = "Weekly"
+   6 = "More than once a week"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL30B
+   1 = "Never"
+   2 = "Once during the year"
+   3 = "Once or twice a semester/term"
+   4 = "Monthly"
+   5 = "Weekly"
+   6 = "More than once a week"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL31A
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL31B
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL31C
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL31D
+   0 = "Has some/all of these policies"
+   1 = "Has none of these policies"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL32
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL34
+   1 = "Certified librarian/media specialist"
+   2 = "Principal or other school administrator"
+   3 = "Other"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYL35
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+BYREGION
+   1 = "Northeast"
+   2 = "Midwest"
+   3 = "South"
+   4 = "West"
+   -9 = "Missing"
+BYSCENP
+   1 = "1-399 students"
+   2 = "400-599 students"
+   3 = "600-799 students"
+   4 = "800-999 students"
+   5 = "1,000-1,199 students"
+   6 = "1,200-1,599 students"
+   7 = "1,600-1,999 students"
+   8 = "2,000-2,499 students"
+   9 = "2,500 or more students"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYSCHWT
+   0 = "Zero"
+BYSCMDFG
+   0 = "Not completed"
+   1 = "Completed"
+   -8 = "Survey component legitimate skip/NA"
+BYSCTRL
+   1 = "Public"
+   2 = "Catholic"
+   3 = "Other private"
+   -9 = "Missing"
+BYSPANP
+   1 = "PK,K,1,2,3,4, or 5 through 12 or higher"
+   2 = "6, 7, or 8 through 12 or higher"
+   3 = "9 through 10, 11, 12 or higher"
+   4 = "10 through 11, 12 or higher"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+BYURBAN
+   1 = "Urban"
+   2 = "Suburban"
+   3 = "Rural"
+   -9 = "Missing"
+F1A02
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A03
+   1 = "Semester system"
+   2 = "Trimester system"
+   3 = "Quarter system"
+   4 = "Block schedule"
+   5 = "Other"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A04AA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A04AB
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A04BA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A04BB
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A04CA
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A04CB
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A05A
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A05B
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A05C
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A05D
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A05E
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A05F
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A06A
+   1 = "None"
+   2 = "A little"
+   3 = "Moderate"
+   4 = "A lot"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A06B
+   1 = "None"
+   2 = "A little"
+   3 = "Moderate"
+   4 = "A lot"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A06C
+   1 = "None"
+   2 = "A little"
+   3 = "Moderate"
+   4 = "A lot"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A06D
+   1 = "None"
+   2 = "A little"
+   3 = "Moderate"
+   4 = "A lot"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A06E
+   1 = "None"
+   2 = "A little"
+   3 = "Moderate"
+   4 = "A lot"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A06F
+   1 = "None"
+   2 = "A little"
+   3 = "Moderate"
+   4 = "A lot"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A06G
+   1 = "None"
+   2 = "A little"
+   3 = "Moderate"
+   4 = "A lot"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A06H
+   1 = "None"
+   2 = "A little"
+   3 = "Moderate"
+   4 = "A lot"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A06I
+   1 = "None"
+   2 = "A little"
+   3 = "Moderate"
+   4 = "A lot"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A06J
+   1 = "None"
+   2 = "A little"
+   3 = "Moderate"
+   4 = "A lot"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A06K
+   1 = "None"
+   2 = "A little"
+   3 = "Moderate"
+   4 = "A lot"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A07A
+   6 = "At least 3 years but less than 4"
+   7 = "4 years"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A07B
+   4 = "At least 1 year but less than 2"
+   5 = "At least 2 years but less than 3"
+   6 = "At least 3 years but less than 4"
+   7 = "4 years"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A07C
+   4 = "At least 1 year but less than 2"
+   5 = "At least 2 years but less than 3"
+   6 = "At least 3 years but less than 4"
+   7 = "4 years"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A07D
+   4 = "Less than 2 years"
+   5 = "At least 2 years but less than 3"
+   6 = "At least 3 years but less than 4"
+   7 = "4 years"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A07E
+   1 = "Course not offered"
+   2 = "None"
+   3 = "Less than 1 year"
+   4 = "At least 1 year but less than 2"
+   5 = "At least 2 years but less than 3"
+   6 = "At least 3 years"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A07F
+   1 = "Course not offered"
+   2 = "None"
+   3 = "Less than 1 year"
+   4 = "At least 1 year but less than 2"
+   5 = "At least 2 years but less than 3"
+   6 = "At least 3 years but less than 4"
+   7 = "4 years"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A07G
+   1 = "Course not offered"
+   2 = "None"
+   3 = "Less than 1 year"
+   4 = "At least 1 year but less than 2"
+   5 = "At least 2 years but less than 3"
+   6 = "At least 3 years but less than 4"
+   7 = "4 years"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A07H
+   1 = "Course not offered"
+   2 = "None"
+   3 = "Less than 1 year"
+   4 = "At least 1 year but less than 2"
+   5 = "At least 2 years but less than 3"
+   6 = "At least 3 years but less than 4"
+   7 = "4 years"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A08A
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A08B
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A08C
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A08D
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A08E
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A08F
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A09
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A10
+   1 = "At this school only"
+   2 = "At an area/regional voc/tech school only"
+   3 = "At this school and area/regional school"
+   4 = "Not available"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A11A
+   1 = "Never used"
+   2 = "Sometimes used"
+   3 = "Often used"
+   4 = "Always used"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A11B
+   1 = "Never used"
+   2 = "Sometimes used"
+   3 = "Often used"
+   4 = "Always used"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A11C
+   1 = "Never used"
+   2 = "Sometimes used"
+   3 = "Often used"
+   4 = "Always used"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A11D
+   1 = "Never used"
+   2 = "Sometimes used"
+   3 = "Often used"
+   4 = "Always used"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A11E
+   1 = "Never used"
+   2 = "Sometimes used"
+   3 = "Often used"
+   4 = "Always used"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A11F
+   1 = "Never used"
+   2 = "Sometimes used"
+   3 = "Often used"
+   4 = "Always used"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A11G
+   1 = "Never used"
+   2 = "Sometimes used"
+   3 = "Often used"
+   4 = "Always used"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A11H
+   1 = "Never used"
+   2 = "Sometimes used"
+   3 = "Often used"
+   4 = "Always used"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A11I
+   1 = "Never used"
+   2 = "Sometimes used"
+   3 = "Often used"
+   4 = "Always used"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A12A
+   1 = "Yes"
+   2 = "No"
+   3 = "No voc/tech completer definition used"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A12B
+   1 = "Yes"
+   2 = "No"
+   3 = "No voc/tech completer definition used"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A12C
+   1 = "Yes"
+   2 = "No"
+   3 = "No voc/tech completer definition used"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A12D
+   1 = "Yes"
+   2 = "No"
+   3 = "No voc/tech completer definition used"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A13A
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A13B
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A13C
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A13D
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A13E
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A13F
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A14
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A15A
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A15B
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A15C
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A15D
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A15E
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A15F
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A16
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A17A
+   1 = "Option is not available"
+   2 = "Option is available but not required"
+   3 = "Required upon failure"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A17B
+   1 = "Option is not available"
+   2 = "Option is available but not required"
+   3 = "Required upon failure"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A17C
+   1 = "Option is not available"
+   2 = "Option is available but not required"
+   3 = "Required upon failure"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A17D
+   1 = "Option is not available"
+   2 = "Option is available but not required"
+   3 = "Required upon failure"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A17E
+   1 = "Option is not available"
+   2 = "Option is available but not required"
+   3 = "Required upon failure"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A17F
+   1 = "Option is not available"
+   2 = "Option available/required upon failure"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A18A
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A18B
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A18C
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A19A
+   1 = "None"
+   2 = "1-10 percent"
+   3 = "11-24 percent"
+   4 = "25-49 percent"
+   5 = "50-74 percent"
+   6 = "75-100 percent"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A19B
+   1 = "None"
+   2 = "1-10 percent"
+   3 = "11-24 percent"
+   4 = "25-49 percent"
+   5 = "50-74 percent"
+   6 = "75-100 percent"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A19C
+   1 = "None"
+   2 = "1-10 percent"
+   3 = "11-24 percent"
+   4 = "25-49 percent"
+   5 = "50-74 percent"
+   6 = "75-100 percent"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A19D
+   1 = "None"
+   2 = "1-10 percent"
+   3 = "11-24 percent"
+   4 = "25-49 percent"
+   5 = "50-100 percent"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A20A
+   1 = "None"
+   2 = "1-10 percent"
+   3 = "11-24 percent"
+   4 = "25-49 percent"
+   5 = "50-74 percent"
+   6 = "75-100 percent"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A20B
+   1 = "None"
+   2 = "1-10 percent"
+   3 = "11-24 percent"
+   4 = "25-49 percent"
+   5 = "50-74 percent"
+   6 = "75-100 percent"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A20C
+   1 = "None"
+   2 = "1-10 percent"
+   3 = "11-24 percent"
+   4 = "25-49 percent"
+   5 = "50-74 percent"
+   6 = "75-100 percent"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A20D
+   1 = "None"
+   2 = "1-10 percent"
+   3 = "11-24 percent"
+   4 = "25-49 percent"
+   5 = "50-74 percent"
+   6 = "75-100 percent"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A20E
+   1 = "None"
+   2 = "1-10 percent"
+   3 = "11-24 percent"
+   4 = "25-49 percent"
+   5 = "50-74 percent"
+   6 = "75-100 percent"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A20F
+   1 = "None"
+   2 = "1-10 percent"
+   3 = "11-24 percent"
+   4 = "25-49 percent"
+   5 = "50-74 percent"
+   6 = "75-100 percent"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A20G
+   1 = "None"
+   2 = "1-10 percent"
+   3 = "11-24 percent"
+   4 = "25-100 percent"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A20H
+   1 = "None"
+   2 = "1-10 percent"
+   3 = "11-24 percent"
+   4 = "25-49 percent"
+   5 = "50-74 percent"
+   6 = "75-100 percent"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A21A
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A21B
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A21C
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A21D
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A21E
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A21F
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A22B
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A22C
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A22D
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A22E
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A22F
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A22G
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A23
+   0 = "No"
+   1 = "Yes"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A24A
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A24B
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A24C
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A24D
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A24E
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A24F
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A24G
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A25A
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A25B
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A25C
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A25D
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A25E
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A25F
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A25G
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A25H
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A25I
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A27
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A28
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A29AP
+   1 = "0 teachers"
+   2 = "1-5 teachers"
+   3 = "6-10 teachers"
+   4 = "11-20 teachers"
+   5 = "More than 20 teachers"
+   -1 = "Don't know"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A29BP
+   1 = "0 teachers"
+   2 = "1-5 teachers"
+   3 = "6-10 teachers"
+   4 = "11-20 teachers"
+   5 = "21-30 teachers"
+   6 = "31-45 teachers"
+   7 = "46-60 teachers"
+   8 = "61-75 teachers"
+   9 = "76-100 teachers"
+   10 = "More than 100 teachers"
+   -1 = "Don't know"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A29CP
+   1 = "0 teachers"
+   2 = "1-5 teachers"
+   3 = "6-10 teachers"
+   4 = "11-20 teachers"
+   5 = "21-30 teachers"
+   6 = "31-45 teachers"
+   7 = "46-60 teachers"
+   8 = "61-75 teachers"
+   9 = "76-100 teachers"
+   10 = "More than 100 teachers"
+   -1 = "Don't know"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A29DP
+   1 = "0 teachers"
+   2 = "1-5 teachers"
+   3 = "6-10 teachers"
+   4 = "More than 10 teachers"
+   -1 = "Don't know"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A29EP
+   1 = "0 teachers"
+   2 = "1-5 teachers"
+   3 = "6-10 teachers"
+   4 = "11-20 teachers"
+   6 = "31-45 teachers"
+   7 = "46-60 teachers"
+   8 = "61-75 teachers"
+   9 = "76-100 teachers"
+   10 = "More than 100 teachers"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A30
+   0 = "0 staff members"
+   1 = "1 staff member"
+   2 = "2 staff members"
+   3 = "3 staff members"
+   4 = "4 staff members"
+   5 = "5 or more staff members"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A31
+   0 = "0 staff members"
+   1 = "1 staff member"
+   2 = "2 staff members"
+   3 = "3 staff members"
+   4 = "4 or more staff members"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A32A
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A32B
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A33A
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A33B
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A33C
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A33D
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A33E
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A33F
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A34A
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A34B
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A34C
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A34D
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A35
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A37A
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A37B
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A37C
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A37D
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A38A
+   1 = "Not at all accurate"
+   2 = "Not at all accurate-somewhat accurate"
+   3 = "Somewhat accurate"
+   4 = "Somewhat accurate-very accurate"
+   5 = "Very accurate"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A38B
+   2 = "Not at all accurate-somewhat accurate"
+   3 = "Somewhat accurate"
+   4 = "Somewhat accurate-very accurate"
+   5 = "Very accurate"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A38C
+   1 = "Not at all accurate"
+   2 = "Not at all accurate-somewhat accurate"
+   3 = "Somewhat accurate"
+   4 = "Somewhat accurate-very accurate"
+   5 = "Very accurate"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A38D
+   1 = "Not at all accurate"
+   2 = "Not at all accurate-somewhat accurate"
+   3 = "Somewhat accurate"
+   4 = "Somewhat accurate-very accurate"
+   5 = "Very accurate"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A38E
+   1 = "Not at all accurate"
+   2 = "Not at all accurate-somewhat accurate"
+   3 = "Somewhat accurate"
+   4 = "Somewhat accurate-very accurate"
+   5 = "Very accurate"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A38F
+   2 = "Not at all accurate-somewhat accurate"
+   3 = "Somewhat accurate"
+   4 = "Somewhat accurate-very accurate"
+   5 = "Very accurate"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A38G
+   1 = "Not at all accurate"
+   2 = "Not at all accurate-somewhat accurate"
+   3 = "Somewhat accurate"
+   4 = "Somewhat accurate-very accurate"
+   5 = "Very accurate"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A38H
+   1 = "Not at all accurate"
+   2 = "Not at all accurate-somewhat accurate"
+   3 = "Somewhat accurate"
+   4 = "Somewhat accurate-very accurate"
+   5 = "Very accurate"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A38I
+   1 = "Not at all accurate"
+   2 = "Not at all accurate-somewhat accurate"
+   3 = "Somewhat accurate"
+   4 = "Somewhat accurate-very accurate"
+   5 = "Very accurate"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A38J
+   1 = "Not at all accurate"
+   2 = "Not at all accurate-somewhat accurate"
+   3 = "Somewhat accurate"
+   4 = "Somewhat accurate-very accurate"
+   5 = "Very accurate"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A38K
+   1 = "Not at all accurate"
+   2 = "Not at all accurate-somewhat accurate"
+   3 = "Somewhat accurate"
+   4 = "Somewhat accurate-very accurate"
+   5 = "Very accurate"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A38L
+   1 = "Not at all accurate"
+   2 = "Not at all accurate-somewhat accurate"
+   3 = "Somewhat accurate"
+   4 = "Somewhat accurate-very accurate"
+   5 = "Very accurate"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A38M
+   1 = "Not at all accurate"
+   2 = "Not at all accurate-somewhat accurate"
+   3 = "Somewhat accurate"
+   4 = "Somewhat accurate-very accurate"
+   5 = "Very accurate"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A38N
+   1 = "Not at all accurate"
+   2 = "Not at all accurate-somewhat accurate"
+   3 = "Somewhat accurate"
+   4 = "Somewhat accurate-very accurate"
+   5 = "Very accurate"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A39A
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A39B
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A39C
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A40A
+   1 = "Daily"
+   2 = "At least once a week"
+   3 = "At least once a month"
+   4 = "On occasion"
+   5 = "Never"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A40B
+   1 = "Daily"
+   2 = "At least once a week"
+   3 = "At least once a month"
+   4 = "On occasion"
+   5 = "Never"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A40C
+   2 = "At least once a week"
+   3 = "At least once a month"
+   4 = "On occasion"
+   5 = "Never"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A40D
+   2 = "At least once a week"
+   3 = "At least once a month"
+   4 = "On occasion"
+   5 = "Never"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A40E
+   1 = "Daily"
+   2 = "At least once a week"
+   3 = "At least once a month"
+   4 = "On occasion"
+   5 = "Never"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A40F
+   1 = "Daily"
+   2 = "At least once a week"
+   3 = "At least once a month"
+   4 = "On occasion"
+   5 = "Never"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A40G
+   1 = "Daily"
+   2 = "At least once a week"
+   3 = "At least once a month"
+   4 = "On occasion"
+   5 = "Never"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A40H
+   3 = "At least once a month"
+   4 = "On occasion"
+   5 = "Never"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A40I
+   4 = "On occasion"
+   5 = "Never"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A40J
+   2 = "At least once a week"
+   3 = "At least once a month"
+   4 = "On occasion"
+   5 = "Never"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A40K
+   1 = "Daily"
+   2 = "At least once a week"
+   3 = "At least once a month"
+   4 = "On occasion"
+   5 = "Never"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A40L
+   1 = "Daily"
+   2 = "At least once a week"
+   3 = "At least once a month"
+   4 = "On occasion"
+   5 = "Never"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A40M
+   2 = "At least once a week"
+   3 = "At least once a month"
+   4 = "On occasion"
+   5 = "Never"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A40N
+   1 = "Daily"
+   2 = "At least once a week"
+   3 = "At least once a month"
+   4 = "On occasion"
+   5 = "Never"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A40O
+   2 = "At least once a week"
+   3 = "At least once a month"
+   4 = "On occasion"
+   5 = "Never"
+   -4 = "Nonrespondent"
+   -6 = "Multiple response"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A40P
+   4 = "On occasion"
+   5 = "Never"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1A42
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+F1ADMSTA
+   0 = "Not completed"
+   1 = "Completed"
+   -8 = "Survey component legitimate skip/NA"
+F1FTTP
+   1 = "0-10 teachers"
+   2 = "11-20 teachers"
+   3 = "21-30 teachers"
+   4 = "31-45 teachers"
+   5 = "46-60 teachers"
+   6 = "61-75 teachers"
+   7 = "76-100 teachers"
+   8 = "101-150 teachers"
+   9 = "More than 150 teachers"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1SCENP
+   1 = "1-399 students"
+   2 = "400-599 students"
+   3 = "600-799 students"
+   4 = "800-999 students"
+   5 = "1,000-1,199 students"
+   6 = "1,200-1,599 students"
+   7 = "1,600-1,999 students"
+   8 = "2,000-2,499 students"
+   9 = "2,500 or more students"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+F1SCFLP
+   1 = "0-5 percent"
+   2 = "6-10 percent"
+   3 = "11-20 percent"
+   4 = "21-30 percent"
+   5 = "31-50 percent"
+   6 = "51-75 percent"
+   7 = "76-100 percent"
+   -4 = "Nonrespondent"
+   -8 = "Survey component legitimate skip/NA"
+   -9 = "Missing"
+PSU
+   1 = "PSU 1"
+   2 = "PSU 2"
+   3 = "PSU 3"
+   -8 = "Survey component legitimate skip/NA"
+STRAT_ID
+   -8 = "Survey component legitimate skip/NA"

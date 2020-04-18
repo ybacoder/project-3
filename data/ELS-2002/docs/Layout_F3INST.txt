@@ -1,0 +1,215 @@
+/**************************************************************************
+ *** Layout File                                                        ***
+ ***                                                                    ***
+ *** This file is designed to provide the necessary information so      ***
+ *** that NCES survey response data may be used in other statistical    ***
+ *** software packages. This file provides variable names, locations,   ***
+ *** and short descriptions for all selected variables. Additionally,   ***
+ *** for categorical variables, this file also contains the response    ***
+ *** codes and value label descriptions.                                ***
+ ***                                                                    ***
+ *** Full sample weights, replicate weights, and identification         ***
+ *** numbers are added automatically to the list of variables selected  ***
+ *** by the EDAT and are included here.                                 ***
+ *************************************************************************/
+
+/* ASCII Dataset File Name */
+els_02_12_f3inst
+
+/* Total Record Length */
+319
+
+/* Variable Names, Locations, and Descriptions */
+Stu_ID         1-7           Student ID
+F3IIPED        7-13          IPEDS code of attended postsecondary institution
+F3ISTATE       13-15         State of attended postsecondary institution
+F3ILEVEL       15-17         Level of attended postsecondary institution
+F3ICNTRL       17-19         Control of attended postsecondary institution
+F3ISECTR       19-21         Sector of attended postsecondary institution
+F3ISELC        21-23         Selectivity of attended postsecondary institution
+F3IOPNAP       23-25         Attended institution has an open admission policy
+F3ISATV25      25-28         SAT verbal 25th percentile score (from SATVR25 in IPEDS)
+F3ISATV75      28-31         SAT verbal 75th percentile score (from SATVR75 in IPEDS)
+F3ISATM25      31-34         SAT math 25th percentile score (from SATMT25 in IPEDS)
+F3ISATM75      34-37         SAT math 75th percentile score (from SATMT75 in IPEDS)
+F3IACTE25      37-39         ACT English 25th percentile score (from ACTEN25 in IPEDS)
+F3IACTE75      39-41         ACT English 75th percentile score (from ACTEN75 in IPEDS)
+F3IACTM25      41-43         ACT math 25th percentile score (from ACTMT25 in IPEDS)
+F3IACTM75      43-45         ACT math 75th percentile score (from ACTMT75 in IPEDS)
+F3IACTC25      45-47         ACT composite 25th percentile score (from ACTCM25 in IPEDS)
+F3IACTC75      47-49         ACT composite 75th percentile score (from ACTCM75 in IPEDS)
+F3IHBCU        49-51         Attended institution is an HBCU
+F3ISTDATE      51-57         Year/month R first attended postsecondary institution
+F3IFIRSTINST   57-59         Institution is R's first-attended postsecondary institution
+F3ILASTINST    59-61         Institution is R's last/currently attended postsecondary institution
+F3ICREDNUM     61-63         Number of credentials earned at postsecondary institution
+F3ICREDTYPE_1  63-65         Credential #1 (highest/only cred from this inst): credential type
+F3ICREDDATE_1  65-71         Credential #1 (highest/only cred from this inst): year/month earned
+F3ICREDFIELD_1 71-121        Credential #1 (highest/only cred from this inst): field-of-study (verbatim)
+F3ICREDGEN_1   121-123       Credential #1 (highest/only cred from this inst): field-of-study 2-digit code
+F3ICREDSPEC_1  123-130       Credential #1 (highest/only cred from this inst): field-of-study 6-digit code
+F3ICREDDBLMAJ_1130-132       Credential #1 (highest/only cred from this inst): double major indicator
+F3ICREDFIELD2_1132-182       Credntl #1 (highest/only cred from this inst): 2nd maj fld-of-study (verbatim)
+F3ICREDGEN2_1  182-184       Credntl #1 (highest/only cred from this inst): 2nd maj fld-of-study 2-digit code
+F3ICREDSPEC2_1 184-191       Credntl #1 (highest/only cred from this inst): 2nd maj fld-of-study 6-digit code
+F3ICREDTYPE_2  191-193       Credential #2 (additional cred from this inst): credential type
+F3ICREDDATE_2  193-199       Credential #2 (additional cred from this inst): year/month earned
+F3ICREDFIELD_2 199-249       Credential #2 (additional cred from this inst): field-of-study (verbatim)
+F3ICREDGEN_2   249-251       Credential #2 (additional cred from this inst): field-of-study 2-digit code
+F3ICREDSPEC_2  251-258       Credential #2 (additional cred from this inst): field-of-study 6-digit code
+F3ICREDDBLMAJ_2258-260       Credential #2 (additional cred from this inst): double major indicator
+F3ICREDFIELD2_2260-310       Credential #2 (additional cred from this inst): 2nd maj fld-of-study (verbatim)
+F3ICREDGEN2_2  310-312       Credntl #2 (additional cred from this inst): 2nd maj fld-of-study 2-digit code
+F3ICREDSPEC2_2 312-319       Credntl #2 (additional cred from this inst): 2nd maj fld-of-study 6-digit code
+
+/* Variable Value Labels */
+F3IACTC25
+   -5 = "Suppressed"
+F3IACTC75
+   -5 = "Suppressed"
+F3IACTE25
+   -5 = "Suppressed"
+F3IACTE75
+   -5 = "Suppressed"
+F3IACTM25
+   -5 = "Suppressed"
+F3IACTM75
+   -5 = "Suppressed"
+F3ICNTRL
+   1 = "Public"
+   2 = "Private not-for-profit"
+   3 = "Private for-profit"
+   -9 = "Missing"
+F3ICREDDATE_1
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F3ICREDDATE_2
+   -5 = "Suppressed"
+F3ICREDDBLMAJ_1
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F3ICREDDBLMAJ_2
+   -5 = "Suppressed"
+F3ICREDFIELD_1
+   -5 = "Suppressed"
+F3ICREDFIELD_2
+   -5 = "Suppressed"
+F3ICREDFIELD2_1
+   -5 = "Suppressed"
+F3ICREDFIELD2_2
+   -5 = "Suppressed"
+F3ICREDGEN_1
+   01 = "Agriculture, Agriculture Operations, and Related Sciences"
+   03 = "Natural Resources and Conservation"
+   04 = "Architecture and Related Services"
+   05 = "Area, Ethnic, Cultural, and Gender Studies"
+   09 = "Communication, Journalism, and Related Programs"
+   10 = "Communications Technologies/Technicians and Support Services"
+   11 = "Computer and Information Sciences and Support Services"
+   12 = "Personal and Culinary Services"
+   13 = "Education"
+   14 = "Engineering"
+   15 = "Engineering Technologies/Technicians"
+   16 = "Foreign Languages, Literatures, and Linguistics"
+   19 = "Family and Consumer Sciences/Human Sciences"
+   22 = "Legal Professions and Studies"
+   23 = "English Language and Literature/Letters"
+   24 = "Liberal Arts and Sciences, General Studies and Humanities"
+   26 = "Biological and Biomedical Sciences"
+   27 = "Mathematics and Statistics"
+   30 = "Multi/Interdisciplinary Studies"
+   31 = "Parks, Recreation, Leisure, and Fitness Studies"
+   38 = "Philosophy and Religious Studies"
+   39 = "Theology and Religious Vocations"
+   40 = "Physical Sciences"
+   42 = "Psychology"
+   43 = "Security and Protective Services"
+   44 = "Public Administration and Social Service Professions"
+   45 = "Social Sciences"
+   46 = "Construction Trades"
+   47 = "Mechanic and Repair Technologies/Technicians"
+   48 = "Precision Production"
+   49 = "Transportation and Materials Moving"
+   50 = "Visual and Performing Arts"
+   51 = "Health Professions and Related Clinical Sciences"
+   52 = "Business, Management, Marketing, and Related Support Services"
+   54 = "History"
+   99 = "Other"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F3ICREDGEN_2
+   -5 = "Suppressed"
+F3ICREDGEN2_1
+   -5 = "Suppressed"
+F3ICREDGEN2_2
+   -5 = "Suppressed"
+F3ICREDNUM
+   0 = "0"
+   1 = "1"
+   2 = "2 or more"
+   -9 = "Missing"
+F3ICREDSPEC_1
+   -5 = "Suppressed"
+F3ICREDSPEC_2
+   -5 = "Suppressed"
+F3ICREDSPEC2_1
+   -5 = "Suppressed"
+F3ICREDSPEC2_2
+   -5 = "Suppressed"
+F3ICREDTYPE_1
+   1 = "Undergraduate certificate or diploma"
+   2 = "Associate's Degree"
+   3 = "Bachelor's Degree"
+   4 = "Post-baccalaureate certificate"
+   5 = "Master's degree/Post-Master's certificate"
+   7 = "Doctoral Degree"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F3ICREDTYPE_2
+   -5 = "Suppressed"
+F3IFIRSTINST
+   0 = "No"
+   1 = "Yes"
+   -9 = "Missing"
+F3IHBCU
+   -5 = "Suppressed"
+F3IIPED
+   -5 = "Suppressed"
+F3ILASTINST
+   0 = "No"
+   1 = "Yes"
+   -9 = "Missing"
+F3ILEVEL
+   1 = "4-year college or university"
+   2 = "2-year college"
+   3 = "Less than 2-years"
+   -9 = "Missing"
+F3IOPNAP
+   -5 = "Suppressed"
+F3ISATM25
+   -5 = "Suppressed"
+F3ISATM75
+   -5 = "Suppressed"
+F3ISATV25
+   -5 = "Suppressed"
+F3ISATV75
+   -5 = "Suppressed"
+F3ISECTR
+   1 = "Public, 4-year or above"
+   2 = "Private not-for-profit, 4-year or above"
+   3 = "Private for-profit, 4-year or above"
+   4 = "Public, 2-year"
+   5 = "Private not-for-profit, 2-year"
+   6 = "Private for-profit, 2-year"
+   7 = "Public, less than 2-year"
+   8 = "Private not-for-profit, less than 2-year"
+   9 = "Private for-profit, less than 2-year"
+   -9 = "Missing"
+F3ISELC
+   -5 = "Suppressed"
+F3ISTATE
+   -5 = "Suppressed"
+F3ISTDATE
+   -9 = "Missing"

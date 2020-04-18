@@ -1,0 +1,346 @@
+/**************************************************************************
+ *** Layout File                                                        ***
+ ***                                                                    ***
+ *** This file is designed to provide the necessary information so      ***
+ *** that NCES survey response data may be used in other statistical    ***
+ *** software packages. This file provides variable names, locations,   ***
+ *** and short descriptions for all selected variables. Additionally,   ***
+ *** for categorical variables, this file also contains the response    ***
+ *** codes and value label descriptions.                                ***
+ ***                                                                    ***
+ *** Full sample weights, replicate weights, and identification         ***
+ *** numbers are added automatically to the list of variables selected  ***
+ *** by the EDAT and are included here.                                 ***
+ *************************************************************************/
+
+/* ASCII Dataset File Name */
+els_02_12_f2inst
+
+/* Total Record Length */
+103
+
+/* Variable Names, Locations, and Descriptions */
+STU_ID         1-7           Student ID
+F2IORDER       7-9           F2 Institution file order number
+F2ILEVEL       9-11          Level of institution
+F2ICNTRL       11-13         Control of institution
+F2ISECTR       13-15         Sector of institution
+F2IAPPLY       15-17         Whether applied in first round of applications
+F2IACCPT       17-19         Whether was accepted by this postsecondary institution
+F2IGRANT       19-21         Offered scholarship or grant
+F2ILOAN        21-23         Offered loan
+F2IWKSTY       23-25         Offered work study
+F2IWAIVR       25-27         Offered tuition waiver/discount
+F2IATTND       27-29         Whether attended this postsecondary institution
+F2IFTPT        29-31         Intensity of enrollment at postsecondary school
+F2ISTART       31-33         First period of attendance at this postsecondary institution
+F2IEND         33-35         Last period of attendance at this postsecondary institution
+F2IMO45        35-37         Number of months enrolled in institution in 2004-2005 school year
+F2IPRE_P       37-39         Number of months enrolled at postsecondary institution in 2002-2003
+F2I0401        39-41         Enrolled in postsecondary institution in 2004/01 (January 2004)
+F2I0402        41-43         Enrolled in postsecondary institution in 2004/02 (February 2004)
+F2I0403        43-45         Enrolled in postsecondary institution in 2004/03 (March 2004)
+F2I0404        45-47         Enrolled in postsecondary institution in 2004/04 (April 2004)
+F2I0405        47-49         Enrolled in postsecondary institution in 2004/05 (May 2004)
+F2I0406        49-51         Enrolled in postsecondary institution in 2004/06 (June 2004)
+F2I0407        51-53         Enrolled in postsecondary institution in 2004/07 (July 2004)
+F2I0408        53-55         Enrolled in postsecondary institution in 2004/08 (August 2004)
+F2I0409        55-57         Enrolled in postsecondary institution in 2004/09 (September 2004
+F2I0410        57-59         Enrolled in postsecondary institution in 2004/10 (October 2004)
+F2I0411        59-61         Enrolled in postsecondary institution in 2004/11 (November 2004)
+F2I0412        61-63         Enrolled in postsecondary institution in 2004/12 (December 2004)
+F2I0501        63-65         Enrolled in postsecondary institution in 2005/01 (January 2005)
+F2I0502        65-67         Enrolled in postsecondary institution in 2005/02 (February 2005)
+F2I0503        67-69         Enrolled in postsecondary institution in 2005/03 (March 2005)
+F2I0504        69-71         Enrolled in postsecondary institution in 2005/04 (April 2005)
+F2I0505        71-73         Enrolled in postsecondary institution in 2005/05 (May 2005)
+F2I0506        73-75         Enrolled in postsecondary institution in 2005/06 (June 2005)
+F2I0507        75-77         Enrolled in postsecondary institution in 2005/07 (July 2005)
+F2I0508        77-79         Enrolled in postsecondary institution in 2005/08 (August 2005)
+F2I0509        79-81         Enrolled in postsecondary institution in 2005/09 (September 2005
+F2I0510        81-83         Enrolled in postsecondary institution in 2005/10 (October 2005)
+F2I0511        83-85         Enrolled in postsecondary institution in 2005/11 (November 2005)
+F2I0512        85-87         Enrolled in postsecondary institution in 2005/12 (December 2005)
+F2I0601        87-89         Enrolled in postsecondary institution in 2006/01 (January 2006)
+F2I0602        89-91         Enrolled in postsecondary institution in 2006/02 (February 2006)
+F2I0603        91-93         Enrolled in postsecondary institution in 2006/03 (March 2006)
+F2I0604        93-95         Enrolled in postsecondary institution in 2006/04 (April 2006)
+F2I0605        95-97         Enrolled in postsecondary institution in 2006/05 (May 2006)
+F2I0606        97-99         Enrolled in postsecondary institution in 2006/06 (June 2006)
+F2I0607        99-101        Enrolled in postsecondary institution in 2006/07 (July 2006)
+F2I0608        101-103       Enrolled in postsecondary institution in 2006/08 (August 2006)
+
+/* Variable Value Labels */
+F2I0401
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0402
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0403
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0404
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0405
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0406
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0407
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0408
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0409
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0410
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0411
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0412
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0501
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0502
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0503
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0504
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0505
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0506
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0507
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0508
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0509
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0510
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0511
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0512
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0601
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0602
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   9 = "Post-interview month"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0603
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   9 = "Post-interview month"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0604
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   9 = "Post-interview month"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0605
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   9 = "Post-interview month"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0606
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   9 = "Post-interview month"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0607
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   9 = "Post-interview month"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2I0608
+   0 = "Not enrolled"
+   1 = "Enrolled"
+   9 = "Post-interview month"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2IACCPT
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2IAPPLY
+   0 = "No"
+   1 = "Yes"
+   -9 = "Missing"
+F2IATTND
+   0 = "No"
+   1 = "Yes"
+   -9 = "Missing"
+F2ICNTRL
+   1 = "Public"
+   2 = "Private not-for-profit"
+   3 = "Private for-profit"
+   -9 = "Missing"
+F2IEND
+   1 = "June 2004 or earlier"
+   2 = "July 2004 - December 2004"
+   3 = "January 2005 - June 2005"
+   4 = "July 2005 - December 2005"
+   5 = "2006"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2IFTPT
+   1 = "Full-time or mainly full-time"
+   2 = "Part-time or mainly part-time"
+   3 = "An equal mix of full-time and part-time"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2IGRANT
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2ILEVEL
+   1 = "4-year college or university"
+   2 = "2-year college"
+   3 = "Less than 2-years"
+   -9 = "Missing"
+F2ILOAN
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2IMO45
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2IORDER
+   1 = "1"
+   2 = "2"
+   3 = "3"
+   4 = "4"
+   5 = "5"
+   6 = "6"
+   7 = "7"
+   8 = "8"
+   9 = "9"
+   10 = "10"
+   11 = "11"
+   12 = "12"
+   13 = "13"
+   14 = "14"
+   15 = "15"
+   16 = "16"
+   17 = "17"
+   18 = "18"
+   19 = "19"
+F2IPRE_P
+   0 = "0 months"
+   1 = "1-3 months"
+   2 = "4-6 months"
+   3 = "7 or more months"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2ISECTR
+   1 = "Public, 4-year or above"
+   2 = "Private not-for-profit, 4-year or above"
+   3 = "Private for-profit, 4-year or above"
+   4 = "Public, 2-year"
+   5 = "Private not-for-profit, 2-year"
+   6 = "Private for-profit, 2-year"
+   7 = "Public, less than 2-year"
+   8 = "Private not-for-profit, less than 2-year"
+   9 = "Private for-profit, less than 2-year"
+   -9 = "Missing"
+F2ISTART
+   1 = "June 2004 or earlier"
+   2 = "July 2004 - December 2004"
+   3 = "January 2005 - June 2005"
+   4 = "July 2005 - December 2005"
+   5 = "2006"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2IWAIVR
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"
+F2IWKSTY
+   0 = "No"
+   1 = "Yes"
+   -3 = "Item legitimate skip/NA"
+   -9 = "Missing"

@@ -1,0 +1,525 @@
+/**************************************************************************
+ *** Layout File                                                        ***
+ ***                                                                    ***
+ *** This file is designed to provide the necessary information so      ***
+ *** that NCES survey response data may be used in other statistical    ***
+ *** software packages. This file provides variable names, locations,   ***
+ *** and short descriptions for all selected variables. Additionally,   ***
+ *** for categorical variables, this file also contains the response    ***
+ *** codes and value label descriptions.                                ***
+ ***                                                                    ***
+ *** Full sample weights, replicate weights, and identification         ***
+ *** numbers are added automatically to the list of variables selected  ***
+ *** by the EDAT and are included here.                                 ***
+ *************************************************************************/
+
+/* ASCII Dataset File Name */
+NELS_88_00_PSE1994
+
+/* Total Record Length */
+236
+
+/* Variable Names, Locations, and Descriptions */
+STU_ID    1-7           Student ID
+INCODE    8-13          NELS:88/94 code of inst attended
+INSTNUM   14-15         Institution sequence number
+TYPETUIT  16-17         In-state/out-state tuition
+NUMATND   18-19         Number different times attended
+ENRLSTAT  20-21         Enrollment status last month
+MAJCODE   22-24         Code--major field of study at inst
+MAJVERB   25-94         Major verbatim - field of study
+MAJSRCH   95-164        Major-last search -field of study
+HRSWEKLY  165-166       Hours classes sched weekly
+TYPDEGCT  167-168       Type of degree/certificate
+DATRCVMO  169-170       Month degree/cert was received
+DATRCVYR  171-172       Year degree/cert was received
+JOBCHNG   173-174       Degree result in job change
+GRANTS    175-176       Grants/scholarships/fellowshp
+LOANS     177-178       Loans
+WORKSTDY  179-180       College work-study
+OTH_FINA  181-182       Other financial aid
+NO_FINA   183-184       No financial aid
+AMT_FINA  185-190       Tot amt financl aid received/year
+CAMPJOB   191-192       Paying job on campus during enrolment
+EDRELJOB  193-194       Job related to educ during enrolment
+PARNBORW  195-196       Parent borrow to finance education
+F3PSEAT   197-198       PSE: Months in attendance
+F3PSEEN   199-200       PSE: Months enrolled
+F3PSECT   201-202       PSE: Continuity of enrollment
+F3SEC2A   203-204       PSE: Type of institution
+STRTMON1  205-206       Month started attending inst-spell1
+STRTYR1   207-208       Year started attending inst-spell1
+ENDMON1   209-210       Month stopped attending inst-spell1
+ENDYR1    211-212       Year stopped attending inst-spell1
+STRTMON2  213-214       Month started attending inst-spell2
+STRTYR2   215-216       Year started attending inst-spell2
+ENDMON2   217-218       Month stopped attending inst-spell2
+ENDYR2    219-220       Year stopped attending inst-spell2
+STRTMON3  221-222       Month started attending inst-spell3
+STRTYR3   223-224       Year started attending inst-spell3
+ENDMON3   225-226       Month stopped attending inst-spell3
+ENDYR3    227-228       Year stopped attending inst-spell3
+STRTMON4  229-230       Month started attending inst-spell4
+STRTYR4   231-232       Year started attending inst-spell4
+ENDMON4   233-234       Month stopped attending inst-spell4
+ENDYR4    235-236       Year stopped attending inst-spell4
+
+/* Variable Value Labels */
+AMT_FINA
+   -4 = "{Uncodable verbatim}"
+   -6 = "{Missing}"
+   -7 = "{Refusal}"
+   -8 = "{Don^t know}"
+   -9 = "{Legitimate skip}"
+CAMPJOB
+   1 = "Yes"
+   2 = "No"
+   -6 = "{Missing}"
+   -7 = "{Refusal}"
+   -8 = "{Don^t know}"
+   -9 = "{Legitimate skip}"
+DATRCVMO
+   0 = "{Not completed}"
+   1 = "{January}"
+   2 = "{February}"
+   3 = "{March}"
+   4 = "{April}"
+   5 = "{May}"
+   6 = "{June}"
+   7 = "{July}"
+   8 = "{August}"
+   9 = "{September}"
+   10 = "{October}"
+   11 = "{November}"
+   12 = "{December}"
+   -6 = "{Missing}"
+   -7 = "{Refusal}"
+   -8 = "{Don^t know}"
+   -9 = "{Legitimate skip}"
+DATRCVYR
+   0 = "{Not completed}"
+   89 = "{1989}"
+   90 = "{1990}"
+   91 = "{1991}"
+   92 = "{1992}"
+   93 = "{1993}"
+   94 = "{1994}"
+   -6 = "{Missing}"
+   -7 = "{Refusal}"
+   -8 = "{Don^t know}"
+   -9 = "{Legitimate skip}"
+EDRELJOB
+   1 = "Yes"
+   2 = "No"
+   -6 = "{Missing}"
+   -7 = "{Refusal}"
+   -8 = "{Don^t know}"
+   -9 = "{Legitimate skip}"
+ENDMON1
+   1 = "{January}"
+   2 = "{February}"
+   3 = "{March}"
+   4 = "{April}"
+   5 = "{May}"
+   6 = "{June}"
+   7 = "{July}"
+   8 = "{August}"
+   9 = "{September}"
+   10 = "{October}"
+   11 = "{November}"
+   12 = "{December}"
+   -2 = "{Currently attend}"
+   -6 = "{Missing}"
+   -7 = "{Refusal}"
+   -8 = "{Don^t know}"
+   -9 = "{Legitimate skip}"
+ENDMON2
+   1 = "{January}"
+   2 = "{February}"
+   3 = "{March}"
+   4 = "{April}"
+   5 = "{May}"
+   6 = "{June}"
+   7 = "{July}"
+   8 = "{August}"
+   9 = "{September}"
+   10 = "{October}"
+   11 = "{November}"
+   12 = "{December}"
+   -2 = "{Currently attend}"
+   -3 = "{Not asked in SAQ}"
+   -6 = "{Missing}"
+   -8 = "{Don^t know}"
+   -9 = "{Legitimate skip}"
+ENDMON3
+   4 = "{April}"
+   5 = "{May}"
+   7 = "{July}"
+   8 = "{August}"
+   11 = "{November}"
+   -2 = "{Currently attend}"
+   -3 = "{Not asked in SAQ}"
+   -8 = "{Don^t know}"
+   -9 = "{Legitimate skip}"
+ENDMON4
+   5 = "{May}"
+   -2 = "{Currently attend}"
+   -3 = "{Not asked in SAQ}"
+   -9 = "{Legitimate skip}"
+ENDYR1
+   90 = "{1990}"
+   91 = "{1991}"
+   92 = "{1992}"
+   93 = "{1993}"
+   94 = "{1994}"
+   -2 = "{Currently attend}"
+   -6 = "{Missing}"
+   -7 = "{Refusal}"
+   -8 = "{Don^t know}"
+   -9 = "{Legitimate skip}"
+ENDYR2
+   91 = "{1991}"
+   92 = "{1992}"
+   93 = "{1993}"
+   94 = "{1994}"
+   -2 = "{Currently attend}"
+   -3 = "{Not asked in SAQ}"
+   -6 = "{Missing}"
+   -8 = "{Don^t know}"
+   -9 = "{Legitimate skip}"
+ENDYR3
+   92 = "{1992}"
+   93 = "{1993}"
+   -2 = "{Currently attend}"
+   -3 = "{Not asked in SAQ}"
+   -9 = "{Legitimate skip}"
+ENDYR4
+   93 = "{1993}"
+   -2 = "{Currently attend}"
+   -3 = "{Not asked in SAQ}"
+   -9 = "{Legitimate skip}"
+ENRLSTAT
+   1 = "Full-time"
+   2 = "Half-time/under ft"
+   3 = "Less than half-time"
+   -6 = "{Missing}"
+   -7 = "{Refusal}"
+   -8 = "{Don^t know}"
+   -9 = "{Legitimate skip}"
+F3PSEAT
+   -6 = "{Missing}"
+   -9 = "{Legitimate skip}"
+F3PSECT
+   1 = "Continuous enrl"
+   2 = "Interrupt in enrl"
+   -9 = "{Legitimate skip}"
+F3PSEEN
+   -6 = "{Missing}"
+   -9 = "{Legitimate skip}"
+F3SEC2A
+   1 = "Private for profit"
+   2 = "Private nfp < 4-year"
+   3 = "Public < 2-year"
+   4 = "Public 2-year"
+   5 = "Private nfp 4-year"
+   6 = "Public 4-year"
+   -6 = "{Missing}"
+   -9 = "{Legitimate skip}"
+GRANTS
+   1 = "Yes"
+   2 = "No"
+   -6 = "{Missing}"
+   -7 = "{Refusal}"
+   -8 = "{Don^t know}"
+   -9 = "{Legitimate skip}"
+HRSWEKLY
+   -6 = "{Missing}"
+   -7 = "{Refusal}"
+   -8 = "{Don^t know}"
+   -9 = "{Legitimate skip}"
+INCODE
+   -4 = "{Uncodable verbatim}"
+   -6 = "{Missing}"
+   -7 = "{Refusal}"
+   -8 = "{Don^t know}"
+   -10 = "{Inst no IPEDS 93/4}"
+   -11 = "{Military training}"
+   -12 = "{Foreign inst}"
+INSTNUM
+   1 = "{1}"
+   2 = "{2}"
+   3 = "{3}"
+   4 = "{4}"
+   5 = "{5}"
+JOBCHNG
+   1 = "Yes"
+   2 = "No"
+   -6 = "{Missing}"
+   -8 = "{Don^t know}"
+   -9 = "{Legitimate skip}"
+LOANS
+   1 = "Yes"
+   2 = "No"
+   -6 = "{Missing}"
+   -7 = "{Refusal}"
+   -8 = "{Don^t know}"
+   -9 = "{Legitimate skip}"
+MAJCODE
+   0 = "Uncodeable"
+   10 = "Agriculture"
+   20 = "Agricultural science"
+   30 = "Natural resources"
+   31 = "Forestry"
+   40 = "Architecture"
+   50 = "American civiliz."
+   51 = "Area studies"
+   52 = "Afri-Amer studies"
+   53 = "Other ethnic studies"
+   60 = "Accounting"
+   61 = "Finance"
+   62 = "Business/mgmt system"
+   63 = "Managment/bus admin"
+   70 = "Secretarial"
+   71 = "Business support"
+   80 = "Marketing/distrib"
+   90 = "Journalism"
+   91 = "Communications"
+   100 = "Communication tech."
+   110 = "Computer programming"
+   111 = "Data processing"
+   112 = "Computer/info scien."
+   120 = "Cosmetology"
+   121 = "Other consumer/pers."
+   130 = "Early childhood ed"
+   131 = "Elementary ed"
+   132 = "Secondary ed"
+   133 = "Special education"
+   134 = "Physical education"
+   135 = "Education: other"
+   140 = "Electrical engineer"
+   141 = "Chemical engineering"
+   142 = "Civil engineering"
+   143 = "Mech engineering"
+   144 = "Engineering: all oth"
+   150 = "Engineering technols"
+   160 = "Spanish"
+   161 = "Foreign lang:non-eur"
+   162 = "Foreign lang:other"
+   170 = "Dental/medical tech"
+   171 = "Community/mental hlt"
+   172 = "Health/phys ed/rec"
+   173 = "Nurse assisting"
+   174 = "Allied hlth:gen&oth"
+   180 = "Audiology"
+   181 = "Clinical health sci"
+   182 = "Dentistry"
+   183 = "Medicine"
+   184 = "Veterinary medicine"
+   185 = "Nursing"
+   186 = "Health/hospital admn"
+   187 = "Public health"
+   188 = "Health sci/prof:oth"
+   190 = "Dietetics"
+   191 = "Textiles"
+   192 = "Home econ: all other"
+   200 = "Child care/guidance"
+   201 = "Vocation home ec:oth"
+   220 = "Paralegal(pre-law)"
+   221 = "Law"
+   230 = "Eng/Amer literature"
+   231 = "Writing:creative/tch"
+   232 = "Letters:other"
+   240 = "Liberal studies"
+   260 = "Zoology"
+   261 = "Botany"
+   262 = "Biochem\biophysics"
+   263 = "Biol sci:other"
+   270 = "Statistics"
+   271 = "Mathematics:other"
+   280 = "Military sciences"
+   300 = "Women^s studies"
+   301 = "Environ studies"
+   302 = "Biopsychology"
+   303 = "Integrated/gen scien"
+   304 = "Interdisciplinary"
+   310 = "Leisure studies"
+   320 = "Basic/personal skill"
+   380 = "Philosophy"
+   381 = "Religious studies"
+   390 = "Clinic pastoral care"
+   400 = "Chemistry"
+   401 = "Earth science"
+   402 = "Physics"
+   403 = "Physical sci:other"
+   420 = "Psychology"
+   430 = "Protective services"
+   440 = "Social work"
+   441 = "Public admin:other"
+   450 = "Anthropology/archae."
+   451 = "Economics"
+   452 = "Geography"
+   453 = "History"
+   454 = "Sociology"
+   455 = "Political science"
+   456 = "Internat. rels."
+   457 = "City planning"
+   460 = "IA: Construction"
+   470 = "Mechanics"
+   471 = "Ia: electronics"
+   472 = "Mechanics:other"
+   480 = "Commercial art"
+   481 = "Precision production"
+   490 = "Air transportation"
+   491 = "Transportation: oth"
+   500 = "Design"
+   501 = "Speech/drama"
+   502 = "Film arts"
+   503 = "Music"
+   504 = "Art history/fine art"
+   505 = "Fine&perf arts:other"
+   900 = "No major"
+   -4 = "{Uncodable verbatim}"
+   -6 = "{Missing}"
+   -7 = "{Refusal}"
+   -8 = "{Don^t know}"
+MAJSRCH
+   [{OTHER}] = "DATA PRESENT"
+MAJVERB
+   [{OTHER}] = "DATA PRESENT"
+NO_FINA
+   1 = "Yes"
+   2 = "No"
+   -6 = "{Missing}"
+   -7 = "{Refusal}"
+   -8 = "{Don^t know}"
+   -9 = "{Legitimate skip}"
+NUMATND
+   1 = "{1}"
+   2 = "{2}"
+   3 = "{3}"
+   4 = "{4}"
+   5 = "{5}"
+   7 = "{7}"
+   -6 = "{Missing}"
+   -7 = "{Refusal}"
+   -8 = "{Don^t know}"
+   -9 = "{Legitimate skip}"
+OTH_FINA
+   1 = "Yes"
+   2 = "No"
+   -6 = "{Missing}"
+   -7 = "{Refusal}"
+   -8 = "{Don^t know}"
+   -9 = "{Legitimate skip}"
+PARNBORW
+   1 = "Yes"
+   2 = "No"
+   -3 = "{Not asked in SAQ}"
+   -6 = "{Missing}"
+   -7 = "{Refusal}"
+   -8 = "{Don^t know}"
+   -9 = "{Legitimate skip}"
+STRTMON1
+   1 = "{January}"
+   2 = "{February}"
+   3 = "{March}"
+   4 = "{April}"
+   5 = "{May}"
+   6 = "{June}"
+   7 = "{July}"
+   8 = "{August}"
+   9 = "{September}"
+   10 = "{October}"
+   11 = "{November}"
+   12 = "{December}"
+   -6 = "{Missing}"
+   -7 = "{Refusal}"
+   -8 = "{Don^t know}"
+   -9 = "{Legitimate skip}"
+STRTMON2
+   1 = "{January}"
+   2 = "{February}"
+   3 = "{March}"
+   4 = "{April}"
+   5 = "{May}"
+   6 = "{June}"
+   7 = "{July}"
+   8 = "{August}"
+   9 = "{September}"
+   10 = "{October}"
+   11 = "{November}"
+   12 = "{December}"
+   -3 = "{Not asked in SAQ}"
+   -6 = "{Missing}"
+   -8 = "{Don^t know}"
+   -9 = "{Legitimate skip}"
+STRTMON3
+   1 = "{January}"
+   3 = "{March}"
+   4 = "{April}"
+   6 = "{June}"
+   8 = "{August}"
+   12 = "{December}"
+   -3 = "{Not asked in SAQ}"
+   -9 = "{Legitimate skip}"
+STRTMON4
+   1 = "{January}"
+   3 = "{March}"
+   -3 = "{Not asked in SAQ}"
+   -9 = "{Legitimate skip}"
+STRTYR1
+   88 = "{1988}"
+   89 = "{1989}"
+   90 = "{1990}"
+   91 = "{1991}"
+   92 = "{1992}"
+   93 = "{1993}"
+   94 = "{1994}"
+   -6 = "{Missing}"
+   -7 = "{Refusal}"
+   -8 = "{Don^t know}"
+   -9 = "{Legitimate skip}"
+STRTYR2
+   91 = "{1991}"
+   92 = "{1992}"
+   93 = "{1993}"
+   94 = "{1994}"
+   -3 = "{Not asked in SAQ}"
+   -6 = "{Missing}"
+   -8 = "{Don^t know}"
+   -9 = "{Legitimate skip}"
+STRTYR3
+   92 = "{1992}"
+   93 = "{1993}"
+   94 = "{1994}"
+   -3 = "{Not asked in SAQ}"
+   -9 = "{Legitimate skip}"
+STRTYR4
+   93 = "{1993}"
+   94 = "{1994}"
+   -3 = "{Not asked in SAQ}"
+   -9 = "{Legitimate skip}"
+TYPDEGCT
+   1 = "None"
+   2 = "Certificate"
+   3 = "Associate^s degree"
+   4 = "Bachelor^s degree"
+   5 = "Other"
+   -6 = "{Missing}"
+   -7 = "{Refusal}"
+   -8 = "{Don^t know}"
+   -9 = "{Legitimate skip}"
+TYPETUIT
+   1 = "In-state"
+   2 = "Out-of-state"
+   -6 = "{Missing}"
+   -7 = "{Refusal}"
+   -8 = "{Don^t know}"
+   -9 = "{Legitimate skip}"
+WORKSTDY
+   1 = "Yes"
+   2 = "No"
+   -6 = "{Missing}"
+   -7 = "{Refusal}"
+   -8 = "{Don^t know}"
+   -9 = "{Legitimate skip}"
