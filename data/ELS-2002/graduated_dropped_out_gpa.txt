@@ -566,6 +566,73 @@ Category            Label                                              Unweighte
 13                  $200,001 or more                                          582                3.59 
 TOTAL                                                                      16,197              100.00 
 
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYURBAN
+Position:   520
+Length:     2
+Label:      School urbanicity
+
+Description:
+Urbanicity of school locale as indicated in the source
+data for sampling: the Common Core of Data (CCD) 1999-2000 and the
+Private School Survey (PSS) 1999-2000.
+1 Urban
+2 Suburban
+3 Rural
+Programming Notes:  BYURBAN is taken from the school file and
+replicated across each student belonging to that school.
+Note: This school level variable is replicated on the student file
+      for all BY eligible sample members.
+Source: ELS:2002 Sampling Data
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Urban                                                   5,486               33.87 
+2                   Suburban                                                7,764               47.93 
+3                   Rural                                                   2,947               18.19 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYREGION
+Position:   522
+Length:     2
+Label:      Geographic region of school
+
+Description:
+Region of school as indicated in the source data for sampling:
+the Common Core of Data (CCD) 1999-2000 and the
+Private School Survey (PSS) 1999-2000.
+1 Northeast
+2 Midwest
+3 South
+4 West
+Programming Notes:  BYREGION is taken from the school file and
+replicated across each student belonging to that school.
+Note: This school level variable is replicated on the student file
+      for all BY eligible sample members.
+Source: ELS:2002 Sampling Data
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Northeast                                               2,966               18.31 
+2                   Midwest                                                 4,031               24.89 
+3                   South                                                   5,881               36.31 
+4                   West                                                    3,319               20.49 
+TOTAL                                                                      16,197              100.00 
+
 
 ----------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------
@@ -689,57 +756,6 @@ Continuous                            0               99.00               14.06 
 
 
 File:       BYF3PSTSTU.PRI
-Name:       BYTVVIGM
-Position:   478
-Length:     2
-Label:      BY hrs/day watching TV/videos/playing video games (weekdays)
-
-Description:
-Indicates the average number of hours per weekday spent watching
-TV/videos or playing video/computer games during the 01-02 school
-year. Hours per weekday watching TV/videos and hours per weekday
-playing video/computer games were collected separately as part of the
-base year questionnaire.
-Note: The two input variables for this composite were top-coded at "6
-or more hours". BYTVVIGM is set to "8 or more hours" for any case
-where one of these input variables is top-coded at "6 or more hours"
-if the other input variable is at least 2 hours. If, however, one
-input indicates "6 or more hours" and the other input indicates 0 or 1
-hours, BYTVVIGM is set to 99 ("top-coded input; unable to calculate").
-SAS code:
-If BYS48A in (-4,-8) then BYTVVIGM=BYS48A;
-  else if (BYS48A<0 or BYS49A<0) then BYTVVIGM=-9;
-  else BYTVVIGM = BYS48A + BYS49A;
-if BYTVVIGM>8 then BYTVVIGM=8; *top-code at 8;
-  else if (BYS48A=6 or BYS49A=6) and 0<=BYTVVIGM<8 then BYTVVIGM=99;
-Applies to: All base year respondents.
-Source: Base Year Student Questionnaire
-
-
-                                                                        Frequency             Percent 
-Category            Label                                              Unweighted          Unweighted 
-------------------- ----------------------------------------- ------------------- ------------------- 
-0                   0 hours                                                   943                5.82 
-1                   1 hour                                                  1,821               11.24 
-2                   2 hours                                                 2,260               13.95 
-3                   3 hours                                                 2,032               12.55 
-4                   4 hours                                                 1,450                8.95 
-5                   5 hours                                                 1,246                7.69 
-6                   6 hours                                                   639                3.95 
-7                   7 hours                                                   343                2.12 
-8                   8 or more hours                                         1,700               10.50 
-99                  Top-coded input; unable to calculate                    1,467                9.06 
--9                  Missing                                                 1,343                8.29 
--8                  Survey component legitimate skip/NA                       305                1.88 
--4                  Nonrespondent                                             648                4.00 
-TOTAL                                                                      16,197              100.00 
-
-
-----------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------
-
-
-File:       BYF3PSTSTU.PRI
 Name:       BYWRKHRS
 Position:   482
 Length:     2
@@ -785,405 +801,6 @@ Category            Label                                              Unweighte
 9                   Over 40 hours a week                                      112                0.69 
 -9                  Missing                                                 2,703               16.69 
 -8                  Survey component legitimate skip/NA                       305                1.88 
--4                  Nonrespondent                                             648                4.00 
-TOTAL                                                                      16,197              100.00 
-
-
-----------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------
-
-
-File:       BYF3PSTSTU.PRI
-Name:       BYURBAN
-Position:   520
-Length:     2
-Label:      School urbanicity
-
-Description:
-Urbanicity of school locale as indicated in the source
-data for sampling: the Common Core of Data (CCD) 1999-2000 and the
-Private School Survey (PSS) 1999-2000.
-1 Urban
-2 Suburban
-3 Rural
-Programming Notes:  BYURBAN is taken from the school file and
-replicated across each student belonging to that school.
-Note: This school level variable is replicated on the student file
-      for all BY eligible sample members.
-Source: ELS:2002 Sampling Data
-
-
-                                                                        Frequency             Percent 
-Category            Label                                              Unweighted          Unweighted 
-------------------- ----------------------------------------- ------------------- ------------------- 
-1                   Urban                                                   5,486               33.87 
-2                   Suburban                                                7,764               47.93 
-3                   Rural                                                   2,947               18.19 
-TOTAL                                                                      16,197              100.00 
-
-
-----------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------
-
-
-File:       BYF3PSTSTU.PRI
-Name:       BYREGION
-Position:   522
-Length:     2
-Label:      Geographic region of school
-
-Description:
-Region of school as indicated in the source data for sampling:
-the Common Core of Data (CCD) 1999-2000 and the
-Private School Survey (PSS) 1999-2000.
-1 Northeast
-2 Midwest
-3 South
-4 West
-Programming Notes:  BYREGION is taken from the school file and
-replicated across each student belonging to that school.
-Note: This school level variable is replicated on the student file
-      for all BY eligible sample members.
-Source: ELS:2002 Sampling Data
-
-
-                                                                        Frequency             Percent 
-Category            Label                                              Unweighted          Unweighted 
-------------------- ----------------------------------------- ------------------- ------------------- 
-1                   Northeast                                               2,966               18.31 
-2                   Midwest                                                 4,031               24.89 
-3                   South                                                   5,881               36.31 
-4                   West                                                    3,319               20.49 
-TOTAL                                                                      16,197              100.00 
-
-
-----------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------
-
-
-File:       BYF3PSTSTU.PRI
-Name:       BYS20D
-Position:   4522
-Length:     2
-Label:      Other students often disrupt class
-
-Description:
-   20. How much do you agree or disagree with each of the following
-   statements about your current school and teachers?
-   (MARK ONE RESPONSE ON EACH LINE)
-   (Strongly Agree; Agree; Disagree; Strongly Disagree)
-   d. Other students often disrupt class
-Note:   This is one of a series of items, a through n.
-Applies to: All respondents.
-Source: ELS:2002 Student Questionnaire
-
-
-                                                                        Frequency             Percent 
-Category            Label                                              Unweighted          Unweighted 
-------------------- ----------------------------------------- ------------------- ------------------- 
-1                   Strongly agree                                          2,773               17.12 
-2                   Agree                                                   7,753               47.87 
-3                   Disagree                                                3,561               21.99 
-4                   Strongly disagree                                         385                2.38 
--9                  Missing                                                   164                1.01 
--8                  Survey component legitimate skip/NA                       305                1.88 
--7                  Not administered; abbreviated interview                   580                3.58 
-                    or breakoff
--6                  Multiple response                                          28                0.17 
--4                  Nonrespondent                                             648                4.00 
-TOTAL                                                                      16,197              100.00 
-
-
-----------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------
-
-
-File:       BYF3PSTSTU.PRI
-Name:       BYS20E
-Position:   4524
-Length:     2
-Label:      The teaching is good
-
-Description:
-   20. How much do you agree or disagree with each of the following
-   statements about your current school and teachers?
-   (MARK ONE RESPONSE ON EACH LINE)
-   (Strongly Agree; Agree; Disagree; Strongly Disagree)
-   e. The teaching is good
-Note:   This is one of a series of items, a through n.
-Applies to: All respondents.
-Source: ELS:2002 Student Questionnaire
-
-
-                                                                        Frequency             Percent 
-Category            Label                                              Unweighted          Unweighted 
-------------------- ----------------------------------------- ------------------- ------------------- 
-1                   Strongly agree                                          2,186               13.50 
-2                   Agree                                                   9,620               59.39 
-3                   Disagree                                                2,114               13.05 
-4                   Strongly disagree                                         470                2.90 
--9                  Missing                                                   251                1.55 
--8                  Survey component legitimate skip/NA                       305                1.88 
--7                  Not administered; abbreviated interview                   580                3.58 
-                    or breakoff
--6                  Multiple response                                          23                0.14 
--4                  Nonrespondent                                             648                4.00 
-TOTAL                                                                      16,197              100.00 
-
-
-----------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------
-
-
-File:       BYF3PSTSTU.PRI
-Name:       BYS20J
-Position:   4534
-Length:     2
-Label:      Does not feel safe at this school
-
-Description:
-   20. How much do you agree or disagree with each of the following
-   statements about your current school and teachers?
-   (MARK ONE RESPONSE ON EACH LINE)
-   (Strongly Agree; Agree; Disagree; Strongly Disagree)
-   j. I don't feel safe at this school
-Note:   This is one of a series of items, a through n.
-Applies to: All respondents.
-Source: ELS:2002 Student Questionnaire
-
-
-                                                                        Frequency             Percent 
-Category            Label                                              Unweighted          Unweighted 
-------------------- ----------------------------------------- ------------------- ------------------- 
-1                   Strongly agree                                            389                2.40 
-2                   Agree                                                   1,182                7.30 
-3                   Disagree                                                6,919               42.72 
-4                   Strongly disagree                                       5,905               36.46 
--9                  Missing                                                   246                1.52 
--8                  Survey component legitimate skip/NA                       305                1.88 
--7                  Not administered; abbreviated interview                   580                3.58 
-                    or breakoff
--6                  Multiple response                                          23                0.14 
--4                  Nonrespondent                                             648                4.00 
-TOTAL                                                                      16,197              100.00 
-
-
-----------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------
-
-
-File:       BYF3PSTSTU.PRI
-Name:       BYS23C
-Position:   4574
-Length:     2
-Label:      Recognized for good grades
-
-Description:
-   23. Since starting ninth grade, did you win any of the following
-   awards or were you recognized at school for doing well or
-   participating in certain activities?
-   (MARK ONE RESPONSE ON EACH LINE)
-   (Yes; No)
-   c. Received special recognition for good grades or honor roll
-Note:   This is one of a series of items, a through f.
-Applies to: All respondents.
-Source: ELS:2002 Student Questionnaire         
-
-
-                                                                        Frequency             Percent 
-Category            Label                                              Unweighted          Unweighted 
-------------------- ----------------------------------------- ------------------- ------------------- 
-0                   No                                                      7,366               45.48 
-1                   Yes                                                     7,137               44.06 
--9                  Missing                                                   154                0.95 
--8                  Survey component legitimate skip/NA                       305                1.88 
--7                  Not administered; abbreviated interview                   580                3.58 
-                    or breakoff
--6                  Multiple response                                           7                0.04 
--4                  Nonrespondent                                             648                4.00 
-TOTAL                                                                      16,197              100.00 
-
-
-----------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------
-
-
-File:       BYF3PSTSTU.PRI
-Name:       BYS24C
-Position:   4586
-Length:     2
-Label:      How many times absent from school
-
-Description:
-   24. How many times did the following things happen to you in the
-   first semester or term of this school year?
-   (MARK ONE RESPONSE ON EACH LINE)
-   (Never; 1-2 times; 3-6 times; 7-9 times; 10 or more times)
-   c. I was absent from school
-Note:   This is one of a series of items, a through g.
-Applies to: All respondents.
-Source: ELS:2002 Student Questionnaire
-
-
-                                                                        Frequency             Percent 
-Category            Label                                              Unweighted          Unweighted 
-------------------- ----------------------------------------- ------------------- ------------------- 
-1                   Never                                                   2,239               13.82 
-2                   1-2 times                                               5,245               32.38 
-3                   3-6 times                                               4,654               28.73 
-4                   7-9 times                                               1,190                7.35 
-5                   10 or more times                                        1,044                6.45 
--9                  Missing                                                   245                1.51 
--8                  Survey component legitimate skip/NA                       305                1.88 
--7                  Not administered; abbreviated interview                   580                3.58 
-                    or breakoff
--6                  Multiple response                                          47                0.29 
--4                  Nonrespondent                                             648                4.00 
-TOTAL                                                                      16,197              100.00 
-
-
-----------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------
-
-
-File:       BYF3PSTSTU.PRI
-Name:       BYS24D
-Position:   4588
-Length:     2
-Label:      How many times got in trouble
-
-Description:
-   24. How many times did the following things happen to you in the
-   first semester or term of this school year?
-   (MARK ONE RESPONSE ON EACH LINE)
-   (Never; 1-2 times; 3-6 times; 7-9 times; 10 or more times)
-   d. I got in trouble for not following school rules
-Note:   This is one of a series of items, a through g.
-Applies to: All respondents.
-Source: ELS:2002 Student Questionnaire
-
-
-                                                                        Frequency             Percent 
-Category            Label                                              Unweighted          Unweighted 
-------------------- ----------------------------------------- ------------------- ------------------- 
-1                   Never                                                   8,162               50.39 
-2                   1-2 times                                               4,476               27.63 
-3                   3-6 times                                               1,128                6.96 
-4                   7-9 times                                                 322                1.99 
-5                   10 or more times                                          386                2.38 
--9                  Missing                                                   174                1.07 
--8                  Survey component legitimate skip/NA                       305                1.88 
--7                  Not administered; abbreviated interview                   580                3.58 
-                    or breakoff
--6                  Multiple response                                          16                0.10 
--4                  Nonrespondent                                             648                4.00 
-TOTAL                                                                      16,197              100.00 
-
-
-----------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------
-
-
-File:       BYF3PSTSTU.PRI
-Name:       BYS27I
-Position:   4680
-Length:     2
-Label:      Parents expect success in school
-
-Description:
-   27. How much do you agree or disagree with the following
-   statements about why you go to school?
-   (MARK ONE RESPONSE ON EACH LINE)
-   (Strongly Agree; Agree; Disagree; Strongly Disagree)
-   i.  I go to school because my parents expect me to succeed
-Note:   This is one of a series of items, a through i.
-Applies to: All respondents.
-Source: ELS:2002 Student Questionnaire
-
-
-                                                                        Frequency             Percent 
-Category            Label                                              Unweighted          Unweighted 
-------------------- ----------------------------------------- ------------------- ------------------- 
-1                   Strongly agree                                          7,800               48.16 
-2                   Agree                                                   5,776               35.66 
-3                   Disagree                                                  703                4.34 
-4                   Strongly disagree                                         217                1.34 
--9                  Missing                                                   152                0.94 
--8                  Survey component legitimate skip/NA                       305                1.88 
--7                  Not administered; abbreviated interview                   580                3.58 
-                    or breakoff
--6                  Multiple response                                          16                0.10 
--4                  Nonrespondent                                             648                4.00 
-TOTAL                                                                      16,197              100.00 
-
-
-----------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------
-
-
-File:       BYF3PSTSTU.PRI
-Name:       BYS37
-Position:   4790
-Length:     2
-Label:      Importance of good grades to student
-
-Description:
-   37. How important are good grades to you?
-   (MARK ONE RESPONSE)
-   Not important
-   Somewhat important
-   Important
-   Very important
-Applies to: All respondents.
-Source: ELS:2002 Student Questionnaire
-
-
-                                                                        Frequency             Percent 
-Category            Label                                              Unweighted          Unweighted 
-------------------- ----------------------------------------- ------------------- ------------------- 
-1                   Not important                                             196                1.21 
-2                   Somewhat important                                      1,685               10.40 
-3                   Important                                               5,256               32.45 
-4                   Very important                                          7,833               48.36 
--9                  Missing                                                   254                1.57 
--8                  Survey component legitimate skip/NA                       305                1.88 
--6                  Multiple response                                          20                0.12 
--4                  Nonrespondent                                             648                4.00 
-TOTAL                                                                      16,197              100.00 
-
-
-----------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------
-
-
-File:       BYF3PSTSTU.PRI
-Name:       BYS38A
-Position:   4792
-Length:     2
-Label:      How often goes to class without pencil/paper
-
-Description:
-   38.  How often do you come to class without these things?
-   (MARK ONE RESPONSE ON EACH LINE)
-   (Never; Seldom; Often; Usually)
-   a. Pencil/pen or paper
-Note:   This is one of a series of items, a through c.
-Applies to: All respondents.
-Source: ELS:2002 Student Questionnaire
-
-
-                                                                        Frequency             Percent 
-Category            Label                                              Unweighted          Unweighted 
-------------------- ----------------------------------------- ------------------- ------------------- 
-1                   Never                                                   7,488               46.23 
-2                   Seldom                                                  4,421               27.30 
-3                   Often                                                   1,044                6.45 
-4                   Usually                                                 1,428                8.82 
--9                  Missing                                                   265                1.64 
--8                  Survey component legitimate skip/NA                       305                1.88 
--7                  Not administered; abbreviated interview                   580                3.58 
-                    or breakoff
--6                  Multiple response                                          18                0.11 
 -4                  Nonrespondent                                             648                4.00 
 TOTAL                                                                      16,197              100.00 
 
@@ -1295,6 +912,93 @@ TOTAL                                                                      16,19
 
 
 File:       BYF3PSTSTU.PRI
+Name:       BYTVVIGM
+Position:   478
+Length:     2
+Label:      BY hrs/day watching TV/videos/playing video games (weekdays)
+
+Description:
+Indicates the average number of hours per weekday spent watching
+TV/videos or playing video/computer games during the 01-02 school
+year. Hours per weekday watching TV/videos and hours per weekday
+playing video/computer games were collected separately as part of the
+base year questionnaire.
+Note: The two input variables for this composite were top-coded at "6
+or more hours". BYTVVIGM is set to "8 or more hours" for any case
+where one of these input variables is top-coded at "6 or more hours"
+if the other input variable is at least 2 hours. If, however, one
+input indicates "6 or more hours" and the other input indicates 0 or 1
+hours, BYTVVIGM is set to 99 ("top-coded input; unable to calculate").
+SAS code:
+If BYS48A in (-4,-8) then BYTVVIGM=BYS48A;
+  else if (BYS48A<0 or BYS49A<0) then BYTVVIGM=-9;
+  else BYTVVIGM = BYS48A + BYS49A;
+if BYTVVIGM>8 then BYTVVIGM=8; *top-code at 8;
+  else if (BYS48A=6 or BYS49A=6) and 0<=BYTVVIGM<8 then BYTVVIGM=99;
+Applies to: All base year respondents.
+Source: Base Year Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+0                   0 hours                                                   943                5.82 
+1                   1 hour                                                  1,821               11.24 
+2                   2 hours                                                 2,260               13.95 
+3                   3 hours                                                 2,032               12.55 
+4                   4 hours                                                 1,450                8.95 
+5                   5 hours                                                 1,246                7.69 
+6                   6 hours                                                   639                3.95 
+7                   7 hours                                                   343                2.12 
+8                   8 or more hours                                         1,700               10.50 
+99                  Top-coded input; unable to calculate                    1,467                9.06 
+-9                  Missing                                                 1,343                8.29 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS46B
+Position:   4940
+Length:     2
+Label:      Hours/day on computer other than for school
+
+Description:
+   46. How many hours a day do you usually use a computer...
+   other than for school work?
+   hours
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+0                   0 hours                                                 1,828               11.29 
+1                   1 hour                                                  4,158               25.67 
+2                   2 hours                                                 3,264               20.15 
+3                   3 hours                                                 1,889               11.66 
+4                   4 hours                                                   977                6.03 
+5                   5 hours                                                   759                4.69 
+6                   6 or more hours                                         1,122                6.93 
+-9                  Missing                                                   667                4.12 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-7                  Not administered; abbreviated interview                   580                3.58 
+                    or breakoff
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
 Name:       BYS44C
 Position:   4920
 Length:     2
@@ -1333,15 +1037,18 @@ TOTAL                                                                      16,19
 
 
 File:       BYF3PSTSTU.PRI
-Name:       BYS46B
-Position:   4940
+Name:       BYS20E
+Position:   4524
 Length:     2
-Label:      Hours/day on computer other than for school
+Label:      The teaching is good
 
 Description:
-   46. How many hours a day do you usually use a computer...
-   other than for school work?
-   hours
+   20. How much do you agree or disagree with each of the following
+   statements about your current school and teachers?
+   (MARK ONE RESPONSE ON EACH LINE)
+   (Strongly Agree; Agree; Disagree; Strongly Disagree)
+   e. The teaching is good
+Note:   This is one of a series of items, a through n.
 Applies to: All respondents.
 Source: ELS:2002 Student Questionnaire
 
@@ -1349,17 +1056,384 @@ Source: ELS:2002 Student Questionnaire
                                                                         Frequency             Percent 
 Category            Label                                              Unweighted          Unweighted 
 ------------------- ----------------------------------------- ------------------- ------------------- 
-0                   0 hours                                                 1,828               11.29 
-1                   1 hour                                                  4,158               25.67 
-2                   2 hours                                                 3,264               20.15 
-3                   3 hours                                                 1,889               11.66 
-4                   4 hours                                                   977                6.03 
-5                   5 hours                                                   759                4.69 
-6                   6 or more hours                                         1,122                6.93 
--9                  Missing                                                   667                4.12 
+1                   Strongly agree                                          2,186               13.50 
+2                   Agree                                                   9,620               59.39 
+3                   Disagree                                                2,114               13.05 
+4                   Strongly disagree                                         470                2.90 
+-9                  Missing                                                   251                1.55 
 -8                  Survey component legitimate skip/NA                       305                1.88 
 -7                  Not administered; abbreviated interview                   580                3.58 
                     or breakoff
+-6                  Multiple response                                          23                0.14 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS87C
+Position:   5748
+Length:     2
+Label:      Thinks math is fun
+
+Description:
+87. How much do you agree or disagree with the following
+statements?
+(MARK ONE RESPONSE ON EACH LINE)
+(Strongly agree; Agree; Disagree; Strongly disagree)
+c. Because doing mathematics is fun, I wouldn't want to give it
+up
+Note:   This is one of a series of items, a through f.
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Strongly agree                                            832                5.14 
+2                   Agree                                                   3,122               19.28 
+3                   Disagree                                                5,403               33.36 
+4                   Strongly disagree                                       2,317               14.31 
+-9                  Missing                                                 2,979               18.39 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-7                  Not administered; abbreviated interview                   580                3.58 
+                    or breakoff
+-6                  Multiple response                                          11                0.07 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS20D
+Position:   4522
+Length:     2
+Label:      Other students often disrupt class
+
+Description:
+   20. How much do you agree or disagree with each of the following
+   statements about your current school and teachers?
+   (MARK ONE RESPONSE ON EACH LINE)
+   (Strongly Agree; Agree; Disagree; Strongly Disagree)
+   d. Other students often disrupt class
+Note:   This is one of a series of items, a through n.
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Strongly agree                                          2,773               17.12 
+2                   Agree                                                   7,753               47.87 
+3                   Disagree                                                3,561               21.99 
+4                   Strongly disagree                                         385                2.38 
+-9                  Missing                                                   164                1.01 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-7                  Not administered; abbreviated interview                   580                3.58 
+                    or breakoff
+-6                  Multiple response                                          28                0.17 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS23C
+Position:   4574
+Length:     2
+Label:      Recognized for good grades
+
+Description:
+   23. Since starting ninth grade, did you win any of the following
+   awards or were you recognized at school for doing well or
+   participating in certain activities?
+   (MARK ONE RESPONSE ON EACH LINE)
+   (Yes; No)
+   c. Received special recognition for good grades or honor roll
+Note:   This is one of a series of items, a through f.
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire         
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+0                   No                                                      7,366               45.48 
+1                   Yes                                                     7,137               44.06 
+-9                  Missing                                                   154                0.95 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-7                  Not administered; abbreviated interview                   580                3.58 
+                    or breakoff
+-6                  Multiple response                                           7                0.04 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS37
+Position:   4790
+Length:     2
+Label:      Importance of good grades to student
+
+Description:
+   37. How important are good grades to you?
+   (MARK ONE RESPONSE)
+   Not important
+   Somewhat important
+   Important
+   Very important
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Not important                                             196                1.21 
+2                   Somewhat important                                      1,685               10.40 
+3                   Important                                               5,256               32.45 
+4                   Very important                                          7,833               48.36 
+-9                  Missing                                                   254                1.57 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-6                  Multiple response                                          20                0.12 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS27I
+Position:   4680
+Length:     2
+Label:      Parents expect success in school
+
+Description:
+   27. How much do you agree or disagree with the following
+   statements about why you go to school?
+   (MARK ONE RESPONSE ON EACH LINE)
+   (Strongly Agree; Agree; Disagree; Strongly Disagree)
+   i.  I go to school because my parents expect me to succeed
+Note:   This is one of a series of items, a through i.
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Strongly agree                                          7,800               48.16 
+2                   Agree                                                   5,776               35.66 
+3                   Disagree                                                  703                4.34 
+4                   Strongly disagree                                         217                1.34 
+-9                  Missing                                                   152                0.94 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-7                  Not administered; abbreviated interview                   580                3.58 
+                    or breakoff
+-6                  Multiple response                                          16                0.10 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS90D
+Position:   5810
+Length:     2
+Label:      Important to friends to get good grades
+
+Description:
+90. Among your close friends, how important is it to them that
+they...
+(MARK ONE RESPONSE ON EACH LINE)
+(Not important; Somewhat important; Very important)
+d. get good grades
+Note:   This is one of a series of items, a through h, j through m,
+and q.
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Not important                                             599                3.70 
+2                   Somewhat important                                      4,646               28.68 
+3                   Very important                                          5,379               33.21 
+-9                  Missing                                                 4,025               24.85 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-7                  Not administered; abbreviated interview                   580                3.58 
+                    or breakoff
+-6                  Multiple response                                          15                0.09 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS38A
+Position:   4792
+Length:     2
+Label:      How often goes to class without pencil/paper
+
+Description:
+   38.  How often do you come to class without these things?
+   (MARK ONE RESPONSE ON EACH LINE)
+   (Never; Seldom; Often; Usually)
+   a. Pencil/pen or paper
+Note:   This is one of a series of items, a through c.
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Never                                                   7,488               46.23 
+2                   Seldom                                                  4,421               27.30 
+3                   Often                                                   1,044                6.45 
+4                   Usually                                                 1,428                8.82 
+-9                  Missing                                                   265                1.64 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-7                  Not administered; abbreviated interview                   580                3.58 
+                    or breakoff
+-6                  Multiple response                                          18                0.11 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS20J
+Position:   4534
+Length:     2
+Label:      Does not feel safe at this school
+
+Description:
+   20. How much do you agree or disagree with each of the following
+   statements about your current school and teachers?
+   (MARK ONE RESPONSE ON EACH LINE)
+   (Strongly Agree; Agree; Disagree; Strongly Disagree)
+   j. I don't feel safe at this school
+Note:   This is one of a series of items, a through n.
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Strongly agree                                            389                2.40 
+2                   Agree                                                   1,182                7.30 
+3                   Disagree                                                6,919               42.72 
+4                   Strongly disagree                                       5,905               36.46 
+-9                  Missing                                                   246                1.52 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-7                  Not administered; abbreviated interview                   580                3.58 
+                    or breakoff
+-6                  Multiple response                                          23                0.14 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS24C
+Position:   4586
+Length:     2
+Label:      How many times absent from school
+
+Description:
+   24. How many times did the following things happen to you in the
+   first semester or term of this school year?
+   (MARK ONE RESPONSE ON EACH LINE)
+   (Never; 1-2 times; 3-6 times; 7-9 times; 10 or more times)
+   c. I was absent from school
+Note:   This is one of a series of items, a through g.
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Never                                                   2,239               13.82 
+2                   1-2 times                                               5,245               32.38 
+3                   3-6 times                                               4,654               28.73 
+4                   7-9 times                                               1,190                7.35 
+5                   10 or more times                                        1,044                6.45 
+-9                  Missing                                                   245                1.51 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-7                  Not administered; abbreviated interview                   580                3.58 
+                    or breakoff
+-6                  Multiple response                                          47                0.29 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS24D
+Position:   4588
+Length:     2
+Label:      How many times got in trouble
+
+Description:
+   24. How many times did the following things happen to you in the
+   first semester or term of this school year?
+   (MARK ONE RESPONSE ON EACH LINE)
+   (Never; 1-2 times; 3-6 times; 7-9 times; 10 or more times)
+   d. I got in trouble for not following school rules
+Note:   This is one of a series of items, a through g.
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Never                                                   8,162               50.39 
+2                   1-2 times                                               4,476               27.63 
+3                   3-6 times                                               1,128                6.96 
+4                   7-9 times                                                 322                1.99 
+5                   10 or more times                                          386                2.38 
+-9                  Missing                                                   174                1.07 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-7                  Not administered; abbreviated interview                   580                3.58 
+                    or breakoff
+-6                  Multiple response                                          16                0.10 
 -4                  Nonrespondent                                             648                4.00 
 TOTAL                                                                      16,197              100.00 
 
@@ -1498,80 +1572,3 @@ Category            Label                                              Unweighte
 TOTAL                                                                      16,197              100.00 
 
 
-----------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------
-
-
-File:       BYF3PSTSTU.PRI
-Name:       BYS87C
-Position:   5748
-Length:     2
-Label:      Thinks math is fun
-
-Description:
-87. How much do you agree or disagree with the following
-statements?
-(MARK ONE RESPONSE ON EACH LINE)
-(Strongly agree; Agree; Disagree; Strongly disagree)
-c. Because doing mathematics is fun, I wouldn't want to give it
-up
-Note:   This is one of a series of items, a through f.
-Applies to: All respondents.
-Source: ELS:2002 Student Questionnaire
-
-
-                                                                        Frequency             Percent 
-Category            Label                                              Unweighted          Unweighted 
-------------------- ----------------------------------------- ------------------- ------------------- 
-1                   Strongly agree                                            832                5.14 
-2                   Agree                                                   3,122               19.28 
-3                   Disagree                                                5,403               33.36 
-4                   Strongly disagree                                       2,317               14.31 
--9                  Missing                                                 2,979               18.39 
--8                  Survey component legitimate skip/NA                       305                1.88 
--7                  Not administered; abbreviated interview                   580                3.58 
-                    or breakoff
--6                  Multiple response                                          11                0.07 
--4                  Nonrespondent                                             648                4.00 
-TOTAL                                                                      16,197              100.00 
-
-
-----------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------
-
-
-File:       BYF3PSTSTU.PRI
-Name:       BYS90D
-Position:   5810
-Length:     2
-Label:      Important to friends to get good grades
-
-Description:
-90. Among your close friends, how important is it to them that
-they...
-(MARK ONE RESPONSE ON EACH LINE)
-(Not important; Somewhat important; Very important)
-d. get good grades
-Note:   This is one of a series of items, a through h, j through m,
-and q.
-Applies to: All respondents.
-Source: ELS:2002 Student Questionnaire
-
-
-                                                                        Frequency             Percent 
-Category            Label                                              Unweighted          Unweighted 
-------------------- ----------------------------------------- ------------------- ------------------- 
-1                   Not important                                             599                3.70 
-2                   Somewhat important                                      4,646               28.68 
-3                   Very important                                          5,379               33.21 
--9                  Missing                                                 4,025               24.85 
--8                  Survey component legitimate skip/NA                       305                1.88 
--7                  Not administered; abbreviated interview                   580                3.58 
-                    or breakoff
--6                  Multiple response                                          15                0.09 
--4                  Nonrespondent                                             648                4.00 
-TOTAL                                                                      16,197              100.00 
-
-
-----------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------
