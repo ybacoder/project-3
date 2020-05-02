@@ -1,0 +1,1577 @@
+GRADUATED HIGH SCHOOL?
+DROPPED OUT AT SOME POINT?
+GPA?
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       F2HSSTAT
+Position:   2028
+Length:     2
+Label:      High school completion status in 2006
+
+Description:
+First follow-up, transcript, and second follow-up data are all used as
+inputs for F2HSSTAT. First follow-up data is used in cases where the
+respondent indicated during the first follow-up they had already
+received a high school credential; transcript data (as preloaded for
+the F2 instrument) is used in cases where the respondent?s transcript
+indicated they received a May or June 2004 diploma or certificate of
+attendance (see also F2PHSDG and F2PHSDT). For second follow-up
+respondents for whom neither of these conditions apply, F2HSSTAT is
+determined by the following variables: type of high school credential
+received (F2A02); high school credential date (F2A03); or, for
+respondents who had not yet received a high school credential, whether
+they are currently pursuing any such credential (F2A07). For second
+follow-up nonrespondents, F2HSSTAT is determined by transcript or
+first follow-up data (if they indicate a final high school completion
+status).
+Note:  There are a small set of cases where F2HSSTAT is set to 1, 2,
+or 3 as a result of a re-examination of transcript information during
+F2 data editing activities. This small set of cases is made up of F2
+nonrespondents who did not indicate receipt of a high school
+credential during F1 participation (or were F1 nonrespondents), and
+where F1RTROUT = 8 (dropped out) or 9 (transferred).
+SAS Code:
+/** The temporary variables constructed below (with the HSxx_t **/
+/** naming convention) are summary variables that identify the **/
+/** type of HS credential received and the date the credential **/
+/** was received. These temporary variables are very similar  **/
+/** in nature to existing composite variables and were         **/
+/** therefore not added to the ECB so as to avoid confusion. **/
+    /* For F2 respondents */
+HSDG_t = 0;
+IF F2NRSTAT = 0 Then DO;
+    /* build summary HS completion date */
+   If F2PHSDT > 0 Then HSGRDT_t = F2PHSDT;
+    If F2A03 > 0 Then HSGRDT_t = F2A03;
+    /* build summary HS completion status */
+   If F2PHSDG > 0 Then HSDG_t = F2PHSDG;
+    If F2A02 > 0 Then HSDG_t = F2A02;
+END;
+/* Populate the summary HS completion date variable
+   for F2 NRs with F1 data if available */
+If F2NRSTAT > 0 Then DO;
+     If F1D41 = 1 or F1EGQFLG in (1,2) then Do;
+      if f1egqflg = 1  then do;
+           HSDG_t = 3 ;             * GED or equivalency ;
+           HSGRDT_t = F1E27 ;
+         end ;
+       else if (f1Qstat = 7 and F1D41 = 1) then do;
+           HSDG_t = 3 ;             * GED or equivalency ;
+           HSGRDT_t = F1D45 ;
+         end ;
+       else if f1egqflg = 2 and f1s15 in (1,2,3) then do ;
+           HSDG_t = 1 ;             * HS Diploma ;
+           HSGRDT_t = F1E27 ;
+         end ;
+       else if f1egqflg = 2 and f1s15 in (4) then do ;
+           HSDG_t = 2 ;             * Certificate of attendance;
+           HSGRDT_t = F1E27 ;
+         end ;
+       else do ;
+          if f1egqflg = 1 and HSDG_t = 0 then do ;
+             HSDG_t = 3 ;           * GED or equivalency ;
+             HSGRDT_t = F1E27 ;
+          end ;
+       end ;
+    End;
+    Else if F1RTROUT in (1,2,3,4,5,6) then Do;
+       if F1RDTLFT > 0 then HSGRDT_t = int(F1RDTLFT / 100) ;
+        /* HS Diploma */
+       if F1RTROUT in (1,2,3,4,5) then HSDG_t=1;
+        /* Certificate of attendance */
+       else if F1RTROUT=6 then HSDG_t=2;
+    End;
+END;
+ /*Transcript indicates diploma, date unknown*/
+If F1RTROUT IN(1,2,3,4) Then F2HSSTAT = F1RTROUT;
+ /*Transcript indicates received certificate of attendance*/
+Else if F1RTROUT = 6 then F2HSSTAT=5;
+ /*Transcript indicates received GED*/
+Else if F1RTROUT= 12 then F2HSSTAT=6;
+Else If F1RTROUT= 5 Then Do;
+   If F1RDTLFT >= 20040900 then F2HSSTAT=2;
+    /*Transcript indicates diploma and F2 interview
+      indicates 9/04 or after*/
+   Else if 0 < F1RDTLFT < 20030900 then F2HSSTAT=3;
+    /*Transcript indicates diploma and F2 interview
+      indicates before 9/03*/
+   Else if 20030900 <= F1RDTLFT < 20040900 then F2HSSTAT=1;
+    /*Transcript indicates diploma and F2 interview
+      indicates 9/03 to 8/04*/
+   Else if Trim(Left(F1RDTLFT)) = '-9' then F2HSSTAT=4;
+    /*Transcript indicates diploma and date unknown*/
+End;
+  /*~~ Overwrite transcript data with F2 data when available ~~*/
+     /*F2 interview indicates received certificate of attendance*/
+   If HSDG_t = 2 then F2HSSTAT=5;
+     /*F2 interview indicates received GED*/
+   Else if HSDG_t = 3 then F2HSSTAT=6;
+   Else If HSDG_t = 1 Then Do;
+      If (HSGRDT_t >= 200409) then F2HSSTAT=2;
+       /*F2 interview indicates diploma and F2 interview
+         indicates 9/04 or after*/
+      Else if (0 < HSGRDT_t < 200309) then F2HSSTAT=3;
+       /*F2 interview indicates diploma and F2 interview
+         indicates before 9/03*/
+      Else if (200309 <= HSGRDT_t < 200409 And HSGRDT_t ^= 200400)
+              then F2HSSTAT=1;
+       /*F2 interview indicates diploma and F2 interview
+         indicates 9/03 to 8/04*/
+      Else if Trim(Left(HSGRDT_t)) IN('','-9','200400')
+              And F1RTROUT NOT IN(1,2,3) then F2HSSTAT=4;
+       /*F2 interview indicates diploma and date unknown*/
+   End;
+    /*F2 interview indicates currently enrolled in high school*/
+   Else if F2A07 in (1,2) then F2HSSTAT=7;
+    /*F2 interview indicates currently working towards a GED*/
+   Else if F2A07 = 3 then F2HSSTAT=8;
+    /*F2 interview indicates not enrolled in high
+      school and not working on GED*/
+   Else if F2A07 = 4 then F2HSSTAT=9;
+ /*~~ No info from F2 or Transcript ~~*/
+If F2HSSTAT = . THen F2HSSTAT = 10; /* Status cannot be determined */
+Applies to: All ELS:2002 sample members.
+Source: ELS:2002 First follow-up Early Graduate Questionnaire; ELS:2002
+First follow-up Dropout Questionnaire; High School Transcript;
+ELS:2002 Second follow-up interview
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Fall 2003 - Summer 2004 graduate                       13,311               82.18 
+2                   Post-summer 2004 graduate                                 336                2.07 
+3                   Pre-fall 2003 graduate                                    405                2.50 
+4                   Graduation date unknown                                    26                0.16 
+5                   Received certificate of attendance                         57                0.35 
+6                   Received GED or other equivalency                         490                3.03 
+7                   Still enrolled in high school                             108                0.67 
+8                   Working towards GED or equivalent                         240                1.48 
+9                   No diploma, not in HS, not pursuing GED                   492                3.04 
+10                  Status cannot be determined                               732                4.52 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       F2EVERDO
+Position:   2018
+Length:     2
+Label:      F2 ever dropped out
+
+Description:
+Indicates whether the sample member has dropped out at some point in
+time. Cases identified by F1EVERDO as ?ever dropouts? remain as such
+in F2EVERDO; these cases include student-reported dropouts (as
+reported via F1 participation; note, however, that F1 student,
+transfer, and homeschool questionnaire respondents were not asked
+whether they had had a dropout episode), and school-reported dropouts
+(as reported at any of the 3 enrollment status updates). F1EVERDO is
+then updated with second follow-up and transcript information as
+follows:  first follow-up nonrespondents who reported in the second
+follow-up that they were not in school during the spring term of 2004
+(F2A12=5) or that they were out for 4 or more weeks during that term
+(F2A13=1) are classified as 'ever dropouts'. Also classified as
+'ever dropouts' are second follow-up respondents who reported that
+they had completed a GED since they were last interviewed (F2A02=3),
+or they had not received a high school credential and were not in a
+high school completion program (F2A07=3 or 4). Finally, cases where
+the sample member's transcript indicates that the sample member
+dropped out, received a GED, was dismissed, or incarcerated
+(F1RTROUT=8, 12, 14,or 15, respectively) are coded as ?ever dropouts?
+in F2EVERDO.
+SAS Code:
+F2EVERDO=0;
+ /*Was an ever dropout in F1*/
+If F1EVERDO=1 then F2EVERDO=1;
+ /*Reported in F2 had been out of school for 4 or
+    more weeks in spring ?04 */
+Else if F2A13=1 then F2EVERDO=1;
+ /*Reported in F2 currently working on a GED or not in a high
+    school completion program*/
+Else if F2A07 IN(3,4) then F2EVERDO=1;
+ /*Reported in F2 not in school in spring term ?04*/
+Else if F2A12=5 then F2EVERDO=1;
+ /*Reported in F2 received a GED*/
+Else if F2A02=3 then F2EVERDO=1;
+ /*Transcript indicates dropped out of high school*/
+Else if F1RTROUT IN(8,12,14,15) then F2EVERDO=1;
+Applies to: All ELS:2002 sample members.
+Source: ELS:2002 First follow-up Survey Control System; High School
+Transcript; ELS:2002 Second follow-up interview
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+0                   No available evidence of dropout episode               14,367               88.70 
+1                   Evidence of a dropout episode                           1,830               11.30 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       F1RGPP2
+Position:   1712
+Length:     2
+Label:      GPA for all courses taken in the 9th - 12th grades - categorical
+
+Description:
+Categorical version of restricted use variable F1RGP.
+SAS code:
+if F1RGP<0 then F1RGPP2=F1RGP;
+else if 0<=F1RGP<=1 then F1RGPP2=0;
+else if 1.01<=F1RGP<=1.5 then F1RGPP2=1;
+else if 1.51<=F1RGP<=2 then F1RGPP2=2;
+else if 2.01<=F1RGP<=2.5 then F1RGPP2=3;
+else if 2.51<=F1RGP<=3 then F1RGPP2=4;
+else if 3.01<=F1RGP<=3.5 then F1RGPP2=5;
+else if 3.51<=F1RGP<=4 then F1RGPP2=6;
+else if 4<F1RGP then F1RGPP2=7;
+Applies to: All high school transcript respondents.
+Source: High School Transcript
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+0                   0.00 - 1.00                                               297                1.83 
+1                   1.01 - 1.50                                               741                4.57 
+2                   1.51 - 2.00                                             1,808               11.16 
+3                   2.01 - 2.50                                             2,816               17.39 
+4                   2.51 - 3.00                                             3,254               20.09 
+5                   3.01 - 3.50                                             3,221               19.89 
+6                   3.51 - 4.00                                             2,659               16.42 
+-9                  Missing                                                    12                0.07 
+-4                  Nonrespondent                                           1,389                8.58 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+2012 Education Longitudinal Study of 2002 EDAT Extract Codebook
+
+..\data\Codebook.txt
+
+/*****************************************************************************************
+NOTES:                                                                                  
+   (1) Full sample weights and/or replicate weights are added automatically.
+   (2) Identification numbers are added automatically.
+*****************************************************************************************/
+
+
+
+File:       BYF3PSTSTU.PRI
+Name:       STU_ID
+Position:   1
+Length:     6
+Label:      Student ID
+
+Description:
+Student ID is composed of the 4-digit School ID (which consists of
+the 3-digit stratum and 1-digit PSU) and a 2-digit sequential
+student code within school.
+Stratum (STRAT_ID) and PSU are embedded in STU_ID for ease of use
+in certain variance estimation programs.
+Note: The following reserve codes are used throughout the ECB. This
+description is added to the first variable of each section to help
+users understand the meaning of each reserve code.
+-1: "Don't know" represents respondents who indicated that they didn't
+know the answer to the question.
+-2: "Refused" represents respondents who indicated that they refused
+to answer the question
+-3: "Item legitimate skip/NA" is filled for questions that are not
+administered based on routing logic; i.e., the items are not
+applicable based on responses to prior questions.
+-4: "Nonrespondent" is filled for all variables across the entire
+questionnaire when a sample member did not respond to the
+questionnaire.
+-5: "Out of range" represents questionnaire respondents who
+reported values that are out of range.
+-6: "Multiple response" represents hard-copy questionnaire respondents
+who reported more than one response for an item that requires
+only one response.
+-7: "Partial interview-breakoff" is filled for questions that are not
+answered because the respondent does not wish to continue the
+interview or they have run out of time. This also includes particular
+items that are not included on an abbreviated-version questionnaire.
+-8: "Survey component legitimate skip/NA" is filled for all items
+within a survey component for sample members who were not administered
+that component by design for one of the following reasons:  1) the
+component was not administered based on their status (e.g., transfer
+students did not receive certain items on the in-school survey), 2)
+the sample member was not a part of the study at the time of
+administration (e.g., first follow-up freshened sample members were by
+definition not eligible for the base-year survey), or 3) the sample
+member was not capable of completing the survey component (e.g.,
+students who were questionnaire-ineligible due to a language barrier
+or disability at the time of the survey).
+-9: "Missing" is filled for questions that are not answered when the
+routing suggests that a response should have been provided.
+Source: ELS:2002 Sampling
+
+                                                                           Mean       Std Deviation 
+Category                            Min                 Max          Unweighted          Unweighted 
+------------------- ------------------- ------------------- ------------------- ------------------- 
+Continuous                       101101              461234           279542.71           104263.77 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYSEX
+Position:   71
+Length:     2
+Label:      Sex-composite
+
+Description:
+BYSEX was previously named SEX in the BY ECB.
+Gender of student (male or female). Taken from student questionnaire
+(BYS14) if available; if missing, then taken from (in order of
+preference) school roster, logical imputation based on first name,
+or statistical imputation otherwise. See section 3.3 of the Base Year
+Data File User's Manual for a discussion of the imputation procedures.
+1 Male
+2 Female
+Source: ELS:2002 Student Questionnaire; Sampling; Imputation
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Male                                                    7,653               47.25 
+2                   Female                                                  7,717               47.64 
+-8                  Survey component legitimate skip/NA                       179                1.11 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYRACE
+Position:   75
+Length:     2
+Label:      Student's race/ethnicity-composite
+
+Description:
+BYRACE was previously named RACE on the BY ECB.
+The race/Hispanic ethnicity variable is obtained from the student
+questionnaire, when available; sampling roster, if missing on the
+questionnaire; or parent questionnaire, if missing on the sampling
+roster and parent respondent is biological parent. Race/ethnicity was
+logically imputed from other questionnaire items (e.g., surname,
+native language) if missing from all available sources. Race adheres
+to the following definitions:
+American Indian or Alaska Native, not Hispanic or Latino
+(This category includes only persons who reported American Indian or
+Alaska Native as their sole race and did not report Hispanic
+ethnicity)
+Asian, Hawaiian or other Pacific Islander, not Hispanic or Latino
+(This category includes persons who reported Asian as their sole race,
+but did not report Hispanic ethnicity. Additionally, Hawaiians and
+Pacific Islanders are included in this category even though they were
+collected separately, due to small reported numbers and to preserve
+consistency with related longitudinal studies. The restricted-use
+data file contains a variable which maintains a separate category for
+Hawaiians/other Pacific Islanders.)
+Black, not Hispanic or Latino
+(This category includes only persons who reported Black as their sole
+race, but did not report Hispanic ethnicity)
+Hispanic, no race specified
+(This category includes Hispanic or Latino ethnicity only. Race
+information was not reported for these cases; only Hispanic
+indication.)
+Hispanic or Latino, regardless of race
+(This category includes Hispanic or Latino ethnicity and any
+combination of race)
+More than one race, non-Hispanic
+(This category includes only persons who reported two or more races
+but did not report Hispanic ethnicity)
+White, not Hispanic or Latino
+(This category includes only persons who reported White as their sole
+race but did not report Hispanic ethnicity)
+The restricted file presents race as a series of five dichotomous
+variables (the respondent is/is not White; is/is not Black, etc.).
+The variables are: White, Black, American Indian/AN, Asian, Native
+Hawaiian/PI. For disclosure risk reasons, simplified versions of race
+appear on the public files, with NH/PI combined with Asian.
+Source: ELS:2002 Student Questionnaire;Sampling;Parent Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Amer. Indian/Alaska Native, non-Hispanic                  130                0.80 
+2                   Asian, Hawaii/Pac. Islander,non-Hispanic                1,460                9.01 
+3                   Black or African American, non-Hispanic                 2,020               12.47 
+4                   Hispanic, no race specified                               996                6.15 
+5                   Hispanic, race specified                                1,221                7.54 
+6                   More than one race, non-Hispanic                          735                4.54 
+7                   White, non-Hispanic                                     8,682               53.60 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYSTLANG
+Position:   95
+Length:     2
+Label:      Whether English is student's native language-composite
+
+Description:
+BYSTLANG was previously named STLANG on the BY ECB.
+BYS67 is the primary source for this composite variable. If missing,
+the variable was imputed. See section 3.3 of the Base Year Data File
+User's Manual for a discussion of the imputation procedures.
+BYS67 item wording:
+67. Is English your native language (the first language you
+learned to speak when you were a child)?
+Yes (SKIP TO QUESTION 71 ON PAGE 23)
+No (GO TO QUESTION 68)
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire; Imputation
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+0                   No                                                      2,586               15.97 
+1                   Yes                                                    12,658               78.15 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYPARED
+Position:   131
+Length:     2
+Label:      Parents' highest level of education
+
+Description:
+BYPARED was previously named PARED on the BY ECB.
+The highest level of education reached by either of the student's
+parents. It is obtained from the parent questionnaire when available,
+or from the student questionnaire if missing on the parent
+questionnaire. The inputs are the composite variables MOTHED and
+FATHED. Because MOTHED and FATHED were imputed if otherwise missing,
+PARED is nonmissing for all student respondent cases.
+SAS Code:
+/* PARED is set to the higher of the two values (MOTHED and FATHED),
+or missing if both MOTHED and FATHED are missing. */
+if MOTHED>=FATHED then PARED=MOTHED;
+else if FATHED>MOTHED then PARED=FATHED;
+if PARED<0 then PARED=-9;
+Source: ELS:2002 Parent Questionnaire; Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Did not finish high school                                944                5.83 
+2                   Graduated from high school or GED                       3,053               18.85 
+3                   Attended 2-year school, no degree                       1,666               10.29 
+4                   Graduated from 2-year school                            1,597                9.86 
+5                   Attended college, no 4-year degree                      1,758               10.85 
+6                   Graduated from college                                  3,468               21.41 
+7                   Completed Master's degree or equivalent                 1,786               11.03 
+8                   Completed PhD, MD, other advanced degree                1,049                6.48 
+-9                  Missing                                                    49                0.30 
+-8                  Survey component legitimate skip/NA                       179                1.11 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYINCOME
+Position:   143
+Length:     2
+Label:      Total family income from all sources 2001-composite
+
+Description:
+BYINCOME was previously named INCOME on the BY ECB.
+Family income: the primary source was question BYP85 in the parent
+questionnaire. If missing, the value was imputed (in the base
+year for base year respondents; in the first follow-up for others).
+See section 3.3 of the Base Year Data File User's Manual for a
+discussion of the imputation procedures.
+BYP85 item wording:
+85. Which category does your total family income from all sources in
+2001 fall into?  (If you are not sure about the amount, please
+estimate.)
+(MARK ONE RESPONSE)
+None
+$1,000 or less
+$1,001 - $5,000
+$5,001 - $10,000
+$10,001 - $15,000
+$15,001 - $20,000
+$20,001 - $25,000
+$25,001 - $35,000
+$35,001 - $50,000
+$50,001 - $75,000
+$75,001 - $100,000
+$100,001 - $200,000
+$200,001 or more
+Source: ELS:2002 Parent Questionnaire; Imputation
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   None                                                       80                0.49 
+2                   $1,000 or less                                            178                1.10 
+3                   $1,001-$5,000                                             305                1.88 
+4                   $5,001-$10,000                                            351                2.17 
+5                   $10,001-$15,000                                           699                4.32 
+6                   $15,001-$20,000                                           782                4.83 
+7                   $20,001-$25,000                                         1,000                6.17 
+8                   $25,001-$35,000                                         1,894               11.69 
+9                   $35,001-$50,000                                         3,022               18.66 
+10                  $50,001-$75,000                                         3,316               20.47 
+11                  $75,001-$100,000                                        2,178               13.45 
+12                  $100,001-$200,000                                       1,810               11.17 
+13                  $200,001 or more                                          582                3.59 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYRISKFC
+Position:   167
+Length:     2
+Label:      Number of academic risk factors in 10th grade
+
+Description:
+This variable indicates the number of academic risk factors associated
+with each sample member. Academic risk factors include whether the
+sample member:  (1) comes from a single-parent household; (2) has two
+parents without a high school diploma; (3) has a sibling who has
+dropped out of school; (4) has changed schools two or more times
+(excluding changes due to school promotions); (5) has repeated at
+least one grade; and (6) comes from a household with an income below
+the federal threshold for poverty. Households are considered
+impoverished if family income is $20,000 or less and household size is
+5 or less; $25,000 or less if household size is 6 or 7; $35,000 or
+less if household size is 8; and $50,000 or less if household size is
+9 or more.
+Note: Three of the six risk factors counted in this variable are
+based on imputed variables, which therefore contain no missing values
+(F1FCOMP, F1PARED, and BYINCOME). The remaining three risk factors
+are based on Parent Questionnaire variables; BYRISKFC values of -4
+(nonrespondent) and -8 (survey component legitimate skip) therefore
+refer to missing data from the Parent Questionnaire.
+SAS code:
+BYRISKFC=0;
+/* single parent household */
+If F1FCOMP in (5,6,7,8,9) then BYRISKFC+1;
+/* both parents w/o hs diploma */
+If F1PARED=1 then BYRISKFC+1;
+/* sibling who dropped out */
+If BYP09>0 or F1N12A=1 or F1N12B=1  or F1N12C=1  or F1N12D=1  or
+F1N12E=1  or F1N12F=1  or F1N12G=1 or F1N12H=1 or F1N12I=1  or F1N12J=
+1 or F1N12K=1    then BYRISKFC+1;
+/* changed schools 2 or more times */
+If BYP45>=2 then BYRISKFC+1;
+/* repeated at least one grade */
+If BYP46=1 then BYRISKFC+1;
+/* family income below poverty level relative to household size */
+Array hhmembers BYP07A - - BYP07L;
+hhnumber=0;
+do over hhmembers;
+	if hhmembers>0 then hhnumber+hhmembers;
+end;
+If BYINCOME <= 6 then BYRISKFC+1;
+Else if hhnumber >= 6 and BYINCOME <= 7 then BYRISKFC+1;
+Else if hhnumber >= 8 and BYINCOME <= 8 then BYRISKFC+1;
+Else if hhnumber >= 9 and BYINCOME <= 9 then BYRISKFC+1;
+/* parent nonrespondents */
+If BYP09 in (-4,-8) then BYRISKFC=BYP09;
+/* parent respondents with missing values for input variables */
+Else if (BYP09<0 and BYP09 ne -3) or BYP45<0 or BYP46<0 then
+BYRISKFC=-9;
+/* top-code at 5 */
+If BYRISKFC=6 then BYRISKFC=5;
+Applies to: All sample members.
+Source: Base Year Parent Questionnaire; Imputation; Base Year Student
+Questionnaire; First Follow-Up New Participant Supplement; Imputation
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+0                   No risk factors                                         5,014               30.96 
+1                   One risk factor                                         3,804               23.49 
+2                   Two risk factors                                        1,907               11.77 
+3                   Three risk factors                                        835                5.16 
+4                   Four risk factors                                         328                2.03 
+5                   Five or six risk factors                                   78                0.48 
+-9                  Missing                                                 1,516                9.36 
+-8                  Survey component legitimate skip/NA                       179                1.11 
+-4                  Nonrespondent                                           2,536               15.66 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYHMWRK
+Position:   476
+Length:     2
+Label:      BY hours per week spent on homework (in and out of school)
+
+Description:
+Indicates the number of hours per week the respondent spends
+working on homework both in-school and out-of-school, as of the base
+year.
+Note: Time spent on homework in-school and time spent on homework out-
+of-school were asked as separate questions in the base year
+questionnaire; these two variables were top-coded at 21 and 26 hours,
+respectively. BYHMWRK values of 97, 98, and 99 indicate that at least
+one of these input values was top-coded for the respondent, and
+therefore a more precise value cannot be calculated.
+SAS code:
+If BYS34A in (-4,-8) then BYHMWRK=BYS34A;
+Else if BYS34A=21 and BYS34B=26 then BYHMWRK=99;
+Else if BYS34A=21 then BYHMWRK=98;
+Else if BYS34B=26 then BYHMWRK=97;
+Else if BYS34A<0 or BYS34B<0 then BYHMWRK=-9;
+Else BYHMWRK=BYS34A + BYS34B;
+Applies to: All base year respondents.
+Source: Base Year Student Questionnaire
+
+
+                                                                           Mean       Std Deviation 
+Category                            Min                 Max          Unweighted          Unweighted 
+------------------- ------------------- ------------------- ------------------- ------------------- 
+Continuous                            0               99.00               14.06               20.53 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYTVVIGM
+Position:   478
+Length:     2
+Label:      BY hrs/day watching TV/videos/playing video games (weekdays)
+
+Description:
+Indicates the average number of hours per weekday spent watching
+TV/videos or playing video/computer games during the 01-02 school
+year. Hours per weekday watching TV/videos and hours per weekday
+playing video/computer games were collected separately as part of the
+base year questionnaire.
+Note: The two input variables for this composite were top-coded at "6
+or more hours". BYTVVIGM is set to "8 or more hours" for any case
+where one of these input variables is top-coded at "6 or more hours"
+if the other input variable is at least 2 hours. If, however, one
+input indicates "6 or more hours" and the other input indicates 0 or 1
+hours, BYTVVIGM is set to 99 ("top-coded input; unable to calculate").
+SAS code:
+If BYS48A in (-4,-8) then BYTVVIGM=BYS48A;
+  else if (BYS48A<0 or BYS49A<0) then BYTVVIGM=-9;
+  else BYTVVIGM = BYS48A + BYS49A;
+if BYTVVIGM>8 then BYTVVIGM=8; *top-code at 8;
+  else if (BYS48A=6 or BYS49A=6) and 0<=BYTVVIGM<8 then BYTVVIGM=99;
+Applies to: All base year respondents.
+Source: Base Year Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+0                   0 hours                                                   943                5.82 
+1                   1 hour                                                  1,821               11.24 
+2                   2 hours                                                 2,260               13.95 
+3                   3 hours                                                 2,032               12.55 
+4                   4 hours                                                 1,450                8.95 
+5                   5 hours                                                 1,246                7.69 
+6                   6 hours                                                   639                3.95 
+7                   7 hours                                                   343                2.12 
+8                   8 or more hours                                         1,700               10.50 
+99                  Top-coded input; unable to calculate                    1,467                9.06 
+-9                  Missing                                                 1,343                8.29 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYWRKHRS
+Position:   482
+Length:     2
+Label:      BY hours worked per week during 01-02 school year
+
+Description:
+Indicates the number of hours the respondent worked per week during
+the 01-02 school year on both weekdays and weekends. This variable
+includes hours worked for those who were not employed at the time of
+the base year interview if they were employed at any time between
+October 2001 and their base year interview.
+SAS code:
+If BYWORKSY in (-4,-8,-9,0) then BYWRKHRS=BYWORKSY;
+Else if BYWORKSY=1 then do;
+	If BYS75>=0 then BYWRKHRS=BYS75;
+	Else if BYS75<0 then BYWRKHRS=-9;
+End;
+If 0<BYWRKHRS<=5 then BYWRKHRS=1;
+Else if 5<BYWRKHRS<=10 then BYWRKHRS=2;
+Else if 10<BYWRKHRS<=15 then BYWRKHRS=3;
+Else if 15<BYWRKHRS<=20 then BYWRKHRS=4;
+Else if 20<BYWRKHRS<=25 then BYWRKHRS=5;
+Else if 25<BYWRKHRS<=30 then BYWRKHRS=6;
+Else if 30<BYWRKHRS<=35 then BYWRKHRS=7;
+Else if 35<BYWRKHRS<=40 then BYWRKHRS=8;
+Else if 40<BYWRKHRS then BYWRKHRS=9;
+Applies to: All base year respondents.
+Source: Base Year Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+0                   Did not work during 01-02 school year                   8,020               49.52 
+1                   1-5 hours a week                                          957                5.91 
+2                   6-10 hours a week                                       1,131                6.98 
+3                   11-15 hours a week                                        678                4.19 
+4                   16-20 hours a week                                        806                4.98 
+5                   21-25 hours a week                                        342                2.11 
+6                   26-30 hours a week                                        263                1.62 
+7                   31-35 hours a week                                         90                0.56 
+8                   36-40 hours a week                                        142                0.88 
+9                   Over 40 hours a week                                      112                0.69 
+-9                  Missing                                                 2,703               16.69 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYURBAN
+Position:   520
+Length:     2
+Label:      School urbanicity
+
+Description:
+Urbanicity of school locale as indicated in the source
+data for sampling: the Common Core of Data (CCD) 1999-2000 and the
+Private School Survey (PSS) 1999-2000.
+1 Urban
+2 Suburban
+3 Rural
+Programming Notes:  BYURBAN is taken from the school file and
+replicated across each student belonging to that school.
+Note: This school level variable is replicated on the student file
+      for all BY eligible sample members.
+Source: ELS:2002 Sampling Data
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Urban                                                   5,486               33.87 
+2                   Suburban                                                7,764               47.93 
+3                   Rural                                                   2,947               18.19 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYREGION
+Position:   522
+Length:     2
+Label:      Geographic region of school
+
+Description:
+Region of school as indicated in the source data for sampling:
+the Common Core of Data (CCD) 1999-2000 and the
+Private School Survey (PSS) 1999-2000.
+1 Northeast
+2 Midwest
+3 South
+4 West
+Programming Notes:  BYREGION is taken from the school file and
+replicated across each student belonging to that school.
+Note: This school level variable is replicated on the student file
+      for all BY eligible sample members.
+Source: ELS:2002 Sampling Data
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Northeast                                               2,966               18.31 
+2                   Midwest                                                 4,031               24.89 
+3                   South                                                   5,881               36.31 
+4                   West                                                    3,319               20.49 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS20D
+Position:   4522
+Length:     2
+Label:      Other students often disrupt class
+
+Description:
+   20. How much do you agree or disagree with each of the following
+   statements about your current school and teachers?
+   (MARK ONE RESPONSE ON EACH LINE)
+   (Strongly Agree; Agree; Disagree; Strongly Disagree)
+   d. Other students often disrupt class
+Note:   This is one of a series of items, a through n.
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Strongly agree                                          2,773               17.12 
+2                   Agree                                                   7,753               47.87 
+3                   Disagree                                                3,561               21.99 
+4                   Strongly disagree                                         385                2.38 
+-9                  Missing                                                   164                1.01 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-7                  Not administered; abbreviated interview                   580                3.58 
+                    or breakoff
+-6                  Multiple response                                          28                0.17 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS20E
+Position:   4524
+Length:     2
+Label:      The teaching is good
+
+Description:
+   20. How much do you agree or disagree with each of the following
+   statements about your current school and teachers?
+   (MARK ONE RESPONSE ON EACH LINE)
+   (Strongly Agree; Agree; Disagree; Strongly Disagree)
+   e. The teaching is good
+Note:   This is one of a series of items, a through n.
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Strongly agree                                          2,186               13.50 
+2                   Agree                                                   9,620               59.39 
+3                   Disagree                                                2,114               13.05 
+4                   Strongly disagree                                         470                2.90 
+-9                  Missing                                                   251                1.55 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-7                  Not administered; abbreviated interview                   580                3.58 
+                    or breakoff
+-6                  Multiple response                                          23                0.14 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS20J
+Position:   4534
+Length:     2
+Label:      Does not feel safe at this school
+
+Description:
+   20. How much do you agree or disagree with each of the following
+   statements about your current school and teachers?
+   (MARK ONE RESPONSE ON EACH LINE)
+   (Strongly Agree; Agree; Disagree; Strongly Disagree)
+   j. I don't feel safe at this school
+Note:   This is one of a series of items, a through n.
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Strongly agree                                            389                2.40 
+2                   Agree                                                   1,182                7.30 
+3                   Disagree                                                6,919               42.72 
+4                   Strongly disagree                                       5,905               36.46 
+-9                  Missing                                                   246                1.52 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-7                  Not administered; abbreviated interview                   580                3.58 
+                    or breakoff
+-6                  Multiple response                                          23                0.14 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS23C
+Position:   4574
+Length:     2
+Label:      Recognized for good grades
+
+Description:
+   23. Since starting ninth grade, did you win any of the following
+   awards or were you recognized at school for doing well or
+   participating in certain activities?
+   (MARK ONE RESPONSE ON EACH LINE)
+   (Yes; No)
+   c. Received special recognition for good grades or honor roll
+Note:   This is one of a series of items, a through f.
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire         
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+0                   No                                                      7,366               45.48 
+1                   Yes                                                     7,137               44.06 
+-9                  Missing                                                   154                0.95 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-7                  Not administered; abbreviated interview                   580                3.58 
+                    or breakoff
+-6                  Multiple response                                           7                0.04 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS24C
+Position:   4586
+Length:     2
+Label:      How many times absent from school
+
+Description:
+   24. How many times did the following things happen to you in the
+   first semester or term of this school year?
+   (MARK ONE RESPONSE ON EACH LINE)
+   (Never; 1-2 times; 3-6 times; 7-9 times; 10 or more times)
+   c. I was absent from school
+Note:   This is one of a series of items, a through g.
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Never                                                   2,239               13.82 
+2                   1-2 times                                               5,245               32.38 
+3                   3-6 times                                               4,654               28.73 
+4                   7-9 times                                               1,190                7.35 
+5                   10 or more times                                        1,044                6.45 
+-9                  Missing                                                   245                1.51 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-7                  Not administered; abbreviated interview                   580                3.58 
+                    or breakoff
+-6                  Multiple response                                          47                0.29 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS24D
+Position:   4588
+Length:     2
+Label:      How many times got in trouble
+
+Description:
+   24. How many times did the following things happen to you in the
+   first semester or term of this school year?
+   (MARK ONE RESPONSE ON EACH LINE)
+   (Never; 1-2 times; 3-6 times; 7-9 times; 10 or more times)
+   d. I got in trouble for not following school rules
+Note:   This is one of a series of items, a through g.
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Never                                                   8,162               50.39 
+2                   1-2 times                                               4,476               27.63 
+3                   3-6 times                                               1,128                6.96 
+4                   7-9 times                                                 322                1.99 
+5                   10 or more times                                          386                2.38 
+-9                  Missing                                                   174                1.07 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-7                  Not administered; abbreviated interview                   580                3.58 
+                    or breakoff
+-6                  Multiple response                                          16                0.10 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS27I
+Position:   4680
+Length:     2
+Label:      Parents expect success in school
+
+Description:
+   27. How much do you agree or disagree with the following
+   statements about why you go to school?
+   (MARK ONE RESPONSE ON EACH LINE)
+   (Strongly Agree; Agree; Disagree; Strongly Disagree)
+   i.  I go to school because my parents expect me to succeed
+Note:   This is one of a series of items, a through i.
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Strongly agree                                          7,800               48.16 
+2                   Agree                                                   5,776               35.66 
+3                   Disagree                                                  703                4.34 
+4                   Strongly disagree                                         217                1.34 
+-9                  Missing                                                   152                0.94 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-7                  Not administered; abbreviated interview                   580                3.58 
+                    or breakoff
+-6                  Multiple response                                          16                0.10 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS37
+Position:   4790
+Length:     2
+Label:      Importance of good grades to student
+
+Description:
+   37. How important are good grades to you?
+   (MARK ONE RESPONSE)
+   Not important
+   Somewhat important
+   Important
+   Very important
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Not important                                             196                1.21 
+2                   Somewhat important                                      1,685               10.40 
+3                   Important                                               5,256               32.45 
+4                   Very important                                          7,833               48.36 
+-9                  Missing                                                   254                1.57 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-6                  Multiple response                                          20                0.12 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS38A
+Position:   4792
+Length:     2
+Label:      How often goes to class without pencil/paper
+
+Description:
+   38.  How often do you come to class without these things?
+   (MARK ONE RESPONSE ON EACH LINE)
+   (Never; Seldom; Often; Usually)
+   a. Pencil/pen or paper
+Note:   This is one of a series of items, a through c.
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Never                                                   7,488               46.23 
+2                   Seldom                                                  4,421               27.30 
+3                   Often                                                   1,044                6.45 
+4                   Usually                                                 1,428                8.82 
+-9                  Missing                                                   265                1.64 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-7                  Not administered; abbreviated interview                   580                3.58 
+                    or breakoff
+-6                  Multiple response                                          18                0.11 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS42
+Position:   4912
+Length:     2
+Label:      Hours/week spent on extracurricular activities
+
+Description:
+   42. In a typical week, how much time do you spend on school-
+   sponsored extracurricular activities (for example, sports, school
+   clubs)?
+   hours
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+0                   0 hours                                                 5,236               32.33 
+1                   1 hour                                                  1,251                7.72 
+2                   2 hours                                                 1,127                6.96 
+3                   3 hours                                                   746                4.61 
+4                   4 hours                                                   491                3.03 
+5                   5 hours                                                   625                3.86 
+6                   6 hours                                                   466                2.88 
+7                   7 hours                                                   261                1.61 
+8                   8 hours                                                   421                2.60 
+9                   9 hours                                                   140                0.86 
+10                  10 hours                                                1,331                8.22 
+11                  11 hours                                                  151                0.93 
+12                  12 hours                                                  591                3.65 
+13                  13 hours                                                  110                0.68 
+14                  14 hours                                                  181                1.12 
+15                  15 hours                                                  588                3.63 
+16                  16 hours                                                   95                0.59 
+17                  17 hours                                                   56                0.35 
+18                  18 hours                                                  124                0.77 
+19                  19 hours                                                   15                0.09 
+20                  20 hours                                                  204                1.26 
+21                  21 or more hours                                          236                1.46 
+-9                  Missing                                                   788                4.87 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-4                  Nonrespondent                                             648                4.00 
+-1                  Don't know                                                 10                0.06 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS43
+Position:   4914
+Length:     2
+Label:      Hours/week spent reading outside of school
+
+Description:
+   43. How much additional reading do you do each week on your own
+   outside of school - not in connection with schoolwork? (Do not
+   count any school-assigned reading.)
+   hours
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+0                   0 hours                                                 4,039               24.94 
+1                   1 hour                                                  3,456               21.34 
+2                   2 hours                                                 2,382               14.71 
+3                   3 hours                                                 1,293                7.98 
+4                   4 hours                                                   624                3.85 
+5                   5 hours                                                   816                5.04 
+6                   6 hours                                                   332                2.05 
+7                   7 hours                                                   274                1.69 
+8                   8 hours                                                   202                1.25 
+9                   9 hours                                                    91                0.56 
+10                  10 hours                                                  411                2.54 
+11                  11 hours                                                   28                0.17 
+12                  12 hours                                                  127                0.78 
+13                  13 hours                                                   17                0.11 
+14                  14 hours                                                   69                0.43 
+15                  15 hours                                                  100                0.62 
+16                  16 hours                                                   24                0.15 
+17                  17 hours                                                    3                0.02 
+18                  18 hours                                                   12                0.07 
+19                  19 hours                                                    6                0.04 
+20                  20 hours                                                   95                0.59 
+21                  21 or more hours                                          158                0.98 
+-9                  Missing                                                   683                4.22 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-4                  Nonrespondent                                             648                4.00 
+-1                  Don't know                                                  2                0.01 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS44C
+Position:   4920
+Length:     2
+Label:      How often volunteers or performs community service
+
+Description:
+   44. How often do you spend time on the following activities
+   outside of school?
+   (MARK ONE RESPONSE ON EACH LINE)
+   (Rarely or never; Less than once a week; Once or twice a week;
+   Everyday or almost everyday)
+   c. Volunteering or performing community service
+Note:   This is one of a series of items, a through h.
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Rarely or never                                         9,645               59.55 
+2                   Less than once a week                                   2,847               17.58 
+3                   Once or twice a week                                    1,444                8.92 
+4                   Everyday or almost everyday                               245                1.51 
+-9                  Missing                                                   431                2.66 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-7                  Not administered; abbreviated interview                   580                3.58 
+                    or breakoff
+-6                  Multiple response                                          52                0.32 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS46B
+Position:   4940
+Length:     2
+Label:      Hours/day on computer other than for school
+
+Description:
+   46. How many hours a day do you usually use a computer...
+   other than for school work?
+   hours
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+0                   0 hours                                                 1,828               11.29 
+1                   1 hour                                                  4,158               25.67 
+2                   2 hours                                                 3,264               20.15 
+3                   3 hours                                                 1,889               11.66 
+4                   4 hours                                                   977                6.03 
+5                   5 hours                                                   759                4.69 
+6                   6 or more hours                                         1,122                6.93 
+-9                  Missing                                                   667                4.12 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-7                  Not administered; abbreviated interview                   580                3.58 
+                    or breakoff
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS54I
+Position:   5004
+Length:     2
+Label:      Importance of getting away from this area
+
+Description:
+   54. How important is each of the following to you in your life?
+   (MARK ONE RESPONSE ON EACH LINE)
+   (Not important; Somewhat important; Very important)
+   i. Getting away from this area of the country
+Note:   This is one of a series of items, a through l and n through
+o.
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Not important                                           6,570               40.56 
+2                   Somewhat important                                      4,963               30.64 
+3                   Very important                                          2,980               18.40 
+-9                  Missing                                                   700                4.32 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-6                  Multiple response                                          30                0.19 
+-4                  Nonrespondent                                             648                4.00 
+-1                  Don't know                                                  1                0.01 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS84D
+Position:   5698
+Length:     2
+Label:      Family has access to the Internet
+
+Description:
+   84. Does your family have the following in your home?
+   (MARK ONE RESPONSE ON EACH LINE)
+   (Have; Does not have)
+   d. Access to the Internet
+Note:   This is one of a series of items, a through j.
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+0                   No                                                      2,305               14.23 
+1                   Yes                                                    11,118               68.64 
+-9                  Missing                                                 1,815               11.21 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-6                  Multiple response                                           6                0.04 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS84I
+Position:   5708
+Length:     2
+Label:      Has own room
+
+Description:
+   84. Does your family have the following in your home?
+   (MARK ONE RESPONSE ON EACH LINE)
+   (Have; Does not have)
+   i. A room of your own
+Note:   This is one of a series of items, a through j.
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+0                   No                                                      1,804               11.14 
+1                   Yes                                                    11,531               71.19 
+-9                  Missing                                                 1,904               11.76 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-6                  Multiple response                                           5                0.03 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS85A
+Position:   5712
+Length:     2
+Label:      How often parents checks homework
+
+Description:
+   85. How often do your parents do the following?
+   (MARK ONE RESPONSE ON EACH LINE)
+   (Never; Rarely; Sometimes; Often)
+   a. Check on whether you have done your homework
+Note:   This is one of a series of items, a through g.
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Never                                                   1,905               11.76 
+2                   Rarely                                                  2,751               16.98 
+3                   Sometimes                                               3,812               23.54 
+4                   Often                                                   4,519               27.90 
+-9                  Missing                                                 2,234               13.79 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-6                  Multiple response                                          22                0.14 
+-4                  Nonrespondent                                             648                4.00 
+-1                  Don't know                                                  1                0.01 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS87C
+Position:   5748
+Length:     2
+Label:      Thinks math is fun
+
+Description:
+87. How much do you agree or disagree with the following
+statements?
+(MARK ONE RESPONSE ON EACH LINE)
+(Strongly agree; Agree; Disagree; Strongly disagree)
+c. Because doing mathematics is fun, I wouldn't want to give it
+up
+Note:   This is one of a series of items, a through f.
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Strongly agree                                            832                5.14 
+2                   Agree                                                   3,122               19.28 
+3                   Disagree                                                5,403               33.36 
+4                   Strongly disagree                                       2,317               14.31 
+-9                  Missing                                                 2,979               18.39 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-7                  Not administered; abbreviated interview                   580                3.58 
+                    or breakoff
+-6                  Multiple response                                          11                0.07 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       BYF3PSTSTU.PRI
+Name:       BYS90D
+Position:   5810
+Length:     2
+Label:      Important to friends to get good grades
+
+Description:
+90. Among your close friends, how important is it to them that
+they...
+(MARK ONE RESPONSE ON EACH LINE)
+(Not important; Somewhat important; Very important)
+d. get good grades
+Note:   This is one of a series of items, a through h, j through m,
+and q.
+Applies to: All respondents.
+Source: ELS:2002 Student Questionnaire
+
+
+                                                                        Frequency             Percent 
+Category            Label                                              Unweighted          Unweighted 
+------------------- ----------------------------------------- ------------------- ------------------- 
+1                   Not important                                             599                3.70 
+2                   Somewhat important                                      4,646               28.68 
+3                   Very important                                          5,379               33.21 
+-9                  Missing                                                 4,025               24.85 
+-8                  Survey component legitimate skip/NA                       305                1.88 
+-7                  Not administered; abbreviated interview                   580                3.58 
+                    or breakoff
+-6                  Multiple response                                          15                0.09 
+-4                  Nonrespondent                                             648                4.00 
+TOTAL                                                                      16,197              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
