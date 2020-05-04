@@ -155,6 +155,15 @@ Category            Label                                              Unweighte
 10                  Status cannot be determined                               732                4.52 
 TOTAL                                                                      16,197              100.00 
 
+### anyone meeting the following criteria is considered a 1 (i.e., will graduate high school or earn equivalent)
+* high school graduate
+* enrolled in high school or working towards GED
+* received GED or certificate of attendance
+
+### anyone meeting the following criteria is considered a 0 (i.e., will not graduate high school or earn equivalent)
+* no diploma, not in high school, not pursuing GED
+* status undetermined
+
 
 ----------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------
