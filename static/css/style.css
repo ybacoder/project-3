@@ -493,28 +493,6 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Clients
---------------------------------------------------------------*/
-.clients {
-  background: #f6f6f7;
-  text-align: center;
-  padding: 5px 0;
-}
-
-.clients img {
-  width: 40%;
-  -webkit-filter: grayscale(100);
-  filter: grayscale(100);
-  transition: all 0.4s ease-in-out;
-  display: inline-block;
-  padding: 15px 0;
-}
-
-.clients img:hover {
-  -webkit-filter: none;
-  filter: none;
-  transform: scale(1.1);
-}
 
 /*--------------------------------------------------------------
 # About
