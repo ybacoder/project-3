@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 import os
+import pandas as pd
 from fastapi import FastAPI, Request, Depends, BackgroundTasks
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
+from fastapi.encoders import jsonable_encoder
+from fastapi.responses import FileResponse, RedirectResponse, JSONResponse
 from database import SessionLocal, engine
 # from pydantic import BaseModel 
 from sqlalchemy.orm import Session
@@ -41,6 +43,7 @@ async def home():
     '''
     return FileResponse(file_path)
 
+
 @app.route("/student_success")
 async def student_success():
     '''
@@ -50,6 +53,7 @@ async def student_success():
         "code": "success",
         "message": "student created"
     }
+
 
 @app.route("/plotly")
 async def plotly():
@@ -61,15 +65,21 @@ async def plotly():
         "message": "student created"
     }
 
-@app.route("/data")
-async def create_student():
+
+@app.route("/get_student_data")
+# @app.get("/get_student_data")
+async def get_student_data():
     '''
     data route access
     '''
-    return {
-        "code": "success",
-        "message": "student created"
-    }
+
+    file_path = os.path.join("clean_student_data.csv")
+
+    df = pd.read_csv(file_path, index_col="STU_ID")
+    json_compatible_df_data = jsonable_encoder(df.to_json())
+
+    return JSONResponse(content=json_compatible_df_data)
+
 
 if __name__=='__main__':
     uvicorn.run(app)
