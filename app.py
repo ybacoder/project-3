@@ -6,10 +6,10 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import FileResponse, RedirectResponse, JSONResponse
-from database import SessionLocal, engine
-# from pydantic import BaseModel 
-from sqlalchemy.orm import Session
-import models
+# from database import SessionLocal, engine
+# from pydantic import BaseModel
+# from sqlalchemy.orm import Session
+# import models
 import uvicorn
 
 file_path = "index.html"
@@ -29,19 +29,23 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-models.Base.metadata.create_all(bind=engine)
+# models.Base.metadata.create_all(bind=engine)
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # templates = Jinja2Templates(directory="templates")
 
 #home screen
-@app.route("/")
-async def home():
-    '''
-    displays the home page
-    '''
-    return FileResponse(file_path)
+# @app.route("/")
+# async def home():
+#     '''
+#     displays the home page
+#     '''
+#     return FileResponse(file_path)
+
+@app.get("/")
+def main():
+    return RedirectResponse(url="/docs/")
 
 
 @app.route("/student_success")
@@ -66,8 +70,8 @@ async def plotly():
     }
 
 
-@app.route("/get_student_data")
-# @app.get("/get_student_data")
+# @app.route("/get_student_data")
+@app.get("/get_student_data")
 async def get_student_data():
     '''
     data route access
