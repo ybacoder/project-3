@@ -46,10 +46,30 @@ async def home():
     '''
     return FileResponse(file_path)
 
-@app.post("/student")
-async def create_student():
+@app.post("/student_success")
+async def student_success():
     '''
     creates a student and stores it to the database
+    '''
+    return {
+        "code": "success",
+        "message": "student created"
+    }
+
+@app.post("/plotly")
+async def plotly():
+    '''
+    diplay visualizations
+    '''
+    return {
+        "code": "success",
+        "message": "student created"
+    }
+
+@app.post("/data")
+async def create_student():
+    '''
+    data route access
     '''
     return {
         "code": "success",
