@@ -375,7 +375,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 80vh;
+  height: 50vh;
   background: url("../img/hero-bg.jpg") center center;
   background-size: cover;
   position: relative;
@@ -387,7 +387,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero:before {
   content: "";
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.3);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -404,7 +404,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero h2 {
-  color: #eee;
+  color: #fff;
   margin-bottom: 40px;
   font-size: 15px;
   font-weight: 500;
@@ -629,7 +629,7 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.7)), url("../img/cta-bg.jpg") fixed center center;
+  background:  url("../img/cta-bg.jpg") fixed center center;
   background-size: cover;
   padding: 60px 0;
 }
