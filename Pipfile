@@ -9,6 +9,7 @@ verify_ssl = true
 pandas = "*"
 scikit-learn = "*"
 ipykernel = "*"
+imbalanced-learn = "*"
 
 [requires]
 python_version = "3.7"
