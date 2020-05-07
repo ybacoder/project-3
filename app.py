@@ -5,7 +5,7 @@ from fastapi import FastAPI, Request, Depends, BackgroundTasks
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.encoders import jsonable_encoder
-from fastapi.responses import FileResponse, RedirectResponse, JSONResponse
+from fastapi.responses import FileResponse, RedirectResponse, Response
 # from database import SessionLocal, engine
 # from pydantic import BaseModel
 # from sqlalchemy.orm import Session
@@ -35,17 +35,13 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # templates = Jinja2Templates(directory="templates")
 
-#home screen
-# @app.route("/")
-# async def home():
-#     '''
-#     displays the home page
-#     '''
-#     return FileResponse(file_path)
-
-@app.get("/")
-def main():
-    return RedirectResponse(url="/docs/")
+home screen
+@app.route("/")
+async def home():
+    '''
+    displays the home page
+    '''
+    return FileResponse("index.html")
 
 
 @app.route("/student_success")
@@ -70,7 +66,6 @@ async def plotly():
     }
 
 
-# @app.route("/get_student_data")
 @app.get("/get_student_data")
 async def get_student_data():
     '''
@@ -82,7 +77,7 @@ async def get_student_data():
     df = pd.read_csv(file_path, index_col="STU_ID")
     json_compatible_df_data = jsonable_encoder(df.to_json())
 
-    return JSONResponse(content=json_compatible_df_data)
+    return Response(content=json_compatible_df_data, media_type="application/json")
 
 
 if __name__=='__main__':
