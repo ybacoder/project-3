@@ -6,8 +6,13 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+fastapi = "*"
+aiofiles = "*"
+uvicorn = "*"
 pandas = "*"
 scikit-learn = "*"
+ipykernel = "*"
+imbalanced-learn = "*"
 
 [requires]
 python_version = "3.7"
