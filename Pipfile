@@ -13,6 +13,7 @@ pandas = "*"
 scikit-learn = "*"
 ipykernel = "*"
 imbalanced-learn = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"

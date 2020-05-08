@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "849df6a7-50b4-4e9a-8937-9356890e5521",
+		"name": "project-3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "predict",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"BYSEX\": 0,\n    \"BYRACE\": 0,\n    \"BYSTLANG\": 0,\n    \"BYPARED\": 1,\n    \"BYINCOME\": 1,\n    \"BYURBAN\": 0,\n    \"BYREGION\": 3,\n    \"BYRISKFC\": 1,\n    \"BYS34A\": 1,\n    \"BYS34B\": 0,\n    \"BYWRKHRS\": 1,\n    \"BYS42\": 0,\n    \"BYS43\": 1,\n    \"BYTVVIGM\": 0,\n    \"BYS46B\": 0,\n    \"BYS44C\": 1,\n    \"BYS20E\": 2,\n    \"BYS87C\": 4,\n    \"BYS20D\": 1,\n    \"BYS23C\": 0,\n    \"BYS37\": 3,\n    \"BYS27I\": 2,\n    \"BYS90D\": 2,\n    \"BYS38A\": 2,\n    \"BYS20J\": 3,\n    \"BYS24C\": 2,\n    \"BYS24D\": 1,\n    \"BYS54I\": 3,\n    \"BYS84D\": 0,\n    \"BYS84I\": 1,\n    \"BYS85A\": 1\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/predict",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

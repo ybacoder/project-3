@@ -1,20 +1,53 @@
-# -*- coding: utf-8 -*-
 import os
+import json
 import pandas as pd
 from fastapi import FastAPI, Request, Depends, BackgroundTasks
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import FileResponse, RedirectResponse, Response
-# from database import SessionLocal, engine
-# from pydantic import BaseModel
-# from sqlalchemy.orm import Session
-# import models
+from pydantic import BaseModel
 import uvicorn
+from joblib import load
 
-file_path = "index.html"
 
-app = FastAPI(debug=True)
+class Student(BaseModel):
+    BYSEX: int
+    BYRACE: int
+    BYSTLANG: int
+    BYPARED: int
+    BYINCOME: int
+    BYURBAN: int
+    BYREGION: int
+    BYRISKFC: int
+    BYS34A: int
+    BYS34B: int
+    BYWRKHRS: int
+    BYS42: int
+    BYS43: int
+    BYTVVIGM: int
+    BYS46B: int
+    BYS44C: int
+    BYS20E: int
+    BYS87C: int
+    BYS20D: int
+    BYS23C: int
+    BYS37: int
+    BYS27I: int
+    BYS90D: int
+    BYS38A: int
+    BYS20J: int
+    BYS24C: int
+    BYS24D: int
+    BYS54I: int
+    BYS84D: int
+    BYS84I: int
+    BYS85A: int
+
+
+rus_clf = load("rus_clf.joblib")
+
+app = FastAPI()
 
 origins = [
     "http://127.0.0.1:63800",
@@ -29,13 +62,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# models.Base.metadata.create_all(bind=engine)
-
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # templates = Jinja2Templates(directory="templates")
 
-home screen
+
 @app.route("/")
 async def home():
     '''
@@ -66,6 +97,35 @@ async def plotly():
     }
 
 
+@app.post("/predict")
+async def predict(student: Student):
+
+    student_list = []
+    for i in student:
+        student_list.append(i[1])
+
+    X = [student_list]
+
+    gpa_range_bin = rus_clf.predict(X)[0]
+
+    gpa_range_dict = {
+        0: "0.00 - 1.50 (Equivalent to D or F average)",
+        1: "1.51 - 2.00 (Equivalent to C average)",
+        2: "2.01 - 3.50 (Equivalent to B average)",
+        3: "3.51 - 4.00 (Equivalent to A average)"
+    }
+    gpa_range = gpa_range_dict[gpa_range_bin]
+    
+    proability_of_gpa_range = rus_clf.predict_proba(X)[0][gpa_range_bin]
+
+    grade_range_proba = json.dumps({
+        "gpa_range": gpa_range,
+        "proability_of_gpa_range": proability_of_gpa_range
+    })
+
+    return Response(content=grade_range_proba, media_type="application/json")
+
+
 @app.get("/get_student_data")
 async def get_student_data():
     '''
@@ -81,4 +141,4 @@ async def get_student_data():
 
 
 if __name__=='__main__':
-    uvicorn.run(app)
+    uvicorn.run("app:app", reload=True)
