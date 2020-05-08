@@ -109,18 +109,20 @@ async def predict(student: Student):
     gpa_range_bin = rus_clf.predict(X)[0]
 
     gpa_range_dict = {
-        0: "0.00 - 1.50 (Equivalent to D or F average)",
-        1: "1.51 - 2.00 (Equivalent to C average)",
-        2: "2.01 - 3.50 (Equivalent to B average)",
-        3: "3.51 - 4.00 (Equivalent to A average)"
+        0: ["0.00 - 1.50", "D or F"],
+        1: ["1.51 - 2.00", "C"],
+        2: ["2.01 - 3.50", "B"],
+        3: ["3.51 - 4.00", "A"]
     }
-    gpa_range = gpa_range_dict[gpa_range_bin]
+    gpa_range = gpa_range_dict[gpa_range_bin][0]
+    equivalent_letter_grade = gpa_range_dict[gpa_range_bin][1]
     
-    proability_of_gpa_range = rus_clf.predict_proba(X)[0][gpa_range_bin]
+    probability_of_gpa_range = rus_clf.predict_proba(X)[0][gpa_range_bin]
 
     grade_range_proba = json.dumps({
         "gpa_range": gpa_range,
-        "proability_of_gpa_range": proability_of_gpa_range
+        "equivalent_letter_grade": equivalent_letter_grade,
+        "probability_of_gpa_range": probability_of_gpa_range
     })
 
     return Response(content=grade_range_proba, media_type="application/json")
