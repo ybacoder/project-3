@@ -16,11 +16,9 @@ import uvicorn
 from joblib import load
 
 
-file_path = "index.html"
-
 rus_clf = load("rus_clf.joblib")
 
-app = FastAPI(debug=True)
+app = FastAPI()
 
 origins = [
     "http://127.0.0.1:63800",
@@ -76,12 +74,14 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 templates = Jinja2Templates(directory="templates")
 
+
 @app.get("/")
 async def home(item_id="templates/index.html"):
     '''
     displays the home page
     '''
     return FileResponse(item_id)
+
 
 @app.api_route("/student_success", methods=["GET", "POST"])
 async def student_success(request: Request, BYSEX: int = Form(default=''),
@@ -101,35 +101,35 @@ async def student_success(request: Request, BYSEX: int = Form(default=''),
         return FileResponse("templates/form.html")
     if request.method == "POST":
 
-        
         student_list = [BYSEX, BYRACE, BYSTLANG, BYPARED, BYINCOME, BYURBAN, BYREGION, BYRISKFC, BYS34A,
-        BYS34B, BYWRKHRS, BYS42, BYS43, BYTVVIGM, BYS46B, BYS44C, BYS20E, BYS87C, BYS20D, BYS23C, BYS37,
-        BYS27I, BYS90D, BYS38A, BYS20J, BYS24C, BYS24D, BYS54I, BYS84D, BYS84I, BYS85A]
+            BYS34B, BYWRKHRS, BYS42, BYS43, BYTVVIGM, BYS46B, BYS44C, BYS20E, BYS87C, BYS20D, BYS23C, BYS37,
+            BYS27I, BYS90D, BYS38A, BYS20J, BYS24C, BYS24D, BYS54I, BYS84D, BYS84I, BYS85A]
 
         X = [student_list]
 
         gpa_range_bin = rus_clf.predict(X)[0]
 
         gpa_range_dict = {
-            0: "0.00 - 1.50 (Equivalent to D or F average)",
-            1: "1.51 - 2.00 (Equivalent to C average)",
-            2: "2.01 - 3.50 (Equivalent to B average)",
-            3: "3.51 - 4.00 (Equivalent to A average)"
+            0: ["0.00 - 1.50", "D or F"],
+            1: ["1.51 - 2.00", "C"],
+            2: ["2.01 - 3.50", "B"],
+            3: ["3.51 - 4.00", "A"]
         }
 
-        gpa_range = gpa_range_dict[gpa_range_bin]
-        
+        gpa_range = gpa_range_dict[gpa_range_bin][0]
+        equivalent_letter_grade = gpa_range_dict[gpa_range_bin][1]
         probability_of_gpa_range = rus_clf.predict_proba(X)[0][gpa_range_bin]
 
         grade_range_proba = json.dumps({
             "gpa_range": gpa_range,
+            "equivalent_letter_grade": equivalent_letter_grade,
             "probability_of_gpa_range": probability_of_gpa_range
         })
+
         print(type(Request))
         print(request.method)
         # return ({"gpa_range": gpa_range, "probability_of_gpa_range" : str(probability_of_gpa_range) })
         return FileResponse("prediction.html", headers = grade_range_proba)
-        
 
 
 @app.get("/prediction")
@@ -138,38 +138,6 @@ async def prediction():
     gpa_range = request.headers['gpa_range']
     probability_of_gpa_range = request.headers['probability_of_gpa_range']
     return templates.TemplateResponse("prediction.html", {"gpa_range": gpa_range, "probability_of_gpa_range" : probability_of_gpa_range})
-
-
-
-# @app.post("/predict")
-# async def predict(student: Student):
-
-#     student_list = []
-#     for i in student:
-#         student_list.append(i[1])
-
-#     X = [student_list]
-
-#     gpa_range_bin = rus_clf.predict(X)[0]
-
-#     gpa_range_dict = {
-#         0: ["0.00 - 1.50", "D or F"],
-#         1: ["1.51 - 2.00", "C"],
-#         2: ["2.01 - 3.50", "B"],
-#         3: ["3.51 - 4.00", "A"]
-#     }
-#     gpa_range = gpa_range_dict[gpa_range_bin][0]
-#     equivalent_letter_grade = gpa_range_dict[gpa_range_bin][1]
-    
-#     probability_of_gpa_range = rus_clf.predict_proba(X)[0][gpa_range_bin]
-
-#     grade_range_proba = json.dumps({
-#         "gpa_range": gpa_range,
-#         "equivalent_letter_grade": equivalent_letter_grade,
-#         "probability_of_gpa_range": probability_of_gpa_range
-#     })
-
-    # return Response(content=grade_range_proba, media_type="application/json")
 
 
 @app.get("/get_student_data")
