@@ -6,6 +6,217 @@
 	},
 	"item": [
 		{
+			"name": "home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "student_success get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"BYSEX\": 0,\n    \"BYRACE\": 0,\n    \"BYSTLANG\": 0,\n    \"BYPARED\": 1,\n    \"BYINCOME\": 1,\n    \"BYURBAN\": 0,\n    \"BYREGION\": 3,\n    \"BYRISKFC\": 1,\n    \"BYS34A\": 1,\n    \"BYS34B\": 0,\n    \"BYWRKHRS\": 1,\n    \"BYS42\": 0,\n    \"BYS43\": 1,\n    \"BYTVVIGM\": 0,\n    \"BYS46B\": 0,\n    \"BYS44C\": 1,\n    \"BYS20E\": 2,\n    \"BYS87C\": 4,\n    \"BYS20D\": 1,\n    \"BYS23C\": 0,\n    \"BYS37\": 3,\n    \"BYS27I\": 2,\n    \"BYS90D\": 2,\n    \"BYS38A\": 2,\n    \"BYS20J\": 3,\n    \"BYS24C\": 2,\n    \"BYS24D\": 1,\n    \"BYS54I\": 3,\n    \"BYS84D\": 0,\n    \"BYS84I\": 1,\n    \"BYS85A\": 1\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/student_success",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"student_success"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "prediction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/prediction?BYSEX=0&BYRACE=0&BYSTLANG=0&BYPARED=0&BYINCOME=0&BYURBAN=0&BYREGION=1&BYRISKFC=0&BYS34A=1&BYS34B=0&BYWRKHRS=0&BYS42=1&BYS43=0&BYTVVIGM=0&BYS46B=0&BYS44C=1&BYS20E=1&BYS87C=1&BYS20D=1&BYS23C=0&BYS37=1&BYS27I=1&BYS90D=1&BYS38A=1&BYS20J=1&BYS24C=2&BYS24D=1&BYS54I=1&BYS84D=0&BYS84I=0&BYS85A=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"prediction"
+					],
+					"query": [
+						{
+							"key": "BYSEX",
+							"value": "0"
+						},
+						{
+							"key": "BYRACE",
+							"value": "0"
+						},
+						{
+							"key": "BYSTLANG",
+							"value": "0"
+						},
+						{
+							"key": "BYPARED",
+							"value": "0"
+						},
+						{
+							"key": "BYINCOME",
+							"value": "0"
+						},
+						{
+							"key": "BYURBAN",
+							"value": "0"
+						},
+						{
+							"key": "BYREGION",
+							"value": "1"
+						},
+						{
+							"key": "BYRISKFC",
+							"value": "0"
+						},
+						{
+							"key": "BYS34A",
+							"value": "1"
+						},
+						{
+							"key": "BYS34B",
+							"value": "0"
+						},
+						{
+							"key": "BYWRKHRS",
+							"value": "0"
+						},
+						{
+							"key": "BYS42",
+							"value": "1"
+						},
+						{
+							"key": "BYS43",
+							"value": "0"
+						},
+						{
+							"key": "BYTVVIGM",
+							"value": "0"
+						},
+						{
+							"key": "BYS46B",
+							"value": "0"
+						},
+						{
+							"key": "BYS44C",
+							"value": "1"
+						},
+						{
+							"key": "BYS20E",
+							"value": "1"
+						},
+						{
+							"key": "BYS87C",
+							"value": "1"
+						},
+						{
+							"key": "BYS20D",
+							"value": "1"
+						},
+						{
+							"key": "BYS23C",
+							"value": "0"
+						},
+						{
+							"key": "BYS37",
+							"value": "1"
+						},
+						{
+							"key": "BYS27I",
+							"value": "1"
+						},
+						{
+							"key": "BYS90D",
+							"value": "1"
+						},
+						{
+							"key": "BYS38A",
+							"value": "1"
+						},
+						{
+							"key": "BYS20J",
+							"value": "1"
+						},
+						{
+							"key": "BYS24C",
+							"value": "2"
+						},
+						{
+							"key": "BYS24D",
+							"value": "1"
+						},
+						{
+							"key": "BYS54I",
+							"value": "1"
+						},
+						{
+							"key": "BYS84D",
+							"value": "0"
+						},
+						{
+							"key": "BYS84I",
+							"value": "0"
+						},
+						{
+							"key": "BYS85A",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "predict",
 			"request": {
 				"method": "POST",
@@ -38,44 +249,6 @@
 					"port": "8000",
 					"path": [
 						"predict"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "student_success post",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					},
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "",
-						"disabled": true
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"BYSEX\": 0,\n    \"BYRACE\": 0,\n    \"BYSTLANG\": 0,\n    \"BYPARED\": 1,\n    \"BYINCOME\": 1,\n    \"BYURBAN\": 0,\n    \"BYREGION\": 3,\n    \"BYRISKFC\": 1,\n    \"BYS34A\": 1,\n    \"BYS34B\": 0,\n    \"BYWRKHRS\": 1,\n    \"BYS42\": 0,\n    \"BYS43\": 1,\n    \"BYTVVIGM\": 0,\n    \"BYS46B\": 0,\n    \"BYS44C\": 1,\n    \"BYS20E\": 2,\n    \"BYS87C\": 4,\n    \"BYS20D\": 1,\n    \"BYS23C\": 0,\n    \"BYS37\": 3,\n    \"BYS27I\": 2,\n    \"BYS90D\": 2,\n    \"BYS38A\": 2,\n    \"BYS20J\": 3,\n    \"BYS24C\": 2,\n    \"BYS24D\": 1,\n    \"BYS54I\": 3,\n    \"BYS84D\": 0,\n    \"BYS84I\": 1,\n    \"BYS85A\": 1\n}"
-				},
-				"url": {
-					"raw": "http://127.0.0.1:8000/student_success",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"student_success"
 					]
 				}
 			},
