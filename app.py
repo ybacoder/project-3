@@ -1,15 +1,38 @@
+# -*- coding: utf-8 -*-
 import os
 import json
 import pandas as pd
-from fastapi import FastAPI, Request, Depends, BackgroundTasks
+from fastapi import FastAPI, Request, Depends, BackgroundTasks, Form, Header
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import FileResponse, RedirectResponse, Response
+from fastapi.templating import Jinja2Templates
+# from database import SessionLocal, engine
 from pydantic import BaseModel
+# from sqlalchemy.orm import Session
+# import models
 import uvicorn
 from joblib import load
 
+
+rus_clf = load("rus_clf.joblib")
+
+app = FastAPI()
+
+origins = [
+    "http://127.0.0.1:63800",
+    "https://127.0.0.1:8000"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+    expose_headers=["*"]
+)
 
 class Student(BaseModel):
     BYSEX: int
@@ -45,84 +68,114 @@ class Student(BaseModel):
     BYS85A: int
 
 
-rus_clf = load("rus_clf.joblib")
 
-app = FastAPI()
-
-origins = [
-    "http://127.0.0.1:63800",
-    "https://127.0.0.1:8000"
-]
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+# models.Base.metadata.create_all(bind=engine)
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
-# templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory="templates")
 
 
-@app.route("/")
-async def home():
+@app.get("/")
+async def home(item_id="templates/index.html"):
     '''
     displays the home page
     '''
-    return FileResponse("index.html")
+    return FileResponse(item_id)
 
 
-@app.route("/student_success")
-async def student_success():
-    '''
-    creates a student and stores it to the database
-    '''
-    return {
-        "code": "success",
-        "message": "student created"
-    }
+@app.get("/student_success")
+async def student_success(request: Request):
+
+    return FileResponse("templates/form.html")
 
 
-@app.route("/plotly")
-async def plotly():
-    '''
-    diplay visualizations
-    '''
-    return {
-        "code": "success",
-        "message": "student created"
-    }
+@app.post("/student_success")
+async def student_success(request: Request, BYSEX: int = Form(default=0),
+    BYRACE: int = Form(default=0),BYSTLANG: int = Form(default=0),BYPARED: int = Form(default=0),
+    BYINCOME: int = Form(default=0),BYURBAN: int = Form(default=0),BYREGION: int = Form(default=0),
+    BYRISKFC: int = Form(default=0),BYS34A: int = Form(default=0),BYS34B: int = Form(default=0),
+    BYWRKHRS: int = Form(default=0),BYS42: int = Form(default=0),BYS43: int = Form(default=0),
+    BYTVVIGM: int = Form(default=0),BYS46B: int = Form(default=0),BYS44C: int = Form(default=0),
+    BYS20E: int = Form(default=0),BYS87C: int = Form(default=0),BYS20D: int = Form(default=0),
+    BYS23C: int = Form(default=0),BYS37: int = Form(default=0),BYS27I: int = Form(default=0),
+    BYS90D: int = Form(default=0),BYS38A: int = Form(default=0),BYS20J: int = Form(default=0),
+    BYS24C: int = Form(default=0),BYS24D: int = Form(default=0),BYS54I: int = Form(default=0),
+    BYS84D: int = Form(default=0),BYS84I: int = Form(default=0),BYS85A: int = Form(default=0)
+):
 
-
-@app.post("/predict")
-async def predict(student: Student):
-
-    student_list = []
-    for i in student:
-        student_list.append(i[1])
+    student_list = [BYSEX, BYRACE, BYSTLANG, BYPARED, BYINCOME, BYURBAN, BYREGION, BYRISKFC, BYS34A,
+        BYS34B, BYWRKHRS, BYS42, BYS43, BYTVVIGM, BYS46B, BYS44C, BYS20E, BYS87C, BYS20D, BYS23C, BYS37,
+        BYS27I, BYS90D, BYS38A, BYS20J, BYS24C, BYS24D, BYS54I, BYS84D, BYS84I, BYS85A]
 
     X = [student_list]
 
     gpa_range_bin = rus_clf.predict(X)[0]
 
     gpa_range_dict = {
-        0: "0.00 - 1.50 (Equivalent to D or F average)",
-        1: "1.51 - 2.00 (Equivalent to C average)",
-        2: "2.01 - 3.50 (Equivalent to B average)",
-        3: "3.51 - 4.00 (Equivalent to A average)"
+        0: ["0.00 - 1.50", "D or F"],
+        1: ["1.51 - 2.00", "C"],
+        2: ["2.01 - 3.50", "B"],
+        3: ["3.51 - 4.00", "A"]
     }
-    gpa_range = gpa_range_dict[gpa_range_bin]
-    
-    proability_of_gpa_range = rus_clf.predict_proba(X)[0][gpa_range_bin]
+
+    gpa_range = gpa_range_dict[gpa_range_bin][0]
+    equivalent_letter_grade = gpa_range_dict[gpa_range_bin][1]
+    probability_of_gpa_range = rus_clf.predict_proba(X)[0][gpa_range_bin]
 
     grade_range_proba = json.dumps({
         "gpa_range": gpa_range,
-        "proability_of_gpa_range": proability_of_gpa_range
+        "equivalent_letter_grade": equivalent_letter_grade,
+        "probability_of_gpa_range": probability_of_gpa_range
     })
 
+    # grade_range_proba = {
+    #     "gpa_range": gpa_range,
+    #     "equivalent_letter_grade": equivalent_letter_grade,
+    #     "probability_of_gpa_range": str(probability_of_gpa_range)
+    # }
+
+    # return ({"gpa_range": gpa_range, "probability_of_gpa_range" : str(probability_of_gpa_range)})
+    return Response(content=grade_range_proba, media_type="application/json")
+    # return templates.TemplateResponse("prediction.html", {"request": Request, "gpa_range": gpa_range, "equivalent_letter_grade": equivalent_letter_grade, "probability_of_gpa_range" : probability_of_gpa_range})
+
+
+@app.put("/student_success")
+async def student_success(request: Request):
+
+    return FileResponse("templates/form.html")
+
+
+@app.post("/prediction")
+async def prediction(request: Request):
+
+    gpa_range = request.headers['gpa_range']
+    equivalent_letter_grade = request.headers['equivalent_letter_grade']
+    probability_of_gpa_range = request.headers['probability_of_gpa_range']
+    # return templates.TemplateResponse("prediction.html"), {"gpa_range": gpa_range, "equivalent_letter_grade": equivalent_letter_grade, "probability_of_gpa_range" : probability_of_gpa_range})
+
+
+@app.post("/predict")
+async def predict(student: Student):
+    student_list = []
+    for i in student:
+        student_list.append(i[1])
+    X = [student_list]
+    gpa_range_bin = rus_clf.predict(X)[0]
+    gpa_range_dict = {
+        0: ["0.00 - 1.50", "D or F"],
+        1: ["1.51 - 2.00", "C"],
+        2: ["2.01 - 3.50", "B"],
+        3: ["3.51 - 4.00", "A"]
+    }
+    gpa_range = gpa_range_dict[gpa_range_bin][0]
+    equivalent_letter_grade = gpa_range_dict[gpa_range_bin][1]
+    probability_of_gpa_range = rus_clf.predict_proba(X)[0][gpa_range_bin]
+    grade_range_proba = json.dumps({
+        "gpa_range": gpa_range,
+        "equivalent_letter_grade": equivalent_letter_grade,
+        "probability_of_gpa_range": probability_of_gpa_range
+    })
     return Response(content=grade_range_proba, media_type="application/json")
 
 
