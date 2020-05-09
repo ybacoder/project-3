@@ -17,7 +17,7 @@ import uvicorn
 from joblib import load
 
 
-rus_clf = load("rus_clf.joblib")
+# rus_clf = load("rus_clf.joblib")
 
 app = FastAPI()
 
