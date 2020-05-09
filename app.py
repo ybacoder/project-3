@@ -2,7 +2,8 @@
 import os
 import json
 import pandas as pd
-from fastapi import FastAPI, Request, Depends, BackgroundTasks, Form, Header
+from typing import List
+from fastapi import FastAPI, Request, Depends, BackgroundTasks, Form, Header, Query
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.encoders import jsonable_encoder
@@ -90,24 +91,94 @@ async def student_success(request: Request):
     return FileResponse("templates/form.html")
 
 
-@app.post("/student_success")
-async def student_success(request: Request, BYSEX: int = Form(default=0),
-    BYRACE: int = Form(default=0),BYSTLANG: int = Form(default=0),BYPARED: int = Form(default=0),
-    BYINCOME: int = Form(default=0),BYURBAN: int = Form(default=0),BYREGION: int = Form(default=0),
-    BYRISKFC: int = Form(default=0),BYS34A: int = Form(default=0),BYS34B: int = Form(default=0),
-    BYWRKHRS: int = Form(default=0),BYS42: int = Form(default=0),BYS43: int = Form(default=0),
-    BYTVVIGM: int = Form(default=0),BYS46B: int = Form(default=0),BYS44C: int = Form(default=0),
-    BYS20E: int = Form(default=0),BYS87C: int = Form(default=0),BYS20D: int = Form(default=0),
-    BYS23C: int = Form(default=0),BYS37: int = Form(default=0),BYS27I: int = Form(default=0),
-    BYS90D: int = Form(default=0),BYS38A: int = Form(default=0),BYS20J: int = Form(default=0),
-    BYS24C: int = Form(default=0),BYS24D: int = Form(default=0),BYS54I: int = Form(default=0),
-    BYS84D: int = Form(default=0),BYS84I: int = Form(default=0),BYS85A: int = Form(default=0)
-):
+# @app.put("/student_success")
+# async def student_success(request: Request, student_list: List[str] = Query(None)):
+#     print(request.method)
+#     print("TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTEST")
+#     print(student_list)
+#     if student_list:
+#         print("TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTEST")
+#         print("TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTEST")
 
+#         print(student_list)
+
+#     return FileResponse("templates/form.html")
+
+
+# @app.put("/student_success")
+# async def student_success(request: Request, BYSEX: int = Form(default=0),
+#     BYRACE: int = Form(default=0),BYSTLANG: int = Form(default=0),BYPARED: int = Form(default=0),
+#     BYINCOME: int = Form(default=0),BYURBAN: int = Form(default=0),BYREGION: int = Form(default=0),
+#     BYRISKFC: int = Form(default=0),BYS34A: int = Form(default=0),BYS34B: int = Form(default=0),
+#     BYWRKHRS: int = Form(default=0),BYS42: int = Form(default=0),BYS43: int = Form(default=0),
+#     BYTVVIGM: int = Form(default=0),BYS46B: int = Form(default=0),BYS44C: int = Form(default=0),
+#     BYS20E: int = Form(default=0),BYS87C: int = Form(default=0),BYS20D: int = Form(default=0),
+#     BYS23C: int = Form(default=0),BYS37: int = Form(default=0),BYS27I: int = Form(default=0),
+#     BYS90D: int = Form(default=0),BYS38A: int = Form(default=0),BYS20J: int = Form(default=0),
+#     BYS24C: int = Form(default=0),BYS24D: int = Form(default=0),BYS54I: int = Form(default=0),
+#     BYS84D: int = Form(default=0),BYS84I: int = Form(default=0),BYS85A: int = Form(default=0)
+# ):
+
+#     student_list = [BYSEX, BYRACE, BYSTLANG, BYPARED, BYINCOME, BYURBAN, BYREGION, BYRISKFC, BYS34A,
+#         BYS34B, BYWRKHRS, BYS42, BYS43, BYTVVIGM, BYS46B, BYS44C, BYS20E, BYS87C, BYS20D, BYS23C, BYS37,
+#         BYS27I, BYS90D, BYS38A, BYS20J, BYS24C, BYS24D, BYS54I, BYS84D, BYS84I, BYS85A]
+
+#     X = [student_list]
+
+#     gpa_range_bin = rus_clf.predict(X)[0]
+
+#     gpa_range_dict = {
+#         0: ["0.00 - 1.50", "D or F"],
+#         1: ["1.51 - 2.00", "C"],
+#         2: ["2.01 - 3.50", "B"],
+#         3: ["3.51 - 4.00", "A"]
+#     }
+
+#     gpa_range = gpa_range_dict[gpa_range_bin][0]
+#     equivalent_letter_grade = gpa_range_dict[gpa_range_bin][1]
+#     probability_of_gpa_range = rus_clf.predict_proba(X)[0][gpa_range_bin]
+
+#     grade_range_proba = json.dumps({
+#         "gpa_range": gpa_range,
+#         "equivalent_letter_grade": equivalent_letter_grade,
+#         "probability_of_gpa_range": probability_of_gpa_range
+#     })
+
+#     # grade_range_proba = {
+#     #     "gpa_range": gpa_range,
+#     #     "equivalent_letter_grade": equivalent_letter_grade,
+#     #     "probability_of_gpa_range": str(probability_of_gpa_range)
+#     # }
+
+#     # return ({"gpa_range": gpa_range, "probability_of_gpa_range" : str(probability_of_gpa_range)})
+#     # return Response(content=grade_range_proba, media_type="application/json")
+    
+#     return templates.TemplateResponse("templates/prediction.html", {"request": Request, "gpa_range": gpa_range, "equivalent_letter_grade": equivalent_letter_grade, "probability_of_gpa_range" : probability_of_gpa_range})
+
+
+# @app.put("/student_success")
+# async def student_success(request: Request):
+
+#     return FileResponse("templates/form.html")
+
+
+@app.get("/prediction")
+async def prediction(request: Request, BYSEX: int = Query(None),
+    BYRACE: int = Query(None),BYSTLANG: int = Query(None),BYPARED: int = Query(None),
+    BYINCOME: int = Query(None),BYURBAN: int = Query(None),BYREGION: int = Query(None),
+    BYRISKFC: int = Query(None),BYS34A: int = Query(None),BYS34B: int = Query(None),
+    BYWRKHRS: int = Query(None),BYS42: int = Query(None),BYS43: int = Query(None),
+    BYTVVIGM: int = Query(None),BYS46B: int = Query(None),BYS44C: int = Query(None),
+    BYS20E: int = Query(None),BYS87C: int = Query(None),BYS20D: int = Query(None),
+    BYS23C: int = Query(None),BYS37: int = Query(None),BYS27I: int = Query(None),
+    BYS90D: int = Query(None),BYS38A: int = Query(None),BYS20J: int = Query(None),
+    BYS24C: int = Query(None),BYS24D: int = Query(None),BYS54I: int = Query(None),
+    BYS84D: int = Query(None),BYS84I: int = Query(None),BYS85A: int = Query(None)):
+    
     student_list = [BYSEX, BYRACE, BYSTLANG, BYPARED, BYINCOME, BYURBAN, BYREGION, BYRISKFC, BYS34A,
         BYS34B, BYWRKHRS, BYS42, BYS43, BYTVVIGM, BYS46B, BYS44C, BYS20E, BYS87C, BYS20D, BYS23C, BYS37,
         BYS27I, BYS90D, BYS38A, BYS20J, BYS24C, BYS24D, BYS54I, BYS84D, BYS84I, BYS85A]
-
+    
     X = [student_list]
 
     gpa_range_bin = rus_clf.predict(X)[0]
@@ -122,37 +193,8 @@ async def student_success(request: Request, BYSEX: int = Form(default=0),
     gpa_range = gpa_range_dict[gpa_range_bin][0]
     equivalent_letter_grade = gpa_range_dict[gpa_range_bin][1]
     probability_of_gpa_range = rus_clf.predict_proba(X)[0][gpa_range_bin]
-
-    grade_range_proba = json.dumps({
-        "gpa_range": gpa_range,
-        "equivalent_letter_grade": equivalent_letter_grade,
-        "probability_of_gpa_range": probability_of_gpa_range
-    })
-
-    # grade_range_proba = {
-    #     "gpa_range": gpa_range,
-    #     "equivalent_letter_grade": equivalent_letter_grade,
-    #     "probability_of_gpa_range": str(probability_of_gpa_range)
-    # }
-
-    # return ({"gpa_range": gpa_range, "probability_of_gpa_range" : str(probability_of_gpa_range)})
-    return Response(content=grade_range_proba, media_type="application/json")
-    # return templates.TemplateResponse("prediction.html", {"request": Request, "gpa_range": gpa_range, "equivalent_letter_grade": equivalent_letter_grade, "probability_of_gpa_range" : probability_of_gpa_range})
-
-
-@app.put("/student_success")
-async def student_success(request: Request):
-
-    return FileResponse("templates/form.html")
-
-
-@app.post("/prediction")
-async def prediction(request: Request):
-
-    gpa_range = request.headers['gpa_range']
-    equivalent_letter_grade = request.headers['equivalent_letter_grade']
-    probability_of_gpa_range = request.headers['probability_of_gpa_range']
-    # return templates.TemplateResponse("prediction.html"), {"gpa_range": gpa_range, "equivalent_letter_grade": equivalent_letter_grade, "probability_of_gpa_range" : probability_of_gpa_range})
+    
+    return templates.TemplateResponse("prediction.html", {"request": request, "gpa_range": gpa_range, "probability_of_gpa_range" : probability_of_gpa_range})
 
 
 @app.post("/predict")
