@@ -31,6 +31,7 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+    expose_headers=["*"]
 )
 
 class Student(BaseModel):
@@ -120,23 +121,28 @@ async def student_success(request: Request, BYSEX: int = Form(default=''),
         equivalent_letter_grade = gpa_range_dict[gpa_range_bin][1]
         probability_of_gpa_range = rus_clf.predict_proba(X)[0][gpa_range_bin]
 
-        grade_range_proba = json.dumps({
-            "gpa_range": gpa_range,
-            "equivalent_letter_grade": equivalent_letter_grade,
-            "probability_of_gpa_range": probability_of_gpa_range
-        })
+        # grade_range_proba = json.dumps({
+        #     "X-gpa_range": gpa_range,
+        #     "X-equivalent_letter_grade": equivalent_letter_grade,
+        #     "X-probability_of_gpa_range": str(probability_of_gpa_range)
+        # })
 
-        print(type(Request))
-        print(request.method)
+        grade_range_proba = {
+            "X-gpa_range": gpa_range,
+            "X-equivalent_letter_grade": equivalent_letter_grade,
+            "X-probability_of_gpa_range": str(probability_of_gpa_range)
+        }
+
         # return ({"gpa_range": gpa_range, "probability_of_gpa_range" : str(probability_of_gpa_range) })
-        return FileResponse("prediction.html", headers = grade_range_proba)
+        return FileResponse("templates/prediction.html", headers = grade_range_proba)
 
 
-@app.get("/prediction")
-async def prediction():
+@app.api_route("/prediction", methods=["GET", "POST"])
+async def prediction(request: Request):
     # return FileResponse("/prediction.html")
-    gpa_range = request.headers['gpa_range']
-    probability_of_gpa_range = request.headers['probability_of_gpa_range']
+    print(request.headers)
+    gpa_range = request.headers['X-gpa_range']
+    probability_of_gpa_range = request.headers['X-probability_of_gpa_range']
     return templates.TemplateResponse("prediction.html", {"gpa_range": gpa_range, "probability_of_gpa_range" : probability_of_gpa_range})
 
 
