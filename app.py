@@ -91,18 +91,17 @@ async def student_success(request: Request):
 
 
 @app.post("/student_success")
-async def student_success(request: Request, BYSEX: int = Form(default=''),
-    BYRACE: int = Form(default=''),BYSTLANG: int = Form(default=''),BYPARED: int = Form(default=''),
-    BYINCOME: int = Form(default=''),BYURBAN: int = Form(default=''),BYREGION: int = Form(default=''),
-    BYRISKFC: int = Form(default=''),BYS34A: int = Form(default=''),BYS34B: int = Form(default=''),
-    BYWRKHRS: int = Form(default=''),BYS42: int = Form(default=''),BYS43: int = Form(default=''),
-    BYTVVIGM: int = Form(default=''),BYS46B: int = Form(default=''),BYS44C: int = Form(default=''),
-    BYS20E: int = Form(default=''),BYS87C: int = Form(default=''),BYS20D: int = Form(default=''),
-    BYS23C: int = Form(default=''),BYS37: int = Form(default=''),BYS27I: int = Form(default=''),
-    BYS90D: int = Form(default=''),BYS38A: int = Form(default=''),BYS20J: int = Form(default=''),
-    BYS24C: int = Form(default=''),BYS24D: int = Form(default=''),BYS54I: int = Form(default=''),
-    BYS84D: int = Form(default=''),BYS84I: int = Form(default=''),BYS85A: int = Form(default=''),
-    gpa_range: str = Header(None), equivalent_letter_grade: str = Header(None), probability_of_gpa_range: str = Header(None)
+async def student_success(request: Request, BYSEX: int = Form(default=0),
+    BYRACE: int = Form(default=0),BYSTLANG: int = Form(default=0),BYPARED: int = Form(default=0),
+    BYINCOME: int = Form(default=0),BYURBAN: int = Form(default=0),BYREGION: int = Form(default=0),
+    BYRISKFC: int = Form(default=0),BYS34A: int = Form(default=0),BYS34B: int = Form(default=0),
+    BYWRKHRS: int = Form(default=0),BYS42: int = Form(default=0),BYS43: int = Form(default=0),
+    BYTVVIGM: int = Form(default=0),BYS46B: int = Form(default=0),BYS44C: int = Form(default=0),
+    BYS20E: int = Form(default=0),BYS87C: int = Form(default=0),BYS20D: int = Form(default=0),
+    BYS23C: int = Form(default=0),BYS37: int = Form(default=0),BYS27I: int = Form(default=0),
+    BYS90D: int = Form(default=0),BYS38A: int = Form(default=0),BYS20J: int = Form(default=0),
+    BYS24C: int = Form(default=0),BYS24D: int = Form(default=0),BYS54I: int = Form(default=0),
+    BYS84D: int = Form(default=0),BYS84I: int = Form(default=0),BYS85A: int = Form(default=0)
 ):
 
     student_list = [BYSEX, BYRACE, BYSTLANG, BYPARED, BYINCOME, BYURBAN, BYREGION, BYRISKFC, BYS34A,
@@ -127,7 +126,7 @@ async def student_success(request: Request, BYSEX: int = Form(default=''),
     grade_range_proba = json.dumps({
         "gpa_range": gpa_range,
         "equivalent_letter_grade": equivalent_letter_grade,
-        "probability_of_gpa_range": str(probability_of_gpa_range)
+        "probability_of_gpa_range": probability_of_gpa_range
     })
 
     # grade_range_proba = {
@@ -136,8 +135,15 @@ async def student_success(request: Request, BYSEX: int = Form(default=''),
     #     "probability_of_gpa_range": str(probability_of_gpa_range)
     # }
 
-    # return ({"gpa_range": gpa_range, "probability_of_gpa_range" : str(probability_of_gpa_range) })
-    return Response(path="templates/prediction", headers=grade_range_proba)
+    # return ({"gpa_range": gpa_range, "probability_of_gpa_range" : str(probability_of_gpa_range)})
+    return Response(content=grade_range_proba, media_type="application/json")
+    # return templates.TemplateResponse("prediction.html", {"request": Request, "gpa_range": gpa_range, "equivalent_letter_grade": equivalent_letter_grade, "probability_of_gpa_range" : probability_of_gpa_range})
+
+
+@app.put("/student_success")
+async def student_success(request: Request):
+
+    return FileResponse("templates/form.html")
 
 
 @app.post("/prediction")
