@@ -14,6 +14,8 @@ scikit-learn = "*"
 ipykernel = "*"
 imbalanced-learn = "*"
 gunicorn = "*"
+jinja2 = "*"
+python-multipart = "*"
 
 [requires]
 python_version = "3.7"
