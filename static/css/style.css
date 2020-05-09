@@ -534,29 +534,6 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Counts
---------------------------------------------------------------*/
-.counts {
-  background: #009970;
-  padding: 40px 0 20px 0;
-  color: #fff;
-}
-
-.counts .counters span {
-  font-size: 36px;
-  display: block;
-  font-weight: 700;
-}
-
-.counts .counters p {
-  padding: 0;
-  margin: 0 0 20px 0;
-  font-family: "Raleway", sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-}
-
-/*--------------------------------------------------------------
 # Why Us
 --------------------------------------------------------------*/
 .why-us .content {
@@ -662,65 +639,6 @@ section {
 .cta .cta-btn:hover {
   background: #009970;
   border: 2px solid #009970;
-}
-
-/*--------------------------------------------------------------
-# Services
---------------------------------------------------------------*/
-.services .icon-box {
-  text-align: center;
-  padding: 40px 20px;
-  transition: all ease-in-out 0.3s;
-  background: #fff;
-}
-
-.services .icon-box .icon {
-  margin: 0 auto;
-  width: 64px;
-  height: 64px;
-  border-radius: 50px;
-  border: 1px solid #009970;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  transition: ease-in-out 0.3s;
-  color: #009970;
-}
-
-.services .icon-box .icon i {
-  font-size: 28px;
-}
-
-.services .icon-box h4 {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 24px;
-}
-
-.services .icon-box h4 a {
-  color: #36343a;
-  transition: ease-in-out 0.3s;
-}
-
-.services .icon-box p {
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.services .icon-box:hover {
-  border-color: #fff;
-  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
-}
-
-.services .icon-box:hover h4 a {
-  color: #009970;
-}
-
-.services .icon-box:hover .icon {
-  color: #fff;
-  background: #009970;
 }
 
 /*--------------------------------------------------------------
@@ -851,11 +769,14 @@ section {
 }
 
 .form .form-group label {
-  /* padding: 0 0 0 10px; */
   margin-bottom: 0;
   font-size: 18px;
-  /* color: #009970;
-  font-weight: bold; */
+  color: #686470;
+}
+
+.form .form-group li {
+  margin-bottom: 0;
+  font-size: 18px;
   color: #686470;
 }
 
@@ -1005,90 +926,6 @@ section {
   }
   .breadcrumbs ol li {
     display: inline-block;
-  }
-}
-
-/*--------------------------------------------------------------
-# Portfolio Details
---------------------------------------------------------------*/
-.portfolio-details {
-  padding-top: 40px;
-}
-
-.portfolio-details .portfolio-details-container {
-  position: relative;
-}
-
-.portfolio-details .portfolio-details-carousel {
-  position: relative;
-  z-index: 1;
-}
-
-.portfolio-details .portfolio-details-carousel .owl-nav, .portfolio-details .portfolio-details-carousel .owl-dots {
-  margin-top: 5px;
-  text-align: left;
-}
-
-.portfolio-details .portfolio-details-carousel .owl-dot {
-  display: inline-block;
-  margin: 0 10px 0 0;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #ddd !important;
-}
-
-.portfolio-details .portfolio-details-carousel .owl-dot.active {
-  background-color: #009970 !important;
-}
-
-.portfolio-details .portfolio-info {
-  padding: 30px;
-  position: absolute;
-  right: 0;
-  bottom: -70px;
-  background: #fff;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  z-index: 2;
-}
-
-.portfolio-details .portfolio-info h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-}
-
-.portfolio-details .portfolio-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.portfolio-details .portfolio-info ul li + li {
-  margin-top: 10px;
-}
-
-.portfolio-details .portfolio-description {
-  padding-top: 50px;
-}
-
-.portfolio-details .portfolio-description h2 {
-  width: 50%;
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.portfolio-details .portfolio-description p {
-  padding: 0 0 0 0;
-}
-
-@media (max-width: 768px) {
-  .portfolio-details .portfolio-info {
-    position: static;
-    margin-top: 30px;
   }
 }
 

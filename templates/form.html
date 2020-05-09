@@ -43,8 +43,6 @@
       <div class="header-container d-flex align-items-center">
         <div class="logo mr-auto">
           <h1 class="text-light"><a href="/"><span>Student Success</span></a></h1>
-          <!-- Uncomment below if you prefer to use an image logo -->
-          <!-- <a href="index.html"><img src="../static/img/logo.png" alt="" class="img-fluid"></a>-->
         </div>
 
         <nav class="nav-menu d-none d-lg-block">
@@ -64,16 +62,15 @@
 
     <!-- ======= Form Section ======= -->
 <section id="form" class="form">
-      <div class="container">
-        <div class="row content">
-          <div class="col-lg-6" data-aos="fade-right">
+  <div class="container">
+    <div class="row content">
+        <div class="col-lg-6" data-aos="fade-right">
             <div class="section-title">
               <h2></br></br>Predict Your Future</h2>
               <p>Answer the following 31 questions to predict your high school success.</p>
             </div>
           </div>
-
-            <form action= "/student_success" method="POST" role="form">
+            <form action="/student_success" method="POST" role="form">
                   <div class="form-group">
                     <div class="col-12" data-aos="fade-left">
                     <h4>1. What is your sex?</h4> 
@@ -94,7 +91,6 @@
                       <div class="form-check">
                         <input name="BYRACE" id="BYRACE_0" type="radio" required="required" class="form-check-input" value="0"> 
                         <label for="BYRACE_0" class="form-check-label">Not White</label>
-                      </div>
                       </div>
                       <div class="form-check">
                         <input name="BYRACE" id="BYRACE_1" type="radio" required="required" class="form-check-input" value="1"> 
@@ -406,7 +402,7 @@
                  
                   
                     
-                    <h4></br>20. Since starting ninth grade, have you won any of the following awards or were you recognized at school for doing well or participating in certain activities? Received special recognition for good grades or honor roll</h4> 
+                    <h4></br>20. Have you been recognized for good grades, for example, honor roll?</h4> 
                     <div>
                       <div class="form-check">
                         <input name="BYS23C" id="BYS23C_0" type="radio" class="form-check-input" value="0" required="required"> 
@@ -415,10 +411,6 @@
                       <div class="form-check">
                         <input name="BYS23C" id="BYS23C_1" type="radio" class="form-check-input" value="1" required="required"> 
                         <label for="BYS23C_1" class="form-check-label">Yes</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYS23C" id="BYS23C_2" type="radio" class="form-check-input" value="-8" required="required"> 
-                        <label for="BYS23C_2" class="form-check-label">N/A</label>
                       </div>
                     </div>
                   
@@ -649,57 +641,15 @@
                     </div>
                   
                     
-                </br><button name="submit" type="submit" class="btn btn-primary"><h4 style="color:white">Submit</h4></button>
+                    </br><button name="submit" type="submit" class="btn btn-primary"><h4 style="color:white">Submit</h4></button>
                     </div>
                     </div>
-                    </div>
-                    </div>
-            
-                </form>
-    </div>
-
-        <!-- ======= Results Section ======= -->
-        <section id="why-us" class="why-us">
-            <div class="container">
-      
-              <div class="row">
-                <div class="col-lg-4 d-flex align-items-stretch justify-content-center" data-aos="fade-right">
-                  <div class="content">
-                    <h3>Your 
-                    </br>Predictions</h3>
                   </div>
                 </div>
-                <div class="col-lg-8 d-flex align-items-stretch">
-                  <div class="icon-boxes d-flex flex-column justify-content-center">
-                    <div class="row">
-                      <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="icon-box mt-4 mt-xl-0">
-                          <i class='bx bx-star bx-tada' ></i>
-                          <h4>GPA Range</h4>
-                          <p>{{ gpa_range }}</p>
-                        </div>
-                      </div>
-                      <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="icon-box mt-4 mt-xl-0">
-                          <i class='bx bxs-graduation bx-tada' ></i>
-                          <h4>Letter Grade</h4>
-                          <p>{{ probability }}</p>
-                        </div>
-                      </div>
-                      <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="icon-box mt-4 mt-xl-0">
-                          <i class='bx bx-sad bx-fade-down' ></i>
-                          <h4>Probability of GPA Range</h4>
-                          <p>Results Here.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div><!-- End .content-->
-                </div>
-              </div>
-      
-            </div>
-          </section><!-- Results Section -->
+          </form>
+      </div>
+  </div>
+</section>
 
     <div class="container d-md-flex py-4">
 
