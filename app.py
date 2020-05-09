@@ -15,6 +15,7 @@ from fastapi.templating import Jinja2Templates
 import uvicorn
 from joblib import load
 
+
 file_path = "index.html"
 
 rus_clf = load("rus_clf.joblib")
@@ -47,7 +48,6 @@ async def home(item_id="templates/index.html"):
     '''
     return FileResponse(item_id)
 
-
 @app.api_route("/student_success", methods=["GET", "POST"])
 async def student_success(request: Request, BYSEX: int = Form(default=''),
     BYRACE: int = Form(default=''),BYSTLANG: int = Form(default=''),BYPARED: int = Form(default=''),
@@ -59,7 +59,8 @@ async def student_success(request: Request, BYSEX: int = Form(default=''),
     BYS23C: int = Form(default=''),BYS37: int = Form(default=''),BYS27I: int = Form(default=''),
     BYS90D: int = Form(default=''),BYS38A: int = Form(default=''),BYS20J: int = Form(default=''),
     BYS24C: int = Form(default=''),BYS24D: int = Form(default=''),BYS54I: int = Form(default=''),
-    BYS84D: int = Form(default=''),BYS84I: int = Form(default=''),BYS85A: int = Form(default='')
+    BYS84D: int = Form(default=''),BYS84I: int = Form(default=''),BYS85A: int = Form(default=''),
+    gpa_range: str = '', probability_of_gpa_range: str ='' 
 ):
     if request.method == "GET":
         return FileResponse("templates/form.html")
@@ -89,67 +90,47 @@ async def student_success(request: Request, BYSEX: int = Form(default=''),
             "gpa_range": gpa_range,
             "probability_of_gpa_range": probability_of_gpa_range
         })
-        print(grade_range_proba)
+        return RedirectResponse("/prediction/gpa_range/{probability_of_gpa_range")
+        # return templates.TemplateResponse("prediction.html", {"request": Request, "gpa_range" : gpa_range, "probability_of_gpa_range" : str(probability_of_gpa_range)})
+        # return FileResponse(""")
 
-        return templates.TemplateResponse("form.html", {"request": Request, "gpa" : gpa_range, "probability" : probability_of_gpa_range})
-
-
-
-
-# @app.get("/student_success/")
-# async def render_form():
-#     return FileResponse("templates/form.html")
-
-# @app.post("/student_success/")
-# async def submit_form(BYSEX: str = Form(default=''),
-#     BYRACE: str = Form(default='')):
-#     return FileResponse("templates/form.html")
-
-@app.route("/plotly")
-async def plotly():
-    '''
-    diplay visualizations
-    '''
-    return {
-        "code": "success",
-        "message": "student created"
-    }
+@app.get("/prediction/{gpa_range}/{probability_of_gpa_range}")
+async def prediction(request: Request, gpa_range: str, probability_of_gpa_range: str):
+    return templates.TemplateResponse("prediction.html", {"request": request, "gpa_range": gpa_range, "probability_of_gpa_range" : str  (probability_of_gpa_range)})
 
 
-<<<<<<< HEAD
-=======
-@app.post("/predict")
-async def predict(student: Student):
 
-    student_list = []
-    for i in student:
-        student_list.append(i[1])
+# @app.post("/predict")
+# async def predict(student: Student):
 
-    X = [student_list]
+#     student_list = []
+#     for i in student:
+#         student_list.append(i[1])
 
-    gpa_range_bin = rus_clf.predict(X)[0]
+#     X = [student_list]
 
-    gpa_range_dict = {
-        0: ["0.00 - 1.50", "D or F"],
-        1: ["1.51 - 2.00", "C"],
-        2: ["2.01 - 3.50", "B"],
-        3: ["3.51 - 4.00", "A"]
-    }
-    gpa_range = gpa_range_dict[gpa_range_bin][0]
-    equivalent_letter_grade = gpa_range_dict[gpa_range_bin][1]
+#     gpa_range_bin = rus_clf.predict(X)[0]
+
+#     gpa_range_dict = {
+#         0: ["0.00 - 1.50", "D or F"],
+#         1: ["1.51 - 2.00", "C"],
+#         2: ["2.01 - 3.50", "B"],
+#         3: ["3.51 - 4.00", "A"]
+#     }
+#     gpa_range = gpa_range_dict[gpa_range_bin][0]
+#     equivalent_letter_grade = gpa_range_dict[gpa_range_bin][1]
     
-    probability_of_gpa_range = rus_clf.predict_proba(X)[0][gpa_range_bin]
+#     probability_of_gpa_range = rus_clf.predict_proba(X)[0][gpa_range_bin]
 
-    grade_range_proba = json.dumps({
-        "gpa_range": gpa_range,
-        "equivalent_letter_grade": equivalent_letter_grade,
-        "probability_of_gpa_range": probability_of_gpa_range
-    })
+#     grade_range_proba = json.dumps({
+#         "gpa_range": gpa_range,
+#         "equivalent_letter_grade": equivalent_letter_grade,
+#         "probability_of_gpa_range": probability_of_gpa_range
+#     })
 
-    return Response(content=grade_range_proba, media_type="application/json")
+    # return Response(content=grade_range_proba, media_type="application/json")
 
 
->>>>>>> master
 @app.get("/get_student_data")
 async def get_student_data():
     '''
