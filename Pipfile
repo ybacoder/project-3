@@ -16,6 +16,7 @@ imbalanced-learn = "*"
 gunicorn = "*"
 jinja2 = "*"
 python-multipart = "*"
+uvloop = "*"
 
 [requires]
 python_version = "3.7"
