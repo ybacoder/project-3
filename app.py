@@ -141,9 +141,10 @@ async def student_success(request: Request, BYSEX: int = Form(default=''),
 async def prediction(request: Request):
     # return FileResponse("/prediction.html")
     print(request.headers)
-    gpa_range = request.headers['X-gpa_range']
-    probability_of_gpa_range = request.headers['X-probability_of_gpa_range']
-    return templates.TemplateResponse("prediction.html", {"gpa_range": gpa_range, "probability_of_gpa_range" : probability_of_gpa_range})
+    # gpa_range = request.headers['X-gpa_range']
+    # equivalent_letter_grade = request.headers['X-equivalent_letter_grade']
+    # probability_of_gpa_range = request.headers['X-probability_of_gpa_range']
+    return templates.TemplateResponse("prediction.html") #, {"gpa_range": gpa_range, "equivalent_letter_grade": equivalent_letter_grade, "probability_of_gpa_range" : probability_of_gpa_range})
 
 
 @app.get("/get_student_data")
