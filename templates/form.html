@@ -51,8 +51,7 @@
           <ul>
             <li><a href="/#">Home</a></li>
             <li><a href="/#about">About</a></li>
-            <li><a href="data">View the Data</a></li>
-            <li><a href="plotly">Plots</a></li>
+            <li><a href="get_student_data">View the Data</a></li>
             <li><a href="/#team">Team</a></li>
             <li><a href="https://github.com/ybacoder/project-3" rel="noreferrer" target="_blank"> Fork me on Github</a></li>
             <li class="get-started"><a href="student_success">Predict Your Success</a></li>
@@ -80,17 +79,13 @@
                     <h4>1. What is your sex?</h4> 
                     <div>
                       <div class="form-check">
-                        <input name="BYSEX" id="BYSEX_0" type="radio" required="required" class="form-check-input" value="2"> 
+                        <input name="BYSEX" id="BYSEX_0" type="radio" required="required" class="form-check-input" value="0"> 
                         <label for="BYSEX_0" class="form-check-label">Female</label>
-                      </div>
-                      <div class="form-check">
+                        </div>
+                        <div class="form-check">
                         <input name="BYSEX" id="BYSEX_1" type="radio" required="required" class="form-check-input" value="1"> 
                         <label for="BYSEX_1" class="form-check-label">Male</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYSEX" id="BYSEX_2" type="radio" required="required" class="form-check-input" value="-8"> 
-                        <label for="BYSEX_2" class="form-check-label">Prefer Not to Answer</label>
-                      </div>
+                        </div>
                     </div>
                   
 
@@ -98,27 +93,12 @@
                     <div>
                       <div class="form-check">
                         <input name="BYRACE" id="BYRACE_0" type="radio" required="required" class="form-check-input" value="0"> 
-                        <label for="BYRACE_0" class="form-check-label">More than one race, non-Hispanic</label>
+                        <label for="BYRACE_0" class="form-check-label">Not White</label>
+                      </div>
                       </div>
                       <div class="form-check">
-                        <input name="BYRACE" id="BYRACE_1" type="radio" required="required" class="form-check-input" value="1" > 
-                        <label for="BYRACE_1" class="form-check-label">American Indian/Alaska Native, non-Hispanic</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYRACE" id="BYRACE_2" type="radio" required="required" class="form-check-input" value="2"> 
-                        <label for="BYRACE_2" class="form-check-label">Asian, Hawaiian/Pacific Islander, non-Hispanic</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYRACE" id="BYRACE_3" type="radio" required="required" class="form-check-input" value="3"> 
-                        <label for="BYRACE_3" class="form-check-label">Black or African American, non-Hispanic</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYRACE" id="BYRACE_4" type="radio" required="required" class="form-check-input" value="4"> 
-                        <label for="BYRACE_4" class="form-check-label">Hispanic</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYRACE" id="BYRACE_5" type="radio" required="required" class="form-check-input" value="5"> 
-                        <label for="BYRACE_5" class="form-check-label">White, non-Hispanic</label>
+                        <input name="BYRACE" id="BYRACE_1" type="radio" required="required" class="form-check-input" value="1"> 
+                        <label for="BYRACE_1" class="form-check-label">White</label>
                       </div>
                     </div>
                   
@@ -138,99 +118,43 @@
             
                   
                     
-                    <h4></br>4. What is the highest level of education reached by either of your parents?</h4> 
+                    <h4></br>4. Did at least one of your parents graduate high school?</h4> 
                     <div>
                       <div class="form-check">
-                        <input name="BYPARED" id="BYPARED_0" type="radio" required="required" class="form-check-input" value="1"> 
-                        <label for="BYPARED_0" class="form-check-label">Did not finish high school</label>
+                        <input name="BYPARED" id="BYPARED_0" type="radio" required="required" class="form-check-input" value="0"> 
+                        <label for="BYPARED_0" class="form-check-label">No</label>
                       </div>
                       <div class="form-check">
-                        <input name="BYPARED" id="BYPARED_1" type="radio"  required="required" class="form-check-input" value="2"> 
-                        <label for="BYPARED_1" class="form-check-label">Graduated from high school or GED</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYPARED" id="BYPARED_2" type="radio" required="required" class="form-check-input" value="3"> 
-                        <label for="BYPARED_2" class="form-check-label">Attended 2-year school, no degree</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYPARED" id="BYPARED_3" type="radio" required="required" class="form-check-input" value="4"> 
-                        <label for="BYPARED_3" class="form-check-label">Graduated from 2-year school</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYPARED" id="BYPARED_4" type="radio" required="required" class="form-check-input" value="5"> 
-                        <label for="BYPARED_4" class="form-check-label">Attended college, no 4-year degree</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYPARED" id="BYPARED_5" type="radio" required="required" class="form-check-input" value="6"> 
-                        <label for="BYPARED_5" class="form-check-label">Graduate from college</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYPARED" id="BYPARED_6" type="radio" required="required" class="form-check-input" value="7"> 
-                        <label for="BYPARED_6" class="form-check-label">Completed Master's degree or equivalent</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYPARED" id="BYPARED_7" type="radio" required="required" class="form-check-input" value="8"> 
-                        <label for="BYPARED_7" class="form-check-label">Completed PhD, MD, other advanced degree</label>
+                        <input name="BYPARED" id="BYPARED_1" type="radio"  required="required" class="form-check-input" value="1"> 
+                        <label for="BYPARED_1" class="form-check-label">Yes</label>
                       </div>
                     </div>
                 
                   
                     
-                    <h4></br>5. Which category does your total family income from all sources in the past year fall into? (If you are not sure about the amount, please estimate)</h4> 
+                    <h4></br>5. Which category does your total family income in the past year fall into? (If you are not sure about the amount, please estimate)</h4> 
                     <div>
                       <div class="form-check">
                         <input name="BYINCOME" id="BYINCOME_0" type="radio" required="required" class="form-check-input" value="0"> 
-                        <label for="BYINCOME_0" class="form-check-label">None</label>
+                        <label for="BYINCOME_0" class="form-check-label">$0 - $25,000</label>
                       </div>
                       <div class="form-check">
                         <input name="BYINCOME" id="BYINCOME_1" type="radio" required="required" class="form-check-input" value="1" > 
-                        <label for="BYINCOME_1" class="form-check-label">$1,000 - $10,000</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYINCOME" id="BYINCOME_2" type="radio" required="required" class="form-check-input" value="2"> 
-                        <label for="BYINCOME_2" class="form-check-label">$10,001 - $20,000</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYINCOME" id="BYINCOME_3" type="radio" required="required" class="form-check-input" value="3"> 
-                        <label for="BYINCOME_3" class="form-check-label">$20,001 - $35,000</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYINCOME" id="BYINCOME_4" type="radio" required="required" class="form-check-input" value="4"> 
-                        <label for="BYINCOME_4" class="form-check-label">$35,001 - $50,000</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYINCOME" id="BYINCOME_5" type="radio" required="required" class="form-check-input" value="5"> 
-                        <label for="BYINCOME_5" class="form-check-label">$50,001 - $75,000</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYINCOME" id="BYINCOME_6" type="radio" required="required" class="form-check-input" value="6"> 
-                        <label for="BYINCOME_6" class="form-check-label">$75,001 - $100,000</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYINCOME" id="BYINCOME_7" type="radio" required="required" class="form-check-input" value="7"> 
-                        <label for="BYINCOME_7" class="form-check-label">$100,001 - $200,000</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYINCOME" id="BYINCOME_8" type="radio" required="required" class="form-check-input" value="8"> 
-                        <label for="BYINCOME_8" class="form-check-label">$200,001 or more</label>
+                        <label for="BYINCOME_1" class="form-check-label">$25,001 or more</label>
                       </div>
                     </div>
                 
                   
                     
-                    <h4></br>6. Is your school located in an urban, suburban, or rural area?</h4> 
+                    <h4></br>6. Is your school located in a rural area?</h4> 
                     <div>
                       <div class="form-check">
-                        <input name="BYURBAN" id="BYURBAN_0" type="radio" required="required" class="form-check-input" value="1"> 
-                        <label for="BYURBAN_0" class="form-check-label">Urban</label>
+                        <input name="BYURBAN" id="BYURBAN_0" type="radio" required="required" class="form-check-input" value="0"> 
+                        <label for="BYURBAN_0" class="form-check-label">No</label>
                       </div>
                       <div class="form-check">
-                        <input name="BYURBAN" id="BYURBAN_1" type="radio" required="required" class="form-check-input" value="2"> 
-                        <label for="BYURBAN_1" class="form-check-label">Suburban</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYURBAN" id="BYURBAN_2" type="radio" required="required" class="form-check-input" value="3"> 
-                        <label for="BYURBAN_2" class="form-check-label">Rural</label>
+                        <input name="BYURBAN" id="BYURBAN_1" type="radio" required="required" class="form-check-input" value="1"> 
+                        <label for="BYURBAN_1" class="form-check-label">Yes</label>
                       </div>
                     </div>
                   
@@ -274,23 +198,7 @@
                       </div>
                       <div class="form-check">
                         <input name="BYRISKFC" id="BYRISKFC_1" type="radio" required="required" class="form-check-input" value="1"> 
-                        <label for="BYRISKFC_1" class="form-check-label">One risk factor</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYRISKFC" id="BYRISKFC_2" type="radio" required="required" class="form-check-input" value="2"> 
-                        <label for="BYRISKFC_2" class="form-check-label">Two risk factors</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYRISKFC" id="BYRISKFC_3" type="radio" required="required" class="form-check-input" value="3"> 
-                        <label for="BYRISKFC_3" class="form-check-label">Three risk factors</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYRISKFC" id="BYRISKFC_4" type="radio" required="required" class="form-check-input" value="4"> 
-                        <label for="BYRISKFC_4" class="form-check-label">Four risk factors</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYRISKFC" id="BYRISKFC_5" type="radio" required="required" class="form-check-input" value="5"> 
-                        <label for="BYRISKFC_5" class="form-check-label">Five or six risk factors</label>
+                        <label for="BYRISKFC_1" class="form-check-label">One or more risk factors</label>
                       </div>
                     </div>
                  
@@ -304,29 +212,17 @@
                       </div>
                       <div class="form-check">
                         <input name="BYS34A" id="BYS34A_1" type="radio" class="form-check-input" value="1" required="required"> 
-                        <label for="BYS34A_1" class="form-check-label">1-5 hours</label>
+                        <label for="BYS34A_1" class="form-check-label">1 - 10 hours</label>
                       </div>
                       <div class="form-check">
                         <input name="BYS34A" id="BYS34A_2" type="radio" class="form-check-input" value="2" required="required"> 
-                        <label for="BYS34A_2" class="form-check-label">6-10 hours</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYS34A" id="BYS34A_3" type="radio" required="required" class="form-check-input" value="3"> 
-                        <label for="BYS34A_3" class="form-check-label">11-15 hours</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYS34A" id="BYS34A_4" type="radio" required="required" class="form-check-input" value="4"> 
-                        <label for="BYS34A_4" class="form-check-label">16-20 hours</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYS34A" id="BYS34A_5" type="radio" required="required" class="form-check-input" value="5"> 
-                        <label for="BYS34A_5" class="form-check-label">21 or more hours</label>
+                        <label for="BYS34A_2" class="form-check-label">11 or more hours</label>
                       </div>
                     </div>
                   
                   
                     
-                    <h4></br>10. Overall, about how much time do you spend on homework each week, outside of school?</h4> 
+                    <h4></br>10. Overall, about how much time do you spend on homework each week outside of school?</h4> 
                     <div>
                       <div class="form-check">
                         <input name="BYS34B" id="BYS34B_0" type="radio" class="form-check-input" value="0" required="required"> 
@@ -334,73 +230,25 @@
                       </div>
                       <div class="form-check">
                         <input name="BYS34B" id="BYS34B_1" type="radio" class="form-check-input" value="1" required="required"> 
-                        <label for="BYS34B_1" class="form-check-label">1-5 hours</label>
+                        <label for="BYS34B_1" class="form-check-label">1 - 10 hours</label>
                       </div>
                       <div class="form-check">
                         <input name="BYS34B" id="BYS34B_2" type="radio" class="form-check-input" value="2" required="required"> 
-                        <label for="BYS34B_2" class="form-check-label">6-10 hours</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYS34B" id="BYS34B_3" type="radio" required="required" class="form-check-input" value="3"> 
-                        <label for="BYS34B_3" class="form-check-label">11-15 hours</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYS34B" id="BYS34B_4" type="radio" required="required" class="form-check-input" value="4"> 
-                        <label for="BYS34B_4" class="form-check-label">16-20 hours</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYS34B" id="BYS34B_5" type="radio" required="required" class="form-check-input" value="5"> 
-                        <label for="BYS34B_5" class="form-check-label">21-25 hours</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYS34B" id="BYS34B_6" type="radio" required="required" class="form-check-input" value="6"> 
-                        <label for="BYS34B_6" class="form-check-label">26 or more hours</label>
+                        <label for="BYS34B_2" class="form-check-label">11 or more hours</label>
                       </div>
                     </div>
                  
                   
                     
-                    <h4></br>11. How many hours per week do you work during the school year? Include both weekday and weekend hours.</h4> 
+                    <h4></br>11. Did you work during the school year?</h4> 
                     <div>
                       <div class="form-check">
                         <input name="BYWRKHRS" id="BYWRKHRS_0" type="radio" required="required" class="form-check-input" value="0"> 
-                        <label for="BYWRKHRS_0" class="form-check-label">Did not work during the school year</label>
+                        <label for="BYWRKHRS_0" class="form-check-label">No</label>
                       </div>
                       <div class="form-check">
                         <input name="BYWRKHRS" id="BYWRKHRS_1" type="radio" required="required" class="form-check-input" value="1"> 
-                        <label for="BYWRKHRS_1" class="form-check-label">1-5 hours a week</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYWRKHRS" id="BYWRKHRS_2" type="radio" required="required" class="form-check-input" value="2"> 
-                        <label for="BYWRKHRS_2" class="form-check-label">6-10 hours a week</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYWRKHRS" id="BYWRKHRS_3" type="radio" required="required" class="form-check-input" value="3"> 
-                        <label for="BYWRKHRS_3" class="form-check-label">11-15 hours a week</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYWRKHRS" id="BYWRKHRS_4" type="radio" required="required" class="form-check-input" value="4"> 
-                        <label for="BYWRKHRS_4" class="form-check-label">16-20 hours a week</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYWRKHRS" id="BYWRKHRS_5" type="radio" required="required" class="form-check-input" value="5"> 
-                        <label for="BYWRKHRS_5" class="form-check-label">21-25 hours a week</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYWRKHRS" id="BYWRKHRS_6" type="radio" required="required" class="form-check-input" value="6"> 
-                        <label for="BYWRKHRS_6" class="form-check-label">26-30 hours a week</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYWRKHRS" id="BYWRKHRS_7" type="radio" required="required" class="form-check-input" value="7"> 
-                        <label for="BYWRKHRS_7" class="form-check-label">31-35 hours a week</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYWRKHRS" id="BYWRKHRS_8" type="radio" required="required" class="form-check-input" value="8"> 
-                        <label for="BYWRKHRS_8" class="form-check-label">36-40 hours a week</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYWRKHRS" id="BYWRKHRS_9" type="radio" required="required" class="form-check-input" value="9"> 
-                        <label for="BYWRKHRS_9" class="form-check-label">Over 40 hours a week</label>
+                        <label for="BYWRKHRS_1" class="form-check-label">Yes</label>
                       </div>
                     </div>
                 
@@ -414,23 +262,11 @@
                       </div>
                       <div class="form-check">
                         <input name="BYS42" id="BYS42_1" type="radio" class="form-check-input" value="1" required="required"> 
-                        <label for="BYS42_1" class="form-check-label">1-5 hours</label>
+                        <label for="BYS42_1" class="form-check-label">1 - 10 hours</label>
                       </div>
                       <div class="form-check">
                         <input name="BYS42" id="BYS42_2" type="radio" class="form-check-input" value="2" required="required"> 
-                        <label for="BYS42_2" class="form-check-label">6-10 hours</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYS42" id="BYS42_3" type="radio" required="required" class="form-check-input" value="3"> 
-                        <label for="BYS42_3" class="form-check-label">11-15 hours</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYS42" id="BYS42_4" type="radio" required="required" class="form-check-input" value="4"> 
-                        <label for="BYS42_4" class="form-check-label">16-20 hours</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYS42" id="BYS42_5" type="radio" required="required" class="form-check-input" value="5"> 
-                        <label for="BYS42_5" class="form-check-label">21 or more hours</label>
+                        <label for="BYS42_2" class="form-check-label">11 or more hours</label>
                       </div>
                     </div>
                  
@@ -444,23 +280,11 @@
                       </div>
                       <div class="form-check">
                         <input name="BYS43" id="BYS43_1" type="radio" class="form-check-input" value="1" required="required"> 
-                        <label for="BYS43_1" class="form-check-label">1-5 hours</label>
+                        <label for="BYS43_1" class="form-check-label">1 - 10 hours</label>
                       </div>
                       <div class="form-check">
                         <input name="BYS43" id="BYS43_2" type="radio" class="form-check-input" value="2" required="required"> 
-                        <label for="BYS43_2" class="form-check-label">6-10 hours</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYS43" id="BYS43_3" type="radio" required="required" class="form-check-input" value="3"> 
-                        <label for="BYS43_3" class="form-check-label">11-15 hours</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYS43" id="BYS43_4" type="radio" required="required" class="form-check-input" value="4"> 
-                        <label for="BYS43_4" class="form-check-label">16-20 hours</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYS43" id="BYS43_5" type="radio" required="required" class="form-check-input" value="5"> 
-                        <label for="BYS43_5" class="form-check-label">21 or more hours</label>
+                        <label for="BYS43_2" class="form-check-label">11 or more hours</label>
                       </div>
                     </div>
                   
@@ -470,23 +294,11 @@
                     <div>
                       <div class="form-check">
                         <input name="BYTVVIGM" id="BYTVVIGM_0" type="radio" class="form-check-input" value="0" required="required"> 
-                        <label for="BYTVVIGM_0" class="form-check-label">0 hours</label>
+                        <label for="BYTVVIGM_0" class="form-check-label">0 - 4hours</label>
                       </div>
                       <div class="form-check">
                         <input name="BYTVVIGM" id="BYTVVIGM_1" type="radio" class="form-check-input" value="1" required="required"> 
-                        <label for="BYTVVIGM_1" class="form-check-label">1-2 hours</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYTVVIGM" id="BYTVVIGM_2" type="radio" class="form-check-input" value="2" required="required"> 
-                        <label for="BYTVVIGM_2" class="form-check-label">3-4 hours</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYTVVIGM" id="BYTVVIGM_3" type="radio" required="required" class="form-check-input" value="3"> 
-                        <label for="BYTVVIGM_3" class="form-check-label">5-6 hours</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYTVVIGM" id="BYTVVIGM_4" type="radio" required="required" class="form-check-input" value="4"> 
-                        <label for="BYTVVIGM_4" class="form-check-label">7 or more hours</label>
+                        <label for="BYTVVIGM_1" class="form-check-label">5 or more hours</label>
                       </div>
                     </div>
                   
@@ -496,19 +308,11 @@
                     <div>
                       <div class="form-check">
                         <input name="BYS46B" id="BYS46B_0" type="radio" class="form-check-input" value="0" required="required"> 
-                        <label for="BYS46B_0" class="form-check-label">0 hours</label>
+                        <label for="BYS46B_0" class="form-check-label">0 - 3 hours</label>
                       </div>
                       <div class="form-check">
                         <input name="BYS46B" id="BYS46B_1" type="radio" class="form-check-input" value="1" required="required"> 
-                        <label for="BYS46B_1" class="form-check-label">1-2 hours</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYS46B" id="BYS46B_2" type="radio" class="form-check-input" value="2" required="required"> 
-                        <label for="BYS46B_2" class="form-check-label">3-4 hours</label>
-                      </div>
-                      <div class="form-check">
-                        <input name="BYS46B" id="BYS46B_3" type="radio" required="required" class="form-check-input" value="3"> 
-                        <label for="BYS46B_3" class="form-check-label">5 or more hours</label>
+                        <label for="BYS46B_1" class="form-check-label">4 or more hours</label>
                       </div>
                     </div>
                  
@@ -672,7 +476,7 @@
                       </div>
                       <div class="form-check">
                         <input name="BYS90D" id="BYS90D_1" type="radio" class="form-check-input" value="2" required="required"> 
-                        <label for="BYS90D_1" class="form-check-label">Somewhat</label>
+                        <label for="BYS90D_1" class="form-check-label">Somewhat important</label>
                       </div>
                       <div class="form-check">
                         <input name="BYS90D" id="BYS90D_2" type="radio" class="form-check-input" value="3" required="required"> 
@@ -734,15 +538,15 @@
                       </div>
                       <div class="form-check">
                         <input name="BYS24C" id="BYS24C_1" type="radio" class="form-check-input" value="2" required="required"> 
-                        <label for="BYS24C_1" class="form-check-label">1-2 times</label>
+                        <label for="BYS24C_1" class="form-check-label">1 - 2 times</label>
                       </div>
                       <div class="form-check">
                         <input name="BYS24C" id="BYS24C_2" type="radio" class="form-check-input" value="3" required="required"> 
-                        <label for="BYS24C_2" class="form-check-label">3-6 times</label>
+                        <label for="BYS24C_2" class="form-check-label">3 - 6 times</label>
                       </div>
                       <div class="form-check">
                         <input name="BYS24C" id="BYS24C_3" type="radio" required="required" class="form-check-input" value="4"> 
-                        <label for="BYS24C_3" class="form-check-label">7-9 times</label>
+                        <label for="BYS24C_3" class="form-check-label">7 - 9 times</label>
                       </div>
                       <div class="form-check">
                         <input name="BYS24C" id="BYS24C_4" type="radio" required="required" class="form-check-input" value="5"> 
@@ -760,15 +564,15 @@
                       </div>
                       <div class="form-check">
                         <input name="BYS24D" id="BYS24D_1" type="radio" required="required" class="form-check-input" value="2"> 
-                        <label for="BYS24D_1" class="form-check-label">1-2 times</label>
+                        <label for="BYS24D_1" class="form-check-label">1 - 2 times</label>
                       </div>
                       <div class="form-check">
                         <input name="BYS24D" id="BYS24D_2" type="radio" required="required" class="form-check-input" value="3"> 
-                        <label for="BYS24D_2" class="form-check-label">3-6 times</label>
+                        <label for="BYS24D_2" class="form-check-label">3 - 6 times</label>
                       </div>
                       <div class="form-check">
                         <input name="BYS24D" id="BYS24D_3" type="radio" required="required" class="form-check-input" value="4"> 
-                        <label for="BYS24D_3" class="form-check-label">7-9 times</label>
+                        <label for="BYS24D_3" class="form-check-label">7 - 9 times</label>
                       </div>
                       <div class="form-check">
                         <input name="BYS24D" id="BYS24D_4" type="radio" required="required" class="form-check-input" value="5"> 
@@ -810,7 +614,7 @@
                 
                   
                     
-                    <h4></br>30. Do you have a room of your own at your home?</h4> 
+                    <h4></br>30. Do you have your own room at your home?</h4> 
                     <div>
                       <div class="form-check">
                         <input name="BYS84I" id="BYS84I_0" type="radio" class="form-check-input" value="0" required="required"> 
@@ -854,19 +658,6 @@
                 </form>
     </div>
 
-    <!-- ======= Bike Example ======= -->
-
-    <div class="result" align="center">
-        {% if result %}
-            {% for variable, value in original_input.items() %}
-                <b>{{ variable }}</b> : {{ value }}
-            {% endfor %}
-            <br>
-            <br> Predicted number of bikes in use:
-               <p style="font-size:50px">{{ result }}</p>
-        {% endif %}
-    </div>
-
         <!-- ======= Results Section ======= -->
         <section id="why-us" class="why-us">
             <div class="container">
@@ -884,21 +675,21 @@
                       <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                         <div class="icon-box mt-4 mt-xl-0">
                           <i class='bx bx-star bx-tada' ></i>
-                          <h4>GPA</h4>
-                          <p>Results Here</p>
+                          <h4>GPA Range</h4>
+                          <p>{{ gpa_range }}</p>
                         </div>
                       </div>
                       <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
                         <div class="icon-box mt-4 mt-xl-0">
                           <i class='bx bxs-graduation bx-tada' ></i>
-                          <h4>Graduate</h4>
-                          <p>Results Here.</p>
+                          <h4>Letter Grade</h4>
+                          <p>{{ probability }}</p>
                         </div>
                       </div>
                       <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
                         <div class="icon-box mt-4 mt-xl-0">
                           <i class='bx bx-sad bx-fade-down' ></i>
-                          <h4>Drop Out</h4>
+                          <h4>Probability of GPA Range</h4>
                           <p>Results Here.</p>
                         </div>
                       </div>
