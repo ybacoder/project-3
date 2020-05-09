@@ -2,7 +2,8 @@
 import os
 import json
 import pandas as pd
-from fastapi import FastAPI, Request, Depends, BackgroundTasks, Form, Header
+from typing import List
+from fastapi import FastAPI, Request, Depends, BackgroundTasks, Form, Header, Query
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.encoders import jsonable_encoder
@@ -68,91 +69,58 @@ class Student(BaseModel):
     BYS85A: int
 
 
-
-# models.Base.metadata.create_all(bind=engine)
-
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 templates = Jinja2Templates(directory="templates")
 
 
 @app.get("/")
-async def home(item_id="templates/index.html"):
+async def home(request: Request):
     '''
     displays the home page
     '''
-    return FileResponse(item_id)
+    return templates.TemplateResponse("index.html", {"request": request})
 
 
 @app.get("/student_success")
 async def student_success(request: Request):
 
-    return FileResponse("templates/form.html")
+    return templates.TemplateResponse("form.html", {"request": request})
 
 
-@app.post("/student_success")
-async def student_success(request: Request, BYSEX: int = Form(default=0),
-    BYRACE: int = Form(default=0),BYSTLANG: int = Form(default=0),BYPARED: int = Form(default=0),
-    BYINCOME: int = Form(default=0),BYURBAN: int = Form(default=0),BYREGION: int = Form(default=0),
-    BYRISKFC: int = Form(default=0),BYS34A: int = Form(default=0),BYS34B: int = Form(default=0),
-    BYWRKHRS: int = Form(default=0),BYS42: int = Form(default=0),BYS43: int = Form(default=0),
-    BYTVVIGM: int = Form(default=0),BYS46B: int = Form(default=0),BYS44C: int = Form(default=0),
-    BYS20E: int = Form(default=0),BYS87C: int = Form(default=0),BYS20D: int = Form(default=0),
-    BYS23C: int = Form(default=0),BYS37: int = Form(default=0),BYS27I: int = Form(default=0),
-    BYS90D: int = Form(default=0),BYS38A: int = Form(default=0),BYS20J: int = Form(default=0),
-    BYS24C: int = Form(default=0),BYS24D: int = Form(default=0),BYS54I: int = Form(default=0),
-    BYS84D: int = Form(default=0),BYS84I: int = Form(default=0),BYS85A: int = Form(default=0)
-):
-
+@app.get("/prediction")
+async def prediction(request: Request, BYSEX: int = Form(default=0),
+    BYRACE: int = Form(default=0), BYSTLANG: int = Form(default=0), BYPARED: int = Form(default=0),
+    BYINCOME: int = Form(default=0), BYURBAN: int = Form(default=0), BYREGION: int = Form(default=0),
+    BYRISKFC: int = Form(default=0), BYS34A: int = Form(default=0), BYS34B: int = Form(default=0),
+    BYWRKHRS: int = Form(default=0), BYS42: int = Form(default=0), BYS43: int = Form(default=0),
+    BYTVVIGM: int = Form(default=0), BYS46B: int = Form(default=0), BYS44C: int = Form(default=0),
+    BYS20E: int = Form(default=0), BYS87C: int = Form(default=0), BYS20D: int = Form(default=0),
+    BYS23C: int = Form(default=0), BYS37: int = Form(default=0), BYS27I: int = Form(default=0),
+    BYS90D: int = Form(default=0), BYS38A: int = Form(default=0), BYS20J: int = Form(default=0),
+    BYS24C: int = Form(default=0), BYS24D: int = Form(default=0), BYS54I: int = Form(default=0),
+    BYS84D: int = Form(default=0), BYS84I: int = Form(default=0), BYS85A: int = Form(default=0)):
+    
     student_list = [BYSEX, BYRACE, BYSTLANG, BYPARED, BYINCOME, BYURBAN, BYREGION, BYRISKFC, BYS34A,
-        BYS34B, BYWRKHRS, BYS42, BYS43, BYTVVIGM, BYS46B, BYS44C, BYS20E, BYS87C, BYS20D, BYS23C, BYS37,
-        BYS27I, BYS90D, BYS38A, BYS20J, BYS24C, BYS24D, BYS54I, BYS84D, BYS84I, BYS85A]
-
+    BYS34B, BYWRKHRS, BYS42, BYS43, BYTVVIGM, BYS46B, BYS44C, BYS20E, BYS87C, BYS20D, BYS23C, BYS37,
+    BYS27I, BYS90D, BYS38A, BYS20J, BYS24C, BYS24D, BYS54I, BYS84D, BYS84I, BYS85A]
+    
     X = [student_list]
-
+    
     gpa_range_bin = rus_clf.predict(X)[0]
-
+    
     gpa_range_dict = {
         0: ["0.00 - 1.50", "D or F"],
         1: ["1.51 - 2.00", "C"],
         2: ["2.01 - 3.50", "B"],
         3: ["3.51 - 4.00", "A"]
     }
-
+    
     gpa_range = gpa_range_dict[gpa_range_bin][0]
     equivalent_letter_grade = gpa_range_dict[gpa_range_bin][1]
-    probability_of_gpa_range = rus_clf.predict_proba(X)[0][gpa_range_bin]
-
-    grade_range_proba = json.dumps({
-        "gpa_range": gpa_range,
-        "equivalent_letter_grade": equivalent_letter_grade,
-        "probability_of_gpa_range": probability_of_gpa_range
-    })
-
-    # grade_range_proba = {
-    #     "gpa_range": gpa_range,
-    #     "equivalent_letter_grade": equivalent_letter_grade,
-    #     "probability_of_gpa_range": str(probability_of_gpa_range)
-    # }
-
-    # return ({"gpa_range": gpa_range, "probability_of_gpa_range" : str(probability_of_gpa_range)})
-    return Response(content=grade_range_proba, media_type="application/json")
-    # return templates.TemplateResponse("prediction.html", {"request": Request, "gpa_range": gpa_range, "equivalent_letter_grade": equivalent_letter_grade, "probability_of_gpa_range" : probability_of_gpa_range})
-
-
-@app.put("/student_success")
-async def student_success(request: Request):
-
-    return FileResponse("templates/form.html")
-
-
-@app.post("/prediction")
-async def prediction(request: Request):
-
-    gpa_range = request.headers['gpa_range']
-    equivalent_letter_grade = request.headers['equivalent_letter_grade']
-    probability_of_gpa_range = request.headers['probability_of_gpa_range']
-    # return templates.TemplateResponse("prediction.html"), {"gpa_range": gpa_range, "equivalent_letter_grade": equivalent_letter_grade, "probability_of_gpa_range" : probability_of_gpa_range})
+    probability_of_gpa_range = str(rus_clf.predict_proba(X)[0][gpa_range_bin] * 100) + "%"
+    
+    return templates.TemplateResponse("prediction.html", {"request": request, "gpa_range": gpa_range, "equivalent_letter_grade": equivalent_letter_grade, "probability_of_gpa_range" : probability_of_gpa_range})
 
 
 @app.post("/predict")
