@@ -74,7 +74,7 @@
             </div>
           </div>
 
-            <form action="{{ url_for('student_success') }}" method="POST" role="form">
+            <form method="POST" role="form">
                   <div class="form-group">
                     <div class="col-12" data-aos="fade-left">
                     <h4>1. What is your sex?</h4> 
@@ -885,14 +885,14 @@
                         <div class="icon-box mt-4 mt-xl-0">
                           <i class='bx bx-star bx-tada' ></i>
                           <h4>GPA</h4>
-                          <p>Results Here</p>
+                          <p>{{ gpa_range }}</p>
                         </div>
                       </div>
                       <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
                         <div class="icon-box mt-4 mt-xl-0">
                           <i class='bx bxs-graduation bx-tada' ></i>
                           <h4>Graduate</h4>
-                          <p>Results Here.</p>
+                          <p>{{ probability_of_gpa_range }}</p>
                         </div>
                       </div>
                       <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">

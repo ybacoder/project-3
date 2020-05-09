@@ -9,7 +9,7 @@ from fastapi.encoders import jsonable_encoder
 from fastapi.responses import FileResponse, RedirectResponse, Response
 from fastapi.templating import Jinja2Templates
 # from database import SessionLocal, engine
-# from pydantic import BaseModel
+from pydantic import BaseModel
 # from sqlalchemy.orm import Session
 # import models
 import uvicorn
@@ -34,6 +34,41 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+class Student(BaseModel):
+    BYSEX: int
+    BYRACE: int
+    BYSTLANG: int
+    BYPARED: int
+    BYINCOME: int
+    BYURBAN: int
+    BYREGION: int
+    BYRISKFC: int
+    BYS34A: int
+    BYS34B: int
+    BYWRKHRS: int
+    BYS42: int
+    BYS43: int
+    BYTVVIGM: int
+    BYS46B: int
+    BYS44C: int
+    BYS20E: int
+    BYS87C: int
+    BYS20D: int
+    BYS23C: int
+    BYS37: int
+    BYS27I: int
+    BYS90D: int
+    BYS38A: int
+    BYS20J: int
+    BYS24C: int
+    BYS24D: int
+    BYS54I: int
+    BYS84D: int
+    BYS84I: int
+    BYS85A: int
+
+
 
 # models.Base.metadata.create_all(bind=engine)
 
@@ -90,13 +125,19 @@ async def student_success(request: Request, BYSEX: int = Form(default=''),
             "gpa_range": gpa_range,
             "probability_of_gpa_range": probability_of_gpa_range
         })
-        return RedirectResponse("/prediction/gpa_range/{probability_of_gpa_range")
-        # return templates.TemplateResponse("prediction.html", {"request": Request, "gpa_range" : gpa_range, "probability_of_gpa_range" : str(probability_of_gpa_range)})
-        # return FileResponse(""")
+        print(type(Request))
+        print(request.method)
+        # return ({"gpa_range": gpa_range, "probability_of_gpa_range" : str(probability_of_gpa_range) })
+        return FileResponse("prediction.html", headers = grade_range_proba)
+        
 
-@app.get("/prediction/{gpa_range}/{probability_of_gpa_range}")
-async def prediction(request: Request, gpa_range: str, probability_of_gpa_range: str):
-    return templates.TemplateResponse("prediction.html", {"request": request, "gpa_range": gpa_range, "probability_of_gpa_range" : str  (probability_of_gpa_range)})
+
+@app.get("/prediction")
+async def prediction():
+    # return FileResponse("/prediction.html")
+    gpa_range = request.headers['gpa_range']
+    probability_of_gpa_range = request.headers['probability_of_gpa_range']
+    return templates.TemplateResponse("prediction.html", {"gpa_range": gpa_range, "probability_of_gpa_range" : probability_of_gpa_range})
 
 
 
