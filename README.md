@@ -16,13 +16,10 @@ Our model is based on data from the **[Education Longitudinal Study of 2002 (ELS
 ## Predictive Questionnaire
 We created a quesitonnaire to predict the user's high school GPA range on a scale of 0 - 3, the equilvalent letter grade, and the probability of the GPA range. After answering 31 simple questions, the user will be provided with their their predicitons.
 
-*gif of questionnaire
+<img src="https://media.giphy.com/media/MAoXnyKgffhB7VdPek/giphy.gif">
 
 ## Heroku Deployment
 The Student Success web app is deployed via **Heroku**. It can be found [here](https://predict-student-success.herokuapp.com/)!
 
 ## Final Thoughts
-help! my brain cannot think of more words!
-
-### Challenges
 Ultimately, there are a multitude of factors that can contribute to one's success in high school. Our original idea was to predict a student's GPA and determine whether the student would graduate or drop out of high school. Unfortunately, there is not a data source that captures all of the factors that can lead to a student dropping out or graduating high school, therefore, our models did not yield a meaningful correlaton for graduation and drop-out. This meant we had to narrow our the focus of our model to GPA only. However, we realize a student's success in high school is not solely determined by their GPA.
