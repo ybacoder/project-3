@@ -2,7 +2,7 @@
 import os
 import json
 import pandas as pd
-from fastapi import FastAPI, Request, Depends, BackgroundTasks, Form
+from fastapi import FastAPI, Request, Depends, BackgroundTasks, Form, Header
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.encoders import jsonable_encoder
@@ -84,7 +84,13 @@ async def home(item_id="templates/index.html"):
     return FileResponse(item_id)
 
 
-@app.api_route("/student_success", methods=["GET", "POST"])
+@app.get("/student_success")
+async def student_success(request: Request):
+
+    return FileResponse("templates/form.html")
+
+
+@app.post("/student_success")
 async def student_success(request: Request, BYSEX: int = Form(default=''),
     BYRACE: int = Form(default=''),BYSTLANG: int = Form(default=''),BYPARED: int = Form(default=''),
     BYINCOME: int = Form(default=''),BYURBAN: int = Form(default=''),BYREGION: int = Form(default=''),
@@ -96,55 +102,75 @@ async def student_success(request: Request, BYSEX: int = Form(default=''),
     BYS90D: int = Form(default=''),BYS38A: int = Form(default=''),BYS20J: int = Form(default=''),
     BYS24C: int = Form(default=''),BYS24D: int = Form(default=''),BYS54I: int = Form(default=''),
     BYS84D: int = Form(default=''),BYS84I: int = Form(default=''),BYS85A: int = Form(default=''),
-    gpa_range: str = '', probability_of_gpa_range: str ='' 
+    gpa_range: str = Header(None), equivalent_letter_grade: str = Header(None), probability_of_gpa_range: str = Header(None)
 ):
-    if request.method == "GET":
-        return FileResponse("templates/form.html")
-    if request.method == "POST":
 
-        student_list = [BYSEX, BYRACE, BYSTLANG, BYPARED, BYINCOME, BYURBAN, BYREGION, BYRISKFC, BYS34A,
-            BYS34B, BYWRKHRS, BYS42, BYS43, BYTVVIGM, BYS46B, BYS44C, BYS20E, BYS87C, BYS20D, BYS23C, BYS37,
-            BYS27I, BYS90D, BYS38A, BYS20J, BYS24C, BYS24D, BYS54I, BYS84D, BYS84I, BYS85A]
+    student_list = [BYSEX, BYRACE, BYSTLANG, BYPARED, BYINCOME, BYURBAN, BYREGION, BYRISKFC, BYS34A,
+        BYS34B, BYWRKHRS, BYS42, BYS43, BYTVVIGM, BYS46B, BYS44C, BYS20E, BYS87C, BYS20D, BYS23C, BYS37,
+        BYS27I, BYS90D, BYS38A, BYS20J, BYS24C, BYS24D, BYS54I, BYS84D, BYS84I, BYS85A]
 
-        X = [student_list]
+    X = [student_list]
 
-        gpa_range_bin = rus_clf.predict(X)[0]
+    gpa_range_bin = rus_clf.predict(X)[0]
 
-        gpa_range_dict = {
-            0: ["0.00 - 1.50", "D or F"],
-            1: ["1.51 - 2.00", "C"],
-            2: ["2.01 - 3.50", "B"],
-            3: ["3.51 - 4.00", "A"]
-        }
+    gpa_range_dict = {
+        0: ["0.00 - 1.50", "D or F"],
+        1: ["1.51 - 2.00", "C"],
+        2: ["2.01 - 3.50", "B"],
+        3: ["3.51 - 4.00", "A"]
+    }
 
-        gpa_range = gpa_range_dict[gpa_range_bin][0]
-        equivalent_letter_grade = gpa_range_dict[gpa_range_bin][1]
-        probability_of_gpa_range = rus_clf.predict_proba(X)[0][gpa_range_bin]
+    gpa_range = gpa_range_dict[gpa_range_bin][0]
+    equivalent_letter_grade = gpa_range_dict[gpa_range_bin][1]
+    probability_of_gpa_range = rus_clf.predict_proba(X)[0][gpa_range_bin]
 
-        # grade_range_proba = json.dumps({
-        #     "X-gpa_range": gpa_range,
-        #     "X-equivalent_letter_grade": equivalent_letter_grade,
-        #     "X-probability_of_gpa_range": str(probability_of_gpa_range)
-        # })
+    grade_range_proba = json.dumps({
+        "gpa_range": gpa_range,
+        "equivalent_letter_grade": equivalent_letter_grade,
+        "probability_of_gpa_range": str(probability_of_gpa_range)
+    })
 
-        grade_range_proba = {
-            "X-gpa_range": gpa_range,
-            "X-equivalent_letter_grade": equivalent_letter_grade,
-            "X-probability_of_gpa_range": str(probability_of_gpa_range)
-        }
+    # grade_range_proba = {
+    #     "gpa_range": gpa_range,
+    #     "equivalent_letter_grade": equivalent_letter_grade,
+    #     "probability_of_gpa_range": str(probability_of_gpa_range)
+    # }
 
-        # return ({"gpa_range": gpa_range, "probability_of_gpa_range" : str(probability_of_gpa_range) })
-        return FileResponse("templates/prediction.html", headers = grade_range_proba)
+    # return ({"gpa_range": gpa_range, "probability_of_gpa_range" : str(probability_of_gpa_range) })
+    return Response(path="templates/prediction", headers=grade_range_proba)
 
 
-@app.api_route("/prediction", methods=["GET", "POST"])
+@app.post("/prediction")
 async def prediction(request: Request):
-    # return FileResponse("/prediction.html")
-    print(request.headers)
-    # gpa_range = request.headers['X-gpa_range']
-    # equivalent_letter_grade = request.headers['X-equivalent_letter_grade']
-    # probability_of_gpa_range = request.headers['X-probability_of_gpa_range']
-    return templates.TemplateResponse("prediction.html") #, {"gpa_range": gpa_range, "equivalent_letter_grade": equivalent_letter_grade, "probability_of_gpa_range" : probability_of_gpa_range})
+
+    gpa_range = request.headers['gpa_range']
+    equivalent_letter_grade = request.headers['equivalent_letter_grade']
+    probability_of_gpa_range = request.headers['probability_of_gpa_range']
+    # return templates.TemplateResponse("prediction.html"), {"gpa_range": gpa_range, "equivalent_letter_grade": equivalent_letter_grade, "probability_of_gpa_range" : probability_of_gpa_range})
+
+
+@app.post("/predict")
+async def predict(student: Student):
+    student_list = []
+    for i in student:
+        student_list.append(i[1])
+    X = [student_list]
+    gpa_range_bin = rus_clf.predict(X)[0]
+    gpa_range_dict = {
+        0: ["0.00 - 1.50", "D or F"],
+        1: ["1.51 - 2.00", "C"],
+        2: ["2.01 - 3.50", "B"],
+        3: ["3.51 - 4.00", "A"]
+    }
+    gpa_range = gpa_range_dict[gpa_range_bin][0]
+    equivalent_letter_grade = gpa_range_dict[gpa_range_bin][1]
+    probability_of_gpa_range = rus_clf.predict_proba(X)[0][gpa_range_bin]
+    grade_range_proba = json.dumps({
+        "gpa_range": gpa_range,
+        "equivalent_letter_grade": equivalent_letter_grade,
+        "probability_of_gpa_range": probability_of_gpa_range
+    })
+    return Response(content=grade_range_proba, media_type="application/json")
 
 
 @app.get("/get_student_data")
