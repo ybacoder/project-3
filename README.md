@@ -19,7 +19,7 @@ As part of the NCES studies, student's are asked to answer a very broad range an
 <p align="center"> <img src="https://media.giphy.com/media/MAoXnyKgffhB7VdPek/giphy.gif"> </p>
 
 ## App Deployment
-The Student Success web app is deployed online. It can be found [here](https://predict-student-success.herokuapp.com/)!
+The Student Success web app is deployed online. It can be found [here](https://student-success-yvlxbmh5cq-uc.a.run.app/)!
 
 ## Final Thoughts
 Ultimately, there are a multitude of factors that can contribute to a student's success in high school and their final GPA. In selecting 31 parameters that we deemed most likely to affect a student's over final GPA range, our hope was to develop a more accurate model. However, there are clearly a lot more factors that affect a student's GPA that are not captured in our model's dataset and in the NCES dataset.
