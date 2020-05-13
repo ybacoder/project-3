@@ -166,7 +166,7 @@ async def prediction(
     gpa_range = gpa_range_dict[gpa_range_bin][0]
     equivalent_letter_grade = gpa_range_dict[gpa_range_bin][1]
     probability_of_gpa_range = (
-        str(rus_clf.predict_proba(X)[0][gpa_range_bin] * 100) + "%"
+        str(round(rus_clf.predict_proba(X)[0][gpa_range_bin] * 100, 1)) + "%"
     )
 
     return templates.TemplateResponse(
@@ -221,4 +221,4 @@ async def get_student_data():
 
 
 if __name__ == "__main__":
-    uvicorn.run("app:app", reload=True)
+    uvicorn.run("main:app", reload=True)
