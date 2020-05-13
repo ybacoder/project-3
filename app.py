@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import os
 import json
 import pandas as pd
@@ -9,12 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import FileResponse, RedirectResponse, Response
 from fastapi.templating import Jinja2Templates
-
-# from database import SessionLocal, engine
 from pydantic import BaseModel
-
-# from sqlalchemy.orm import Session
-# import models
 import uvicorn
 from joblib import load
 
