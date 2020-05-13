@@ -82,7 +82,7 @@ async def student_success(request: Request):
     return templates.TemplateResponse("form.html", {"request": request})
 
 
-@app.get("/prediction")
+@app.post("/prediction")
 async def prediction(
     request: Request,
     BYSEX: int = Form(default=0),

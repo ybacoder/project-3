@@ -16,8 +16,6 @@ imbalanced-learn = "==0.6.2"
 gunicorn = "==20.0.4"
 jinja2 = "==3.0.0a1"
 python-multipart = "==0.0.5"
-uvloop = "==0.14.0"
-httptools = "==0.1.1"
 
 [requires]
 python_version = "3.7"
