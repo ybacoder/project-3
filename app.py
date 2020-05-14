@@ -158,8 +158,8 @@ async def prediction(
 
     gpa_range_dict = {
         0: ["0.00 - 1.50", "D or F"],
-        1: ["1.51 - 2.00", "C"],
-        2: ["2.01 - 3.50", "B"],
+        1: ["1.51 - 2.50", "C"],
+        2: ["2.51 - 3.50", "B"],
         3: ["3.51 - 4.00", "A"],
     }
 
@@ -189,8 +189,8 @@ async def predict(student: Student):
     gpa_range_bin = rus_clf.predict(X)[0]
     gpa_range_dict = {
         0: ["0.00 - 1.50", "D or F"],
-        1: ["1.51 - 2.00", "C"],
-        2: ["2.01 - 3.50", "B"],
+        1: ["1.51 - 2.50", "C"],
+        2: ["2.51 - 3.50", "B"],
         3: ["3.51 - 4.00", "A"],
     }
     gpa_range = gpa_range_dict[gpa_range_bin][0]
