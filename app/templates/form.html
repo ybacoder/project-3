@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Student Success</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../static/img/grad_cap_icon.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../static/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../static/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="../static/vendor/owl.carousel/../static/owl.carousel.min.css" rel="stylesheet">
+  <link href="../static/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../static/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Bethany - v2.0.0
+  * Template URL: https://bootstrapmade.com/bethany-free-onepage-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container">
+      <div class="header-container d-flex align-items-center">
+        <div class="logo mr-auto">
+          <h1 class="text-light"><a href="/"><span>Student Success</span></a></h1>
+        </div>
+
+        <nav class="nav-menu d-none d-lg-block">
+          <ul>
+            <li><a href="/#">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="get_student_data">View the Data</a></li>
+            <li><a href="/#team">Team</a></li>
+            <li><a href="https://github.com/ybacoder/project-3" rel="noreferrer" target="_blank"> Fork me on Github</a></li>
+            <li class="get-started"><a href="student_success">Predict Your Success</a></li>
+          </ul>
+        </nav><!-- .nav-menu -->
+      </div><!-- End Header Container -->
+    </div>
+  </header><!-- End Header -->
+
+
+    <!-- ======= Form Section ======= -->
+<section id="form" class="form">
+  <div class="container">
+    <div class="row content">
+        <div class="col-lg-6" data-aos="fade-right">
+            <div class="section-title">
+              <h2></br></br>Predict Your Future</h2>
+              <p>Answer the following 31 questions to predict your high school success.</p>
+            </div>
+          </div>
+            <form action="/prediction" role="form">
+                  <div class="form-group">
+                    <div class="col-12" data-aos="fade-left">
+                    <h4>1. What is your sex?</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYSEX" id="BYSEX_0" type="radio" required="required" class="form-check-input" value="0"> 
+                        <label for="BYSEX_0" class="form-check-label">Female</label>
+                        </div>
+                        <div class="form-check">
+                        <input name="BYSEX" id="BYSEX_1" type="radio" required="required" class="form-check-input" value="1"> 
+                        <label for="BYSEX_1" class="form-check-label">Male</label>
+                        </div>
+                    </div>
+                  
+
+                    <h4></br>2. What is your race/ethnicity?</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYRACE" id="BYRACE_0" type="radio" required="required" class="form-check-input" value="0"> 
+                        <label for="BYRACE_0" class="form-check-label">Not White</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYRACE" id="BYRACE_1" type="radio" required="required" class="form-check-input" value="1"> 
+                        <label for="BYRACE_1" class="form-check-label">White</label>
+                      </div>
+                    </div>
+                  
+                  
+                    
+                    <h4></br>3. Is English your native language?</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYSTLANG" id="BYSTLANG_0" type="radio"  required="required" class="form-check-input" value="0"> 
+                        <label for="BYSTLANG_0" class="form-check-label">No</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYSTLANG" id="BYSTLANG_1" type="radio" required="required" class="form-check-input" value="1"> 
+                        <label for="BYSTLANG_1" class="form-check-label">Yes</label>
+                      </div>
+                    </div>
+            
+                  
+                    
+                    <h4></br>4. Did at least one of your parents graduate high school?</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYPARED" id="BYPARED_0" type="radio" required="required" class="form-check-input" value="0"> 
+                        <label for="BYPARED_0" class="form-check-label">No</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYPARED" id="BYPARED_1" type="radio"  required="required" class="form-check-input" value="1"> 
+                        <label for="BYPARED_1" class="form-check-label">Yes</label>
+                      </div>
+                    </div>
+                
+                  
+                    
+                    <h4></br>5. Which category does your total family income in the past year fall into? (If you are not sure about the amount, please estimate)</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYINCOME" id="BYINCOME_0" type="radio" required="required" class="form-check-input" value="0"> 
+                        <label for="BYINCOME_0" class="form-check-label">$0 - $25,000</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYINCOME" id="BYINCOME_1" type="radio" required="required" class="form-check-input" value="1" > 
+                        <label for="BYINCOME_1" class="form-check-label">$25,001 or more</label>
+                      </div>
+                    </div>
+                
+                  
+                    
+                    <h4></br>6. Is your school located in a rural area?</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYURBAN" id="BYURBAN_0" type="radio" required="required" class="form-check-input" value="0"> 
+                        <label for="BYURBAN_0" class="form-check-label">No</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYURBAN" id="BYURBAN_1" type="radio" required="required" class="form-check-input" value="1"> 
+                        <label for="BYURBAN_1" class="form-check-label">Yes</label>
+                      </div>
+                    </div>
+                  
+                  
+                    
+                    <h4></br>7. What region of the United States is your school located?</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYREGION" id="BYREGION_0" type="radio" required="required" class="form-check-input" value="1"> 
+                        <label for="BYREGION_0" class="form-check-label">Northeast</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYREGION" id="BYREGION_1" type="radio" required="required" class="form-check-input" value="2"> 
+                        <label for="BYREGION_1" class="form-check-label">Midwest</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYREGION" id="BYREGION_2" type="radio" required="required" class="form-check-input" value="3"> 
+                        <label for="BYREGION_2" class="form-check-label">South</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYREGION" id="BYREGION_3" type="radio" required="required" class="form-check-input" value="4"> 
+                        <label for="BYREGION_3" class="form-check-label">West</label>
+                      </div>
+                    </div>
+                 
+                  
+                    
+                    <h4></br>8. Calculate your number of academic risk factors by reviewing the statements below and totaling how many statements apply to you.</h4>  
+                    <ul style="padding-left:40px">
+                        <li>Comes from a single-parent household.</li>
+                        <li>Has two parents without a high school diploma.</li>
+                        <li>Has a sibling who has dropped out of school.</li>
+                        <li>Has changed schools two or more times (excluding changes due to promotions.</li>
+                        <li>Has repeated at least one grade.</li>
+                        <li>Comes from a household with an income below the federal threshold for poverty. </br>Households are considered impoverished if family income is $20,000 or less and household size is 5 or less; $25,000 or less if household size is 6 or 7; $35,000 or less if household size is 8; and $50,000 or less if household size is 9 or more.</li>
+                    </ul>
+                    <div>
+                      <div class="form-check">
+                        <input name="BYRISKFC" id="BYRISKFC_0" type="radio" required="required" class="form-check-input" value="0"> 
+                        <label for="BYRISKFC_0" class="form-check-label">No risk factors</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYRISKFC" id="BYRISKFC_1" type="radio" required="required" class="form-check-input" value="1"> 
+                        <label for="BYRISKFC_1" class="form-check-label">One or more risk factors</label>
+                      </div>
+                    </div>
+                 
+                  
+                    
+                    <h4></br>9. Overall, about how much time do you spend on homework each week while at school?</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYS34A" id="BYS34A_0" type="radio" class="form-check-input" value="0" required="required"> 
+                        <label for="BYS34A_0" class="form-check-label">0 hours</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS34A" id="BYS34A_1" type="radio" class="form-check-input" value="1" required="required"> 
+                        <label for="BYS34A_1" class="form-check-label">1 - 10 hours</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS34A" id="BYS34A_2" type="radio" class="form-check-input" value="2" required="required"> 
+                        <label for="BYS34A_2" class="form-check-label">11 or more hours</label>
+                      </div>
+                    </div>
+                  
+                  
+                    
+                    <h4></br>10. Overall, about how much time do you spend on homework each week outside of school?</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYS34B" id="BYS34B_0" type="radio" class="form-check-input" value="0" required="required"> 
+                        <label for="BYS34B_0" class="form-check-label">0 hours</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS34B" id="BYS34B_1" type="radio" class="form-check-input" value="1" required="required"> 
+                        <label for="BYS34B_1" class="form-check-label">1 - 10 hours</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS34B" id="BYS34B_2" type="radio" class="form-check-input" value="2" required="required"> 
+                        <label for="BYS34B_2" class="form-check-label">11 or more hours</label>
+                      </div>
+                    </div>
+                 
+                  
+                    
+                    <h4></br>11. Did you work during the school year?</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYWRKHRS" id="BYWRKHRS_0" type="radio" required="required" class="form-check-input" value="0"> 
+                        <label for="BYWRKHRS_0" class="form-check-label">No</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYWRKHRS" id="BYWRKHRS_1" type="radio" required="required" class="form-check-input" value="1"> 
+                        <label for="BYWRKHRS_1" class="form-check-label">Yes</label>
+                      </div>
+                    </div>
+                
+                  
+                    
+                    <h4></br>12. In a typical week, how much time do you spend on school-sponsored extracurricular activities (for example, sports, school clubs)?</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYS42" id="BYS42_0" type="radio" class="form-check-input" value="0" required="required"> 
+                        <label for="BYS42_0" class="form-check-label">0 hours</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS42" id="BYS42_1" type="radio" class="form-check-input" value="1" required="required"> 
+                        <label for="BYS42_1" class="form-check-label">1 - 10 hours</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS42" id="BYS42_2" type="radio" class="form-check-input" value="2" required="required"> 
+                        <label for="BYS42_2" class="form-check-label">11 or more hours</label>
+                      </div>
+                    </div>
+                 
+                  
+                    
+                    <h4></br>13. How much additional reading do you do each week on your own outside of school - not in connection with schoolwork? (Do not count any school-assigned reading.)</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYS43" id="BYS43_0" type="radio" class="form-check-input" value="0" required="required"> 
+                        <label for="BYS43_0" class="form-check-label">0 hours</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS43" id="BYS43_1" type="radio" class="form-check-input" value="1" required="required"> 
+                        <label for="BYS43_1" class="form-check-label">1 - 10 hours</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS43" id="BYS43_2" type="radio" class="form-check-input" value="2" required="required"> 
+                        <label for="BYS43_2" class="form-check-label">11 or more hours</label>
+                      </div>
+                    </div>
+                  
+                  
+                    
+                    <h4></br>14. On average, how many hours per weekday do you spend watching TV/videos/playing video games?</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYTVVIGM" id="BYTVVIGM_0" type="radio" class="form-check-input" value="0" required="required"> 
+                        <label for="BYTVVIGM_0" class="form-check-label">0 - 4hours</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYTVVIGM" id="BYTVVIGM_1" type="radio" class="form-check-input" value="1" required="required"> 
+                        <label for="BYTVVIGM_1" class="form-check-label">5 or more hours</label>
+                      </div>
+                    </div>
+                  
+                  
+                    
+                    <h4></br>15. How many hours a day do you usually use a computer other than for schoolwork?</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYS46B" id="BYS46B_0" type="radio" class="form-check-input" value="0" required="required"> 
+                        <label for="BYS46B_0" class="form-check-label">0 - 3 hours</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS46B" id="BYS46B_1" type="radio" class="form-check-input" value="1" required="required"> 
+                        <label for="BYS46B_1" class="form-check-label">4 or more hours</label>
+                      </div>
+                    </div>
+                 
+                  
+                    
+                    <h4></br>16. How often do you spend time volunteering or performing community service outside of school?</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYS44C" id="BYS44C_0" type="radio" class="form-check-input" value="1" required="required"> 
+                        <label for="BYS44C_0" class="form-check-label">Rarely or never</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS44C" id="BYS44C_1" type="radio" class="form-check-input" value="2" required="required"> 
+                        <label for="BYS44C_1" class="form-check-label">Less than once a week</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS44C" id="BYS44C_2" type="radio" class="form-check-input" value="3" required="required"> 
+                        <label for="BYS44C_2" class="form-check-label">Once or twice a week</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS44C" id="BYS44C_3" type="radio" required="required" class="form-check-input" value="4"> 
+                        <label for="BYS44C_3" class="form-check-label">Everyday or almost everyday</label>
+                      </div>
+                    </div>
+                  
+                  
+                    
+                    <h4></br>17. How much do you agree or disagree with the following statement about your current school and teachers? </br>The teaching is good.</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYS20E" id="BYS20E_0" type="radio" class="form-check-input" value="1" required="required"> 
+                        <label for="BYS20E_0" class="form-check-label">Strongly agree</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS20E" id="BYS20E_1" type="radio" class="form-check-input" value="2" required="required"> 
+                        <label for="BYS20E_1" class="form-check-label">Agree</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS20E" id="BYS20E_2" type="radio" class="form-check-input" value="3" required="required"> 
+                        <label for="BYS20E_2" class="form-check-label">Disagree</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS20E" id="BYS20E_3" type="radio" required="required" class="form-check-input" value="4"> 
+                        <label for="BYS20E_3" class="form-check-label">Strongly disagree</label>
+                      </div>
+                    </div>
+                  
+                  
+                    
+                    <h4></br>18. How much do agree or disagree with the following statement? </br>Because doing mathematics is fun, I wouldn't want to give it up.</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYS87C" id="BYS87C_0" type="radio" class="form-check-input" value="1" required="required"> 
+                        <label for="BYS87C_0" class="form-check-label">Strongly agree</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS87C" id="BYS87C_1" type="radio" class="form-check-input" value="2" required="required"> 
+                        <label for="BYS87C_1" class="form-check-label">Agree</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS87C" id="BYS87C_2" type="radio" class="form-check-input" value="3" required="required"> 
+                        <label for="BYS87C_2" class="form-check-label">Disagree</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS87C" id="BYS87C_3" type="radio" required="required" class="form-check-input" value="4"> 
+                        <label for="BYS87C_3" class="form-check-label">Strongly disagree</label>
+                      </div>
+                    </div>
+                  
+                  
+                    
+                    <h4></br>19. How much do you agree or disagree with the following statement about your current school and teachers? </br>Other students often disrupt class.</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYS20D" id="BYS20D_0" type="radio" class="form-check-input" value="1" required="required"> 
+                        <label for="BYS20D_0" class="form-check-label">Strongly agree</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS20D" id="BYS20D_1" type="radio" class="form-check-input" value="2" required="required"> 
+                        <label for="BYS20D_1" class="form-check-label">Agree</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS20D" id="BYS20D_2" type="radio" class="form-check-input" value="3" required="required"> 
+                        <label for="BYS20D_2" class="form-check-label">Disagree</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS20D" id="BYS20D_3" type="radio" required="required" class="form-check-input" value="4"> 
+                        <label for="BYS20D_3" class="form-check-label">Strongly disagree</label>
+                      </div>
+                    </div>
+                 
+                  
+                    
+                    <h4></br>20. Have you been recognized for good grades, for example, honor roll?</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYS23C" id="BYS23C_0" type="radio" class="form-check-input" value="0" required="required"> 
+                        <label for="BYS23C_0" class="form-check-label">No</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS23C" id="BYS23C_1" type="radio" class="form-check-input" value="1" required="required"> 
+                        <label for="BYS23C_1" class="form-check-label">Yes</label>
+                      </div>
+                    </div>
+                  
+                  
+                    
+                    <h4></br>21. How important are good grades to you?</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYS37" id="BYS37_0" type="radio" class="form-check-input" value="1" required="required"> 
+                        <label for="BYS37_0" class="form-check-label">Not important</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS37" id="BYS37_1" type="radio" class="form-check-input" value="2" required="required"> 
+                        <label for="BYS37_1" class="form-check-label">Somewhat important</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS37" id="BYS37_2" type="radio" class="form-check-input" value="3" required="required"> 
+                        <label for="BYS37_2" class="form-check-label">Important</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS37" id="BYS37_3" type="radio" required="required" class="form-check-input" value="4"> 
+                        <label for="BYS37_3" class="form-check-label">Very important</label>
+                      </div>
+                    </div>
+                  
+                  
+                    
+                    <h4></br>22. How much do you agree or disagree with the following statement about why you go to school? </br>I go to school because my parents expect me to succeed.</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYS27I" id="BYS27I_0" type="radio" class="form-check-input" value="1" required="required"> 
+                        <label for="BYS27I_0" class="form-check-label">Strongly agree</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS27I" id="BYS27I_1" type="radio" class="form-check-input" value="2" required="required"> 
+                        <label for="BYS27I_1" class="form-check-label">Agree</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS27I" id="BYS27I_2" type="radio" class="form-check-input" value="3" required="required"> 
+                        <label for="BYS27I_2" class="form-check-label">Disagree</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS27I" id="BYS27I_3" type="radio" required="required" class="form-check-input" value="4"> 
+                        <label for="BYS27I_3" class="form-check-label">Strongly disagree</label>
+                      </div>
+                    </div>
+                
+                  
+                    
+                    <h4></br>23. Among your close friends, how important is it to them that they get good grades?</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYS90D" id="BYS90D_0" type="radio" class="form-check-input" value="1" required="required"> 
+                        <label for="BYS90D_0" class="form-check-label">Not important</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS90D" id="BYS90D_1" type="radio" class="form-check-input" value="2" required="required"> 
+                        <label for="BYS90D_1" class="form-check-label">Somewhat important</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS90D" id="BYS90D_2" type="radio" class="form-check-input" value="3" required="required"> 
+                        <label for="BYS90D_2" class="form-check-label">Very important</label>
+                      </div>
+                    </div>
+                  
+                  
+                    
+                    <h4></br>24. How often do you come to class without a pencil/pen or paper?</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYS38A" id="BYS38A_0" type="radio" class="form-check-input" value="1" required="required"> 
+                        <label for="BYS38A_0" class="form-check-label">Never</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS38A" id="BYS38A_1" type="radio" class="form-check-input" value="2" required="required"> 
+                        <label for="BYS38A_1" class="form-check-label">Seldom</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS38A" id="BYS38A_2" type="radio" class="form-check-input" value="3" required="required"> 
+                        <label for="BYS38A_2" class="form-check-label">Often</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS38A" id="BYS38A_3" type="radio" required="required" class="form-check-input" value="4"> 
+                        <label for="BYS38A_3" class="form-check-label">Usually</label>
+                      </div>
+                    </div>
+                  
+                  
+                    
+                    <h4></br>25. How much do you agree or disagree with the following statement about your current school and teachers? </br>I don't feel safe at this school.</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYS20J" id="BYS20J_0" type="radio" class="form-check-input" value="1" required="required"> 
+                        <label for="BYS20J_0" class="form-check-label">Strongly agree</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS20J" id="BYS20J_1" type="radio" class="form-check-input" value="2" required="required"> 
+                        <label for="BYS20J_1" class="form-check-label">Agree</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS20J" id="BYS20J_2" type="radio" class="form-check-input" value="3" required="required"> 
+                        <label for="BYS20J_2" class="form-check-label">Disagree</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS20J" id="BYS20J_3" type="radio" required="required" class="form-check-input" value="4"> 
+                        <label for="BYS20J_3" class="form-check-label">Strongly disagree</label>
+                      </div>
+                    </div>
+                  
+                  
+                    
+                    <h4></br>26. How many times were you absent from school during the first semester or term of this school year?</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYS24C" id="BYS24C_0" type="radio" class="form-check-input" value="1" required="required"> 
+                        <label for="BYS24C_0" class="form-check-label">Never</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS24C" id="BYS24C_1" type="radio" class="form-check-input" value="2" required="required"> 
+                        <label for="BYS24C_1" class="form-check-label">1 - 2 times</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS24C" id="BYS24C_2" type="radio" class="form-check-input" value="3" required="required"> 
+                        <label for="BYS24C_2" class="form-check-label">3 - 6 times</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS24C" id="BYS24C_3" type="radio" required="required" class="form-check-input" value="4"> 
+                        <label for="BYS24C_3" class="form-check-label">7 - 9 times</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS24C" id="BYS24C_4" type="radio" required="required" class="form-check-input" value="5"> 
+                        <label for="BYS24C_4" class="form-check-label">10 or more times</label>
+                      </div>
+                    </div>
+                 
+                  
+                    
+                    <h4></br>27. How many times did you get in trouble for not following school rules during the first semester or term of this school year?</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYS24D" id="BYS24D_0" type="radio" required="required" class="form-check-input" value="1"> 
+                        <label for="BYS24D_0" class="form-check-label">Never</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS24D" id="BYS24D_1" type="radio" required="required" class="form-check-input" value="2"> 
+                        <label for="BYS24D_1" class="form-check-label">1 - 2 times</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS24D" id="BYS24D_2" type="radio" required="required" class="form-check-input" value="3"> 
+                        <label for="BYS24D_2" class="form-check-label">3 - 6 times</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS24D" id="BYS24D_3" type="radio" required="required" class="form-check-input" value="4"> 
+                        <label for="BYS24D_3" class="form-check-label">7 - 9 times</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS24D" id="BYS24D_4" type="radio" required="required" class="form-check-input" value="5"> 
+                        <label for="BYS24D_4" class="form-check-label">10 or more times</label>
+                      </div>
+                    </div>
+                 
+                  
+                    
+                    <h4></br>28. How important is getting away from this area of the country to you in your life?</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYS54I" id="BYS54I_0" type="radio" class="form-check-input" value="1" required="required"> 
+                        <label for="BYS54I_0" class="form-check-label">Not important</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS54I" id="BYS54I_1" type="radio" class="form-check-input" value="2" required="required"> 
+                        <label for="BYS54I_1" class="form-check-label">Somewhat important</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS54I" id="BYS54I_2" type="radio" class="form-check-input" value="3" required="required"> 
+                        <label for="BYS54I_2" class="form-check-label">Very important</label>
+                      </div>
+                    </div>
+                 
+                  
+                    
+                    <h4></br>29. Does your family have access to the internet at your home?</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYS84D" id="BYS84D_0" type="radio" class="form-check-input" value="0" required="required"> 
+                        <label for="BYS84D_0" class="form-check-label">No</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS84D" id="BYS84D_1" type="radio" class="form-check-input" value="1" required="required"> 
+                        <label for="BYS84D_1" class="form-check-label">Yes</label>
+                      </div>
+                    </div>
+                
+                  
+                    
+                    <h4></br>30. Do you have your own room at your home?</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYS84I" id="BYS84I_0" type="radio" class="form-check-input" value="0" required="required"> 
+                        <label for="BYS84I_0" class="form-check-label">No</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS84I" id="BYS84I_1" type="radio" class="form-check-input" value="1" required="required"> 
+                        <label for="BYS84I_1" class="form-check-label">Yes</label>
+                      </div>
+                    </div>
+                 
+                  
+                    
+                    <h4></br>31. How often do your parents check whether you have done your homework?</h4> 
+                    <div>
+                      <div class="form-check">
+                        <input name="BYS85A" id="BYS85A_0" type="radio" class="form-check-input" value="1" required="required"> 
+                        <label for="BYS85A_0" class="form-check-label">Never</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS85A" id="BYS85A_1" type="radio" class="form-check-input" value="2" required="required"> 
+                        <label for="BYS85A_1" class="form-check-label">Rarely</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS85A" id="BYS85A_2" type="radio" class="form-check-input" value="3" required="required"> 
+                        <label for="BYS85A_2" class="form-check-label">Sometimes</label>
+                      </div>
+                      <div class="form-check">
+                        <input name="BYS85A" id="BYS85A_3" type="radio" required="required" class="form-check-input" value="4"> 
+                        <label for="BYS85A_3" class="form-check-label">Often</label>
+                      </div>
+                    </div>
+                  
+                    
+                    </br><button name="submit" type="submit" class="btn btn-primary"><h4 style="color:white">Submit</h4></button>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+          </form>
+      </div>
+  </div>
+</section>
+
+<!-- ======= Results Section ======= -->
+<section id="why-us" class="why-us">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-4 d-flex align-items-stretch justify-content-center" data-aos="fade-right">
+        <div class="content">
+          <h3>Your 
+          </br>Predictions</h3>
+        </div>
+      </div>
+      <div class="col-lg-8 d-flex align-items-stretch">
+        <div class="icon-boxes d-flex flex-column justify-content-center">
+          <div class="row">
+            <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+              <div class="icon-box mt-4 mt-xl-0">
+                <i class='bx bx-star bx-tada' ></i>
+                <h4>GPA</h4>
+                <p>{{ gpa_range }}</p>
+              </div>
+            </div>
+            <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+              <div class="icon-box mt-4 mt-xl-0">
+                <i class='bx bxs-graduation bx-tada' ></i>
+                <h4>Equivalent Letter Grade</h4>
+                <p>{{ equivalent_letter_grade }}</p>
+              </div>
+            </div>
+            <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+              <div class="icon-box mt-4 mt-xl-0">
+                <i class='bx bx-sad bx-fade-down' ></i>
+                <h4>Probability of GPA</h4>
+                <p>{{ probability_of_gpa_range }}</p>
+              </div>
+            </div>
+          </div>
+        </div><!-- End .content-->
+      </div>
+    </div>
+
+  </div>
+</section><!-- Results Section -->
+
+    <div class="container d-md-flex py-4">
+
+      <div class="mr-md-auto text-center text-md-left">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Bethany</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bethany-free-onepage-bootstrap-theme/ -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="../static/vendor/jquery/jquery.min.js"></script>
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="../static/vendor/php-email-form/validate.js"></script>
+  <script src="../static/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="../static/vendor/counterup/counterup.min.js"></script>
+  <script src="../static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../static/vendor/venobox/venobox.min.js"></script>
+  <script src="../static/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="../static/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../static/js/main.js"></script>
+
+</body>
+
+</html>
