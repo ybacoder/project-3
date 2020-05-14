@@ -4,7 +4,8 @@
 Untitled*
 .ipynb_checkpoints/
 notes.txt
-app/
+app/app/
+app/commands.txt
 
 
 ## Ignore Visual Studio temporary files, build results, and
