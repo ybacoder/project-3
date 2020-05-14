@@ -46,7 +46,7 @@ The Student Success web app is deployed online. It can be found [here](https://s
 
 ### Access our API directly
 
-#### You may access our API directly by submitting a POST request to https://student-success-owz2yc537q-uc.a.run.app/predict
+#### You may access our API directly and get student success prediction results by submitting a POST request to https://student-success-owz2yc537q-uc.a.run.app/predict. Please review our [input parameters keyfile](input_params_keyfile.txt) and the example input and output JSONs below.
 
 ##### Example Body to Submit as JSON
 ```json
