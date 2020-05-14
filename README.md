@@ -44,6 +44,56 @@ The Student Success web app is deployed online. It can be found [here](https://s
 `pipenv shell`  
 `python app.py`  
 
+### Access our API directly
+
+#### You may access our API directly by submitting a POST request to https://student-success-owz2yc537q-uc.a.run.app/predict
+
+##### Example Body to Submit as JSON
+```json
+{
+    "BYSEX": 0,
+    "BYRACE": 0,
+    "BYSTLANG": 0,
+    "BYPARED": 1,
+    "BYINCOME": 1,
+    "BYURBAN": 0,
+    "BYREGION": 3,
+    "BYRISKFC": 1,
+    "BYS34A": 1,
+    "BYS34B": 0,
+    "BYWRKHRS": 1,
+    "BYS42": 0,
+    "BYS43": 1,
+    "BYTVVIGM": 0,
+    "BYS46B": 0,
+    "BYS44C": 1,
+    "BYS20E": 2,
+    "BYS87C": 4,
+    "BYS20D": 1,
+    "BYS23C": 0,
+    "BYS37": 3,
+    "BYS27I": 2,
+    "BYS90D": 2,
+    "BYS38A": 2,
+    "BYS20J": 3,
+    "BYS24C": 2,
+    "BYS24D": 1,
+    "BYS54I": 3,
+    "BYS84D": 0,
+    "BYS84I": 1,
+    "BYS85A": 1
+}
+
+```
+##### Example JSON Response
+```json
+{
+    "gpa_range": "1.51 - 2.00",
+    "equivalent_letter_grade": "C",
+    "probability_of_gpa_range": 0.72
+}
+```
+
 ## Repo Overview
 
 1. /data contains downloaded data from the [NCES Codebook](https://nces.ed.gov/onlinecodebook).
