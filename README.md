@@ -36,7 +36,7 @@ Ultimately, there are a multitude of factors that can contribute to a student's 
 
 ### App Deployment
 
-The Student Success web app is deployed online. It can be found [here](https://predict-student-success.herokuapp.com/)!
+The Student Success web app is deployed online. It can be found [here](https://student-success-owz2yc537q-uc.a.run.app/)!
 
 ### Run App Locally
 
